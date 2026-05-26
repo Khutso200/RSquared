@@ -1,0 +1,9956 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+<!-- saved from url=(0031)http://www.rsquaredit.com/#home -->
+
+
+
+
+
+
+<html lang="en"><head><meta charset="UTF-8">
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+
+
+
+<title>RSquared Technologies — Enterprise IT Infrastructure, Security &amp; Automation</title>
+
+
+
+
+
+
+<meta name="description" content="RSquared Technologies delivers enterprise network infrastructure, cybersecurity, cloud automation, and smart building solutions from Sandton, Johannesburg.">
+
+
+
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+
+
+
+
+
+
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+
+
+
+
+
+
+<link href="./RSquared Technologies — Enterprise IT Infrastructure, Security &amp; Automation_files/css2" rel="stylesheet">
+
+
+
+
+
+
+<style>
+
+
+
+
+
+
+/*=================================================================
+
+
+
+
+
+
+  RESET & VARIABLES
+
+
+
+
+
+
+=================================================================*/
+
+
+
+
+
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+
+
+
+
+
+:root{
+
+
+
+
+
+
+  --purple:#7c3aed;
+
+
+
+
+
+
+  --purple-light:#a855f7;
+
+
+
+
+
+
+  --purple-dark:#5b21b6;
+
+
+
+
+
+
+  --purple-glow:rgba(124,58,237,0.2);
+
+
+
+
+
+
+  --black:#0a0a0a;
+
+
+
+
+
+
+  --dark:#111111;
+
+
+
+
+
+
+  --gray-dark:#1c1c1c;
+
+
+
+
+
+
+  --gray-mid:#2a2a2a;
+
+
+
+
+
+
+  --gray-light:#3d3d3d;
+
+
+
+
+
+
+  --gray-border:#2a2a2a;
+
+
+
+
+
+
+  --white:#ffffff;
+
+
+
+
+
+
+  --text-primary:#e8e8e8;
+
+
+
+
+
+
+  --text-secondary:#9a9a9a;
+
+
+
+
+
+
+  --text-muted:#666666;
+
+
+
+
+
+
+  --p50:#1a0a2e;--p100:#2d1b4e;--p200:#4c2889;--p300:#7c3aed;
+
+
+
+
+
+
+  --p400:#9333ea;--p500:#a855f7;--p600:#7c3aed;--p700:#6d28d9;
+
+
+
+
+
+
+  --p800:#5b21b6;--p900:#4c1d95;
+
+
+
+
+
+
+  --g50:#111111;--g100:#1c1c1c;--g200:#2a2a2a;--g300:#3d3d3d;
+
+
+
+
+
+
+  --g400:#666666;--g500:#808080;--g600:#9a9a9a;--g700:#c0c0c0;
+
+
+
+
+
+
+  --g800:#e0e0e0;--g900:#e8e8e8;
+
+
+
+
+
+
+  --gn100:#052e16;--gn500:#22c55e;--gn600:#16a34a;--gn700:#15803d;
+
+
+
+
+
+
+  --y100:#1c1000;--y500:#ca8a04;--y600:#a16207;
+
+
+
+
+
+
+  --w:#ffffff;--b:#0a0a0a;
+
+
+
+
+
+
+  --navy:#0a0a0a;--electric:#a855f7;--gold:#a855f7;
+
+
+
+
+
+
+  --glass-bg:rgba(255,255,255,0.03);--glass-border:rgba(255,255,255,0.08);
+
+
+
+
+
+
+}
+
+
+
+
+
+
+html{scroll-behavior:smooth}
+
+
+
+
+
+
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:var(--text-primary);background:var(--black);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*=================================================================
+
+
+
+
+
+
+  UTILITY
+
+
+
+
+
+
+=================================================================*/
+
+
+
+
+
+
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+
+
+
+
+
+
+.mono{font-family:'JetBrains Mono',monospace}
+
+
+
+
+
+
+.serif-i{font-family:'Libre Baskerville',serif;font-style:italic}
+
+
+
+
+
+
+.label{display:inline-flex;align-items:center;gap:12px;font-family:'JetBrains Mono',monospace;font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--purple-light)}
+
+
+
+
+
+
+.label::before{content:'';width:32px;height:1px;background:var(--purple)}
+
+
+
+
+
+
+.section-header{text-align:center;margin-bottom:64px}
+
+
+
+
+
+
+.section-header h2{font-size:clamp(1.5rem,3vw,2.25rem);margin-top:16px;line-height:1.2;color:#ffffff}
+
+
+
+
+
+
+.section-header h2 .m{color:var(--text-secondary)}
+
+
+
+
+
+
+.section-header p{color:var(--text-secondary);max-width:520px;margin:16px auto 0}
+
+
+
+
+
+
+.grad-text{background:linear-gradient(135deg,#ffffff 40%,#a855f7 70%,#7c3aed 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+
+
+
+
+
+
+
+
+
+
+
+
+
+section{padding:80px 0}
+
+
+
+
+
+
+h1{font-size:clamp(2rem,4vw,3rem)}
+
+
+
+
+
+
+h2{font-size:clamp(1.5rem,3vw,2.25rem)}
+
+
+
+
+
+
+h3{font-size:1.5rem}
+
+
+
+
+
+
+h4{font-size:1.25rem}
+
+
+
+
+
+
+p{font-size:1rem;line-height:1.75}
+
+
+
+
+
+
+.card{padding:28px;border-radius:10px}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*=================================================================
+
+
+
+
+
+
+  ANIMATIONS
+
+
+
+
+
+
+=================================================================*/
+
+
+
+
+
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+
+
+
+
+
+
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+
+
+
+
+
+
+@keyframes slideL{from{opacity:0;transform:translateX(-16px)}to{opacity:1;transform:translateX(0)}}
+
+
+
+
+
+
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}
+
+
+
+
+
+
+@keyframes spinSlow{from{transform:rotate(0)}to{transform:rotate(360deg)}}
+
+
+
+
+
+
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+
+
+
+
+
+
+@keyframes gradShift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+
+
+
+
+
+
+@keyframes glowPulse{0%,100%{box-shadow:0 0 20px rgba(124,58,237,.3),0 0 40px rgba(124,58,237,.1)}50%{box-shadow:0 0 40px rgba(124,58,237,.5),0 0 80px rgba(124,58,237,.2)}}
+
+
+
+
+
+
+@keyframes shimmer{0%{background-position:-200% center}100%{background-position:200% center}}
+
+
+
+
+
+
+@keyframes borderGlow{0%,100%{border-color:rgba(124,58,237,.18)}50%{border-color:rgba(168,85,247,.4)}}
+
+
+
+
+
+
+@keyframes blink{50%{border-color:transparent}}
+
+
+
+
+
+
+@keyframes lavaMove{0%{transform:translate(0,0) scale(1)}33%{transform:translate(30px,-20px) scale(1.1)}66%{transform:translate(-20px,15px) scale(.95)}100%{transform:translate(0,0) scale(1)}}
+
+
+
+
+
+
+@keyframes lavaMove2{0%{transform:translate(0,0) scale(1)}33%{transform:translate(-25px,20px) scale(1.05)}66%{transform:translate(15px,-25px) scale(.9)}100%{transform:translate(0,0) scale(1)}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.anim-up{animation:fadeUp .7s ease-out both}
+
+
+
+
+
+
+.anim-in{animation:fadeIn .5s ease-out both}
+
+
+
+
+
+
+.anim-sl{animation:slideL .5s ease-out both;opacity:0}
+
+
+
+
+
+
+.d1{animation-delay:.1s}.d2{animation-delay:.2s}.d3{animation-delay:.3s}.d4{animation-delay:.4s}.d5{animation-delay:.5s}.d6{animation-delay:.6s}.d8{animation-delay:.8s}.d10{animation-delay:1s}.d12{animation-delay:1.2s}.d14{animation-delay:1.4s}.d16{animation-delay:1.6s}.d18{animation-delay:1.8s}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*=================================================================
+
+
+
+
+
+
+  BUTTONS
+
+
+
+
+
+
+=================================================================*/
+
+
+
+
+
+
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 28px;font-size:1rem;font-weight:500;border-radius:6px;text-decoration:none;border:none;cursor:pointer;transition:all .3s;font-family:inherit;position:relative;overflow:hidden}
+
+
+
+
+
+
+.btn-p{background:linear-gradient(135deg,#7c3aed,#9333ea);color:#f0f0f0;box-shadow:0 0 30px rgba(124,58,237,.3)}
+
+
+
+
+
+
+.btn-p::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.12),transparent);opacity:0;transition:opacity .3s}
+
+
+
+
+
+
+.btn-p:hover{background:linear-gradient(135deg,#6d28d9,#7c3aed);transform:translateY(-3px) scale(1.03);box-shadow:0 8px 32px rgba(124,58,237,.6)}
+
+
+
+
+
+
+.btn-p:hover::after{opacity:1}
+
+
+
+
+
+
+.btn-p:active{transform:translateY(-1px) scale(1.01)}
+
+
+
+
+
+
+.btn-s{background:transparent;color:var(--text-primary);border:1px solid var(--gray-border)}
+
+
+
+
+
+
+.btn-s:hover{border-color:var(--purple);color:var(--purple-light);background:rgba(124,58,237,.08)}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*=================================================================
+
+
+
+
+
+
+  HEADER
+
+
+
+
+
+
+=================================================================*/
+
+
+
+
+
+
+header{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(10,10,10,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--gray-border);transition:all .3s;box-shadow:0 1px 32px rgba(124,58,237,.08)}
+
+
+
+
+
+
+header .inner{display:flex;align-items:center;justify-content:space-between;height:4.5rem;max-width:1280px;margin:0 auto;padding:0 2rem}
+
+
+
+
+
+
+.logo-g{display:flex;align-items:center;gap:.75rem;text-decoration:none;cursor:pointer}
+
+
+
+
+
+
+.logo-g img{height:36px;width:auto}
+
+
+
+
+
+
+.logo-t{font-size:1.125rem;font-weight:700;color:var(--text-primary)}
+
+
+
+
+
+
+.logo-t span{font-weight:400;color:var(--text-secondary)}
+
+
+
+
+
+
+nav{display:flex;align-items:center;gap:2rem}
+
+
+
+
+
+
+nav a,.nav-link{font-size:.9375rem;color:var(--text-secondary);text-decoration:none;transition:color .2s;cursor:pointer;background:none;border:none;font-family:inherit;padding:0;font-weight:500}
+
+
+
+
+
+
+nav a:hover,.nav-link:hover{color:var(--purple-light)}
+
+
+
+
+
+
+nav a.active,.nav-link.active{color:var(--purple-light);font-weight:700;position:relative}
+
+
+
+
+
+
+nav a.active::after,.nav-link.active::after{content:'';position:absolute;bottom:-4px;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--purple),var(--purple-light));border-radius:2px}
+
+
+
+
+
+
+.mob-btn{display:none;background:none;border:none;cursor:pointer;padding:.5rem;color:var(--text-primary)}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*=================================================================
+
+
+
+
+
+
+  MOBILE NAV
+
+
+
+
+
+
+=================================================================*/
+
+
+
+
+
+
+.mob-nav{display:none;position:fixed;inset:0;z-index:2000;background:rgba(10,10,10,.98);backdrop-filter:blur(20px);flex-direction:column;align-items:center;justify-content:center;gap:2rem}
+
+
+
+
+
+
+.mob-nav.open{display:flex}
+
+
+
+
+
+
+.mob-nav .nav-link,.mob-nav a{font-size:1.5rem;color:var(--text-primary);text-decoration:none;font-weight:600;background:none;border:none;cursor:pointer;font-family:inherit}
+
+
+
+
+
+
+.mob-nav .cls{position:absolute;top:1.5rem;right:1.5rem;background:none;border:none;font-size:2rem;cursor:pointer;color:var(--text-secondary)}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*=================================================================
+
+
+
+
+
+
+  PAGE CONTAINER
+
+
+
+
+
+
+=================================================================*/
+
+
+
+
+
+
+.page{display:none;min-height:100vh;padding-top:68px}
+
+
+
+
+
+
+.page.active{display:block}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*=================================================================
+
+
+
+
+
+
+  HOME HERO
+
+
+
+
+
+
+=================================================================*/
+
+
+
+
+
+
+.hero{position:relative;min-height:calc(100vh - 68px);display:flex;align-items:center;justify-content:center;overflow:hidden;background:linear-gradient(180deg,var(--dark),var(--black))}
+
+
+
+
+
+
+.hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(124,58,237,.3),transparent)}
+
+
+
+
+
+
+.hero-bg{position:absolute;inset:0;pointer-events:none;background-image:radial-gradient(rgba(124,58,237,.08) 1px,transparent 1px);background-size:40px 40px}
+
+
+
+
+
+
+.hero-bg .b1{position:absolute;top:20%;left:20%;width:400px;height:400px;background:rgba(124,58,237,.12);border-radius:50%;filter:blur(80px);animation:float 8s ease-in-out infinite}
+
+
+
+
+
+
+.hero-bg .b2{position:absolute;bottom:20%;right:20%;width:350px;height:350px;background:rgba(168,85,247,.08);border-radius:50%;filter:blur(80px);animation:float 10s ease-in-out infinite reverse}
+
+
+
+
+
+
+.hero-bg .gt{position:absolute;inset:0;background:linear-gradient(180deg,rgba(124,58,237,.06),transparent 60%)}
+
+
+
+
+
+
+.hero-c{position:relative;z-index:10;text-align:center;max-width:800px;margin:0 auto;padding:40px 24px}
+
+
+
+
+
+
+.hero h1{margin-bottom:24px}
+
+
+
+
+
+
+.hero h1 .l1{display:block;font-size:clamp(36px,6vw,72px);font-weight:700;color:#ffffff;line-height:1.1}
+
+
+
+
+
+
+.hero h1 .l2{display:block;font-size:clamp(36px,6vw,72px);font-weight:700;line-height:1.1;margin-top:8px}
+
+
+
+
+
+
+.hero h1 .l2 .t{color:var(--text-secondary)}
+
+
+
+
+
+
+.hero h1 .l2 .e{background:linear-gradient(135deg,var(--purple),var(--purple-light),var(--purple));background-size:200% 200%;animation:gradShift 4s ease infinite;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+
+
+
+
+
+
+.hero p.sub{color:var(--text-secondary);font-size:clamp(16px,2vw,18px);max-width:600px;margin:0 auto 32px}
+
+
+
+
+
+
+.hero-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:48px}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.sc{max-width:480px;margin:0 auto;background:var(--gray-dark);border:1px solid var(--gray-border);border-radius:16px;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,.4);transition:box-shadow .3s}
+
+
+
+
+
+
+.sc:hover{box-shadow:0 12px 48px rgba(124,58,237,.2)}
+
+
+
+
+
+
+.sc-bar{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;border-bottom:1px solid var(--gray-border);background:var(--gray-mid)}
+
+
+
+
+
+
+.sc-bar .l{display:flex;align-items:center;gap:8px}
+
+
+
+
+
+
+.sc-bar .dot{width:8px;height:8px;border-radius:50%;background:var(--purple);animation:pulse 2s infinite}
+
+
+
+
+
+
+.sc-bar .r{display:flex;align-items:center;gap:6px}
+
+
+
+
+
+
+.sc-bar .dg{width:6px;height:6px;border-radius:50%;background:var(--gn500)}
+
+
+
+
+
+
+.sc-items{padding:16px;display:flex;flex-direction:column;gap:8px}
+
+
+
+
+
+
+.sc-i{display:flex;align-items:center;justify-content:space-between;padding:6px 10px;border-radius:8px;transition:background .2s;cursor:default}
+
+
+
+
+
+
+.sc-i:hover{background:var(--gray-mid)}
+
+
+
+
+
+
+.badge{padding:2px 10px;border-radius:100px;font-size:10px;font-weight:500;font-family:'JetBrains Mono',monospace}
+
+
+
+
+
+
+.bg-gn{background:rgba(22,163,74,.2);color:#4ade80}
+
+
+
+
+
+
+.bg-pr{background:rgba(124,58,237,.2);color:var(--purple-light)}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.partners{padding:48px 0;border-top:1px solid var(--gray-border);border-bottom:1px solid var(--gray-border);background:var(--dark)}
+
+
+
+
+
+
+.partners-in{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:32px}
+
+
+
+
+
+
+.partners span{font-size:15px;font-weight:600;color:var(--text-secondary);transition:all .3s;cursor:default}
+
+
+
+
+
+
+.partners span:hover{color:var(--purple-light);transform:scale(1.1)}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.stats{padding:64px 0;border-top:1px solid var(--gray-border);border-bottom:1px solid var(--gray-border);background:var(--dark)}
+
+
+
+
+
+
+.stats-g{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;text-align:center}
+
+
+
+
+
+
+.stat-n{font-size:clamp(28px,4vw,40px);font-weight:700;margin-bottom:4px}
+
+
+
+
+
+
+.stat-l{font-size:12px;color:var(--text-secondary)}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.home-svc{padding:80px 0;background:var(--black);position:relative}
+
+
+
+
+
+
+.home-svc::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:1px;height:64px;background:linear-gradient(180deg,var(--purple),transparent)}
+
+
+
+
+
+
+.svc-grid-home{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+
+
+
+
+
+
+.svc-ch{position:relative;background:var(--gray-dark);border:1px solid var(--gray-border);border-radius:16px;padding:32px;transition:all .3s;cursor:pointer}
+
+
+
+
+
+
+.svc-ch::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--purple),transparent);opacity:0;transition:opacity .3s}
+
+
+
+
+
+
+.svc-ch:hover{background:var(--gray-mid);border-color:var(--purple);box-shadow:0 8px 40px rgba(124,58,237,.3);transform:translateY(-4px)}
+
+
+
+
+
+
+.svc-ch:hover::before{opacity:1}
+
+
+
+
+
+
+.svc-icon{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:16px;transition:transform .3s}
+
+
+
+
+
+
+.svc-ch:hover .svc-icon{transform:scale(1.1)}
+
+
+
+
+
+
+.ip{background:rgba(124,58,237,.2);color:var(--purple-light)}.ig{background:rgba(22,163,74,.15);color:#4ade80}.iy{background:rgba(202,138,4,.15);color:#fbbf24}.igr{background:var(--gray-mid);color:var(--text-secondary)}
+
+
+
+
+
+
+.svc-ch h3{font-size:16px;font-weight:600;margin-bottom:8px;color:var(--text-primary)}
+
+
+
+
+
+
+.svc-ch p{font-size:14px;color:var(--text-secondary);line-height:1.6;margin-bottom:16px}
+
+
+
+
+
+
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+
+
+
+
+
+
+.tag{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text-secondary);background:var(--gray-mid);padding:4px 10px;border-radius:100px;border:1px solid var(--gray-border);transition:all .3s}
+
+
+
+
+
+
+.svc-ch:hover .tag{background:rgba(124,58,237,.15);color:var(--purple-light);border-color:rgba(124,58,237,.3)}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.fs-cta{grid-column:1/-1;background:linear-gradient(135deg,rgba(124,58,237,.1),rgba(124,58,237,.05));border:1px solid rgba(124,58,237,.3);border-radius:16px;padding:48px;display:grid;grid-template-columns:1fr auto;gap:32px;align-items:center;transition:box-shadow .3s}
+
+
+
+
+
+
+.fs-cta:hover{box-shadow:0 12px 48px rgba(124,58,237,.15)}
+
+
+
+
+
+
+.fs-cta h3{font-size:clamp(22px,3vw,28px);margin-bottom:12px;color:var(--text-primary)}
+
+
+
+
+
+
+.fs-cta p{color:var(--text-secondary);margin-bottom:16px}
+
+
+
+
+
+
+.orb{position:relative;width:140px;height:140px}
+
+
+
+
+
+
+.orb-r{position:absolute;inset:0;border:1px solid rgba(124,58,237,.4);border-radius:50%;animation:spinSlow 20s linear infinite}
+
+
+
+
+
+
+.orb-d{position:absolute;width:8px;height:8px;border-radius:50%}
+
+
+
+
+
+
+.orb-d.t{top:-4px;left:50%;transform:translateX(-50%);background:var(--purple)}
+
+
+
+
+
+
+.orb-d.bo{bottom:-4px;left:50%;transform:translateX(-50%);background:var(--purple-light)}
+
+
+
+
+
+
+.orb-c{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:48px;height:48px;border-radius:14px;background:linear-gradient(135deg,var(--purple),#6d28d9);display:flex;align-items:center;justify-content:center;font-size:22px;box-shadow:0 8px 24px rgba(124,58,237,.4)}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*=================================================================
+
+
+
+
+
+
+  SERVICES PAGE
+
+
+
+
+
+
+=================================================================*/
+
+
+
+
+
+
+.svc-page{padding:80px 0 100px;background:var(--black)}
+
+
+
+
+
+
+.svc-page .hero-mini{padding:60px 0 40px;text-align:center;background:linear-gradient(180deg,var(--dark),var(--black))}
+
+
+
+
+
+
+.svc-page .hero-mini h1{font-size:clamp(32px,5vw,56px);font-weight:700;margin-bottom:16px;color:#ffffff}
+
+
+
+
+
+
+.svc-page .hero-mini p{color:var(--text-secondary);max-width:560px;margin:0 auto}
+
+
+
+
+
+
+.svc-expand{border:1px solid var(--gray-border);border-radius:16px;margin-bottom:16px;overflow:hidden;transition:transform .3s cubic-bezier(.22,.68,0,1.2),box-shadow .3s ease,border-color .3s ease;background:var(--gray-dark)}
+
+
+
+
+
+
+.svc-expand:hover{border-color:var(--purple);transform:translateY(-3px);box-shadow:0 12px 40px rgba(124,58,237,.15)}
+
+
+
+
+
+
+.svc-expand.open{border-color:var(--purple);box-shadow:0 4px 24px rgba(124,58,237,.15)}
+
+
+
+
+
+
+.svc-head{display:flex;align-items:center;gap:20px;padding:24px 32px;cursor:pointer;transition:background .2s;user-select:none}
+
+
+
+
+
+
+.svc-head:hover{background:var(--gray-mid)}
+
+
+
+
+
+
+.svc-expand.open .svc-head{background:rgba(124,58,237,.1);border-bottom:1px solid rgba(124,58,237,.2)}
+
+
+
+
+
+
+.svc-head .svc-icon{flex-shrink:0}
+
+
+
+
+
+
+.svc-head-text{flex:1}
+
+
+
+
+
+
+.svc-head-text h3{font-size:18px;font-weight:600;margin-bottom:4px;color:var(--text-primary)}
+
+
+
+
+
+
+.svc-head-text p{font-size:14px;color:var(--text-secondary)}
+
+
+
+
+
+
+.svc-arrow{width:32px;height:32px;border-radius:8px;background:var(--gray-mid);display:flex;align-items:center;justify-content:center;transition:all .3s;flex-shrink:0;color:var(--text-secondary)}
+
+
+
+
+
+
+.svc-expand.open .svc-arrow{background:var(--purple);color:#f0f0f0;transform:rotate(180deg)}
+
+
+
+
+
+
+.svc-body{display:none;padding:32px}
+
+
+
+
+
+
+.svc-expand.open .svc-body{display:block}
+
+
+
+
+
+
+.svc-body h4{font-size:1.25rem;font-weight:600;margin-bottom:12px;color:var(--purple-light)}
+
+
+
+
+
+
+.svc-body .caps{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:24px}
+
+
+
+
+
+
+.svc-body .cap{display:flex;align-items:flex-start;gap:8px;font-size:13px;color:var(--text-secondary);line-height:1.5}
+
+
+
+
+
+
+.svc-body .cap .ck{color:var(--purple-light);flex-shrink:0;margin-top:2px}
+
+
+
+
+
+
+.svc-body .desc{font-size:14px;color:var(--text-secondary);line-height:1.8;margin-bottom:20px;max-width:800px}
+
+
+
+
+
+
+.svc-body .desc+.desc{margin-top:0}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*=================================================================
+
+
+
+
+
+
+  ABOUT PAGE
+
+
+
+
+
+
+=================================================================*/
+
+
+
+
+
+
+.about-hero{padding:60px 0 40px;text-align:center;background:linear-gradient(180deg,var(--dark),var(--black))}
+
+
+
+
+
+
+.about-hero h1{font-size:clamp(32px,5vw,56px);font-weight:700;margin-bottom:16px;color:#ffffff}
+
+
+
+
+
+
+.about-hero p{color:var(--text-secondary);max-width:580px;margin:0 auto}
+
+
+
+
+
+
+.about-story{padding:60px 0;background:var(--black)}
+
+
+
+
+
+
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+
+
+
+
+
+
+.about-left h2{font-size:clamp(24px,3vw,36px);margin-bottom:20px;line-height:1.3;color:var(--text-primary)}
+
+
+
+
+
+
+.about-left p{color:var(--text-secondary);line-height:1.8;margin-bottom:16px;font-size:15px}
+
+
+
+
+
+
+.about-right{position:relative}
+
+
+
+
+
+
+.founder-card{background:linear-gradient(135deg,var(--gray-dark),var(--gray-mid),rgba(124,58,237,.15));border-radius:16px;padding:40px;color:var(--text-primary);position:relative;overflow:hidden;border:1px solid rgba(124,58,237,.2);animation:glowPulse 6s ease infinite}
+
+
+
+
+
+
+.founder-card::before{content:'';position:absolute;top:-50%;right:-50%;width:200%;height:200%;background:radial-gradient(circle,rgba(124,58,237,.08) 0%,transparent 60%);pointer-events:none}
+
+
+
+
+
+
+.founder-card .fc-label{font-family:'JetBrains Mono',monospace;font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--purple-light);margin-bottom:16px}
+
+
+
+
+
+
+.founder-card h3{font-size:22px;font-weight:700;margin-bottom:4px;color:var(--text-primary)}
+
+
+
+
+
+
+.founder-card .fc-role{font-size:14px;color:var(--purple-light);margin-bottom:20px}
+
+
+
+
+
+
+.founder-card p{font-size:14px;color:var(--text-secondary);line-height:1.7}
+
+
+
+
+
+
+.values-section{padding:60px 0 80px;background:var(--dark);position:relative;overflow:hidden}
+
+
+
+
+
+
+.values-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+
+
+
+
+
+
+.value-card{background:var(--gray-dark);border:1px solid var(--gray-border);border-radius:16px;padding:28px;transition:transform .3s cubic-bezier(.22,.68,0,1.2),box-shadow .3s ease,border-color .3s ease}
+
+
+
+
+
+
+.value-card:hover{border-color:var(--purple);transform:translateY(-5px);box-shadow:0 16px 48px rgba(124,58,237,.12)}
+
+
+
+
+
+
+.value-card .v-icon{margin-bottom:16px}
+
+
+
+
+
+
+.value-card h3{font-size:1.5rem;font-weight:600;margin-bottom:8px;color:var(--text-primary)}
+
+
+
+
+
+
+.value-card p{font-size:14px;color:var(--text-secondary);line-height:1.6}
+
+
+
+
+
+
+.v-icon{width:52px;height:52px;border-radius:14px;background:linear-gradient(135deg,rgba(124,58,237,.1),rgba(124,58,237,.2));border:1px solid rgba(124,58,237,.2);display:flex;align-items:center;justify-content:center;color:var(--purple-light);transition:all .3s;flex-shrink:0}
+
+
+
+
+
+
+.value-card:hover .v-icon{background:linear-gradient(135deg,var(--purple),#6d28d9);border-color:#6d28d9;color:#fff;transform:scale(1.1) rotate(-5deg);box-shadow:0 8px 24px rgba(124,58,237,.35)}
+
+
+
+
+
+
+.timeline-section{padding:60px 0 80px;background:var(--black)}
+
+
+
+
+
+
+.timeline{position:relative;max-width:700px;margin:0 auto}
+
+
+
+
+
+
+.timeline::before{content:'';position:absolute;left:24px;top:0;bottom:0;width:2px;background:linear-gradient(180deg,var(--purple),var(--purple-light),var(--gray-border))}
+
+
+
+
+
+
+.tl-item{display:flex;gap:24px;margin-bottom:32px;position:relative}
+
+
+
+
+
+
+.tl-dot{width:12px;height:12px;border-radius:50%;background:var(--purple);border:3px solid var(--black);box-shadow:0 0 0 2px var(--purple);flex-shrink:0;margin-top:6px;position:relative;left:19px;z-index:2}
+
+
+
+
+
+
+.tl-content{flex:1;padding-left:16px}
+
+
+
+
+
+
+.tl-year{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--purple-light);font-weight:500;margin-bottom:4px}
+
+
+
+
+
+
+.tl-title{font-size:16px;font-weight:600;margin-bottom:4px;color:var(--text-primary)}
+
+
+
+
+
+
+.tl-desc{font-size:14px;color:var(--text-secondary);line-height:1.6}
+
+
+
+
+
+
+.certs-section{padding:60px 0 80px;background:var(--dark);position:relative;overflow:hidden}
+
+
+
+
+
+
+.certs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+
+
+
+
+
+
+.cert-c{background:var(--gray-dark);border:1px solid var(--gray-border);border-radius:12px;padding:16px;text-align:center;transition:transform .3s cubic-bezier(.22,.68,0,1.2),box-shadow .3s ease,border-color .3s ease;cursor:default}
+
+
+
+
+
+
+.cert-c:hover{border-color:var(--purple);transform:translateY(-5px) scale(1.04);box-shadow:0 12px 32px rgba(124,58,237,.18)}
+
+
+
+
+
+
+.cert-c svg{margin-bottom:8px}
+
+
+
+
+
+
+.cert-c .cn{font-size:12px;color:var(--text-secondary);margin-bottom:2px;font-weight:500}
+
+
+
+
+
+
+.cert-c .cv{font-size:10px;color:var(--text-muted)}
+
+
+
+
+
+
+.cert-c:hover .cn{color:var(--purple-light)}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*=================================================================
+
+
+
+
+
+
+  PROJECT / PACKAGE / BLOG / CAREERS
+
+
+
+
+
+
+=================================================================*/
+
+
+
+
+
+
+.proj-hero,.pkg-hero,.blog-hero,.careers-hero{padding:60px 0 40px;text-align:center;background:linear-gradient(180deg,var(--dark),var(--black))}
+
+
+
+
+
+
+.proj-hero h1,.pkg-hero h1,.blog-hero h1,.careers-hero h1{font-size:clamp(32px,5vw,56px);font-weight:700;margin-bottom:16px;color:#ffffff}
+
+
+
+
+
+
+.proj-section,.pkg-section,.blog-section,.careers-section{padding:40px 0 100px;background:var(--black)}
+
+
+
+
+
+
+.proj-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+
+
+
+
+
+
+.proj-card,.blog-card{background:var(--gray-dark);border:1px solid var(--gray-border);border-radius:16px;overflow:hidden;transition:all .3s;cursor:pointer}
+
+
+
+
+
+
+.proj-card:hover,.blog-card:hover{border-color:var(--purple);transform:translateY(-4px);box-shadow:0 12px 48px rgba(124,58,237,.15)}
+
+
+
+
+
+
+.proj-img,.blog-img{height:176px;position:relative;overflow:hidden}
+
+
+
+
+
+
+.proj-img .pat,.blog-img .pat{position:absolute;inset:0;background:repeating-linear-gradient(45deg,transparent,transparent 20px,rgba(124,58,237,.05) 20px,rgba(124,58,237,.05) 40px)}
+
+
+
+
+
+
+.proj-img .ic{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:48px;opacity:.6;transition:all .3s}
+
+
+
+
+
+
+.proj-card:hover .ic{opacity:.9;transform:translate(-50%,-50%) scale(1.1)}
+
+
+
+
+
+
+.proj-body,.blog-body{padding:24px}
+
+
+
+
+
+
+.proj-tag,.blog-cat{font-family:'JetBrains Mono',monospace;font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--purple-light);margin-bottom:8px}
+
+
+
+
+
+
+.blog-cat{background:rgba(124,58,237,.15);padding:3px 10px;border-radius:100px}
+
+
+
+
+
+
+.proj-body h3,.blog-body h3{font-size:16px;font-weight:600;margin-bottom:8px;transition:color .3s;color:var(--text-primary)}
+
+
+
+
+
+
+.proj-card:hover .proj-body h3,.blog-card:hover .blog-body h3{color:var(--purple-light)}
+
+
+
+
+
+
+.proj-body p,.blog-body p{font-size:14px;color:var(--text-secondary);line-height:1.6}
+
+
+
+
+
+
+.proj-detail{margin-top:16px;padding-top:16px;border-top:1px solid var(--gray-border)}
+
+
+
+
+
+
+.proj-detail h4{font-size:13px;font-weight:600;color:var(--purple-light);margin-bottom:8px}
+
+
+
+
+
+
+.proj-detail ul{display:flex;flex-direction:column;gap:4px;list-style:none}
+
+
+
+
+
+
+.proj-detail li{font-size:13px;color:var(--text-secondary);padding-left:16px;position:relative}
+
+
+
+
+
+
+.proj-detail li::before{content:'>';position:absolute;left:0;color:var(--purple-light);font-weight:700}
+
+
+
+
+
+
+.pkg-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+
+
+
+
+
+
+.pkg-card{background:var(--gray-dark);border:1px solid var(--gray-border);border-radius:16px;padding:32px;transition:all .3s;display:flex;flex-direction:column}
+
+
+
+
+
+
+.pkg-card:hover{border-color:var(--purple);box-shadow:0 8px 32px rgba(124,58,237,.15);transform:translateY(-4px)}
+
+
+
+
+
+
+.pkg-card.featured{border-color:rgba(124,58,237,.5);box-shadow:0 4px 24px rgba(124,58,237,.15)}
+
+
+
+
+
+
+.pkg-label,.proj-detail h4{font-family:'JetBrains Mono',monospace;font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--purple-light);margin-bottom:8px}
+
+
+
+
+
+
+.pkg-card h3{font-size:20px;font-weight:700;margin-bottom:8px;color:var(--text-primary)}
+
+
+
+
+
+
+.pkg-desc{font-size:14px;color:var(--text-secondary);margin-bottom:20px}
+
+
+
+
+
+
+.pkg-items{display:flex;flex-direction:column;gap:8px;margin-bottom:24px;flex:1}
+
+
+
+
+
+
+.pkg-i{display:flex;align-items:flex-start;gap:10px;font-size:13px;color:var(--text-secondary);line-height:1.5}
+
+
+
+
+
+
+.pkg-i .ck{color:var(--purple-light);flex-shrink:0;margin-top:2px}
+
+
+
+
+
+
+.pkg-meta{font-size:12px;color:var(--text-muted);font-style:italic;margin-bottom:16px}
+
+
+
+
+
+
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+
+
+
+
+
+
+.blog-card{display:flex;flex-direction:column}
+
+
+
+
+
+
+.blog-img{height:180px}
+
+
+
+
+
+
+.blog-body{padding:24px;flex:1;display:flex;flex-direction:column}
+
+
+
+
+
+
+.blog-meta{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+
+
+
+
+
+
+.blog-date{font-size:12px;color:var(--text-muted)}
+
+
+
+
+
+
+.blog-body .read-more{margin-top:16px;font-size:13px;color:var(--purple-light);font-weight:500;display:inline-flex;align-items:center;gap:6px}
+
+
+
+
+
+
+.careers-intro{max-width:700px;margin:0 auto 48px;text-align:center}
+
+
+
+
+
+
+.careers-intro p{color:var(--text-secondary);line-height:1.8;font-size:15px}
+
+
+
+
+
+
+.perks-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:64px}
+
+
+
+
+
+
+.perk{background:var(--gray-dark);border:1px solid var(--gray-border);border-radius:16px;padding:24px;text-align:center;transition:all .3s}
+
+
+
+
+
+
+.perk:hover{border-color:var(--purple);transform:translateY(-4px);box-shadow:0 4px 16px rgba(124,58,237,.15)}
+
+
+
+
+
+
+.perk .p-icon{font-size:28px;margin-bottom:12px}
+
+
+
+
+
+
+.perk h4{font-size:14px;font-weight:600;margin-bottom:4px;color:var(--text-primary)}
+
+
+
+
+
+
+.perk p{font-size:13px;color:var(--text-secondary)}
+
+
+
+
+
+
+.jobs-list{max-width:800px;margin:0 auto}
+
+
+
+
+
+
+.job-card{background:var(--gray-dark);border:1px solid var(--gray-border);border-radius:16px;padding:28px 32px;margin-bottom:16px;display:flex;align-items:center;justify-content:space-between;gap:20px;transition:all .3s}
+
+
+
+
+
+
+.job-card:hover{border-color:var(--purple);box-shadow:0 4px 16px rgba(124,58,237,.1)}
+
+
+
+
+
+
+.job-info h3{font-size:17px;font-weight:600;margin-bottom:4px;color:var(--text-primary)}
+
+
+
+
+
+
+.job-info .job-meta{display:flex;gap:16px;font-size:13px;color:var(--text-muted)}
+
+
+
+
+
+
+.job-info .job-meta span{display:flex;align-items:center;gap:4px}
+
+
+
+
+
+
+.no-jobs{text-align:center;padding:48px;background:rgba(124,58,237,.06);border:1px dashed rgba(124,58,237,.3);border-radius:16px}
+
+
+
+
+
+
+.no-jobs h3{font-size:18px;margin-bottom:8px;color:var(--text-primary)}
+
+
+
+
+
+
+.no-jobs p{font-size:14px;color:var(--text-secondary);max-width:400px;margin:0 auto 20px}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*=================================================================
+
+
+
+
+
+
+  CONTACT PAGE
+
+
+
+
+
+
+=================================================================*/
+
+
+
+
+
+
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
+
+
+
+
+
+
+.contact-info h2{margin-bottom:1.25rem;color:var(--text-primary)}
+
+
+
+
+
+
+.contact-info p{color:var(--text-secondary);line-height:1.7;margin-bottom:1.5rem}
+
+
+
+
+
+
+.contact-details{display:flex;flex-direction:column;gap:1.5rem}
+
+
+
+
+
+
+.contact-item{display:flex;align-items:flex-start;gap:1rem}
+
+
+
+
+
+
+.contact-icon{width:3rem;height:3rem;border-radius:.75rem;background:rgba(124,58,237,.15);color:var(--purple-light);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+
+
+
+
+
+
+.contact-text .label{font-size:.75rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:.05em;margin-bottom:.25rem;display:block}
+
+
+
+
+
+
+.contact-text a,.contact-text p{font-size:.9375rem;color:var(--text-primary);text-decoration:none}
+
+
+
+
+
+
+.contact-text a:hover{color:var(--purple-light)}
+
+
+
+
+
+
+.contact-form-card{background:rgba(124,58,237,.06);border:1px solid rgba(124,58,237,.18);border-radius:1.25rem;padding:2.5rem;backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);box-shadow:0 8px 32px rgba(124,58,237,.08)}
+
+
+
+
+
+
+.contact-form-card h3{font-size:1.5rem;margin-bottom:1.5rem;color:var(--text-primary)}
+
+
+
+
+
+
+.form-group{margin-bottom:1.25rem}
+
+
+
+
+
+
+.form-group label{display:block;font-size:.875rem;font-weight:600;color:var(--text-primary);margin-bottom:.5rem}
+
+
+
+
+
+
+.form-group input,.form-group textarea,.form-group select{width:100%;padding:.75rem 1rem;border:1.5px solid var(--gray-border);border-radius:.5rem;font-family:'Inter',sans-serif;font-size:.9375rem;color:var(--text-primary);background:var(--gray-dark);transition:border-color .2s,box-shadow .2s;outline:none}
+
+
+
+
+
+
+.form-group input:focus,.form-group textarea:focus,.form-group select:focus{border-color:var(--purple);box-shadow:0 0 0 3px rgba(124,58,237,.12),0 0 20px rgba(124,58,237,.08)}
+
+
+
+
+
+
+.form-group textarea{resize:vertical;min-height:8rem}
+
+
+
+
+
+
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*=================================================================
+
+
+
+
+
+
+  FOOTER
+
+
+
+
+
+
+=================================================================*/
+
+
+
+
+
+
+.site-footer{padding:60px 0 30px;border-top:1px solid #2d2d2d;background:#0a0a0a;position:relative;overflow:hidden}
+
+
+
+
+
+
+.site-footer::before{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(124,58,237,.08) 1px,transparent 1px);background-size:32px 32px;pointer-events:none}
+
+
+
+
+
+
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:3rem;margin-bottom:3rem}
+
+
+
+
+
+
+.footer-brand p{font-size:.9375rem;color:#a0a0a0;line-height:1.7;max-width:24rem;margin-top:1rem}
+
+
+
+
+
+
+.footer-col h4{font-size:.875rem;color:#ffffff;text-transform:uppercase;letter-spacing:.05em;margin-bottom:1rem;font-weight:600}
+
+
+
+
+
+
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:.75rem}
+
+
+
+
+
+
+.footer-col a,.footer-col .nav-link{font-size:.9375rem;color:#a0a0a0;text-decoration:none;transition:color .2s;cursor:pointer;background:none;border:none;font-family:inherit;padding:0;text-align:left}
+
+
+
+
+
+
+.footer-col a:hover,.footer-col .nav-link:hover{color:#a855f7}
+
+
+
+
+
+
+.footer-bottom{padding:20px 0 0;border-top:1px solid #2d2d2d;display:flex;align-items:center;justify-content:space-between}
+
+
+
+
+
+
+.footer-bottom p{font-size:.875rem;color:#666666}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*=================================================================
+
+
+
+
+
+
+  DEEP DIVE (dark section)
+
+
+
+
+
+
+=================================================================*/
+
+
+
+
+
+
+.deep-dive{padding:80px 0 100px;background:var(--dark);color:var(--text-primary);position:relative;overflow:hidden}
+
+
+
+
+
+
+.deep-dive::before{content:'';position:absolute;top:-200px;right:-200px;width:600px;height:600px;background:radial-gradient(circle,rgba(124,58,237,.15),transparent 70%);pointer-events:none}
+
+
+
+
+
+
+.deep-dive::after{content:'';position:absolute;bottom:-200px;left:-200px;width:500px;height:500px;background:radial-gradient(circle,rgba(124,58,237,.1),transparent 70%);pointer-events:none}
+
+
+
+
+
+
+.dd-header{text-align:center;margin-bottom:56px;position:relative;z-index:2}
+
+
+
+
+
+
+.dd-header .label{color:var(--purple-light)}
+
+
+
+
+
+
+.dd-header .label::before{background:var(--purple)}
+
+
+
+
+
+
+.dd-header h2{font-size:clamp(28px,4vw,48px);margin-top:16px;color:var(--text-primary)}
+
+
+
+
+
+
+.dd-header h2 .m{color:var(--text-secondary)}
+
+
+
+
+
+
+.dd-header p{color:var(--text-secondary);max-width:520px;margin:16px auto 0}
+
+
+
+
+
+
+.dd-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;position:relative;z-index:2}
+
+
+
+
+
+
+.dd-card{background:rgba(124,58,237,.06);border:1px solid rgba(124,58,237,.18);border-radius:16px;padding:32px;transition:transform .3s cubic-bezier(.22,.68,0,1.2),box-shadow .3s ease,border-color .3s ease,background .3s ease}
+
+
+
+
+
+
+.dd-card:hover{background:rgba(124,58,237,.1);border-color:rgba(124,58,237,.35);transform:translateY(-5px);box-shadow:0 16px 48px rgba(0,0,0,.35)}
+
+
+
+
+
+
+.dd-card h3{font-size:17px;font-weight:600;color:var(--text-primary);margin-bottom:6px}
+
+
+
+
+
+
+.dd-card .dd-sub{font-size:13px;color:var(--purple-light);margin-bottom:16px}
+
+
+
+
+
+
+.dd-techs{display:flex;flex-direction:column;gap:6px}
+
+
+
+
+
+
+.dd-tech{font-size:13px;color:var(--text-secondary);padding-left:16px;position:relative;line-height:1.5}
+
+
+
+
+
+
+.dd-tech::before{content:'>';position:absolute;left:0;color:var(--purple-light);font-weight:700}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*=================================================================
+
+
+
+
+
+
+  ROADMAP
+
+
+
+
+
+
+=================================================================*/
+
+
+
+
+
+
+.roadmap{padding:80px 0 100px;background:var(--black);position:relative;overflow:hidden}
+
+
+
+
+
+
+.rm-container{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+
+
+
+
+
+
+.rm-text h2{font-size:clamp(24px,3.5vw,40px);margin-bottom:16px;line-height:1.3;color:var(--text-primary)}
+
+
+
+
+
+
+.rm-text h2 .typing{display:inline-block;border-right:2px solid var(--purple);padding-right:4px;animation:blink .8s step-end infinite}
+
+
+
+
+
+
+.rm-text p{color:var(--text-secondary);line-height:1.8;margin-bottom:20px;font-size:15px}
+
+
+
+
+
+
+.rm-cards{position:relative;overflow:hidden;contain:layout}
+
+
+
+
+
+
+.rm-orbit{position:absolute;inset:-40px;pointer-events:none;z-index:0}
+
+
+
+
+
+
+.rm-orbit .o1{position:absolute;inset:0;border:1px solid rgba(124,58,237,.15);border-radius:50%;animation:spinSlow 30s linear infinite}
+
+
+
+
+
+
+.rm-orbit .o2{position:absolute;inset:30px;border:1px solid rgba(124,58,237,.2);border-radius:50%;animation:spinSlow 22s linear infinite reverse}
+
+
+
+
+
+
+.rm-orbit .o3{position:absolute;inset:60px;border:1px solid rgba(124,58,237,.1);border-radius:50%;animation:spinSlow 40s linear infinite}
+
+
+
+
+
+
+.rm-orbit .sat{position:absolute;width:10px;height:10px;border-radius:50%;background:var(--purple-light);box-shadow:0 0 12px rgba(124,58,237,.6)}
+
+
+
+
+
+
+.rm-orbit .sat.s1{top:-5px;left:50%}
+
+
+
+
+
+
+.rm-orbit .sat.s2{bottom:-5px;right:20%}
+
+
+
+
+
+
+.rm-orbit .sat.s3{top:40%;left:-5px}
+
+
+
+
+
+
+.rm-step-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;position:relative;z-index:2}
+
+
+
+
+
+
+.rm-step{background:rgba(124,58,237,.06);backdrop-filter:blur(12px);border:1px solid rgba(124,58,237,.18);border-radius:16px;padding:24px;text-align:center;transition:all .35s cubic-bezier(.22,.68,0,1.2);cursor:default;animation:borderGlow 4s ease infinite}
+
+
+
+
+
+
+.rm-step:hover{transform:translateY(-6px) scale(1.04);box-shadow:0 16px 40px rgba(124,58,237,.18);border-color:rgba(168,85,247,.5)}
+
+
+
+
+
+
+.rm-step .rm-icon{width:48px;height:48px;border-radius:14px;margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-size:22px;transition:transform .3s}
+
+
+
+
+
+
+.rm-step:hover .rm-icon{transform:scale(1.15) rotate(-5deg)}
+
+
+
+
+
+
+.rm-step h4{font-size:1.25rem;font-weight:600;margin-bottom:4px;color:var(--text-primary)}
+
+
+
+
+
+
+.rm-step .rm-link{font-size:13px;color:var(--purple-light);font-weight:500;display:inline-flex;align-items:center;gap:4px}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*=================================================================
+
+
+
+
+
+
+  SKILLS
+
+
+
+
+
+
+=================================================================*/
+
+
+
+
+
+
+.skills-section{padding:80px 0;background:var(--dark)}
+
+
+
+
+
+
+.skills-split{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+
+
+
+
+
+
+.skills-left h2{font-size:clamp(24px,3.5vw,40px);margin-bottom:16px;line-height:1.3;color:var(--text-primary)}
+
+
+
+
+
+
+.skills-left p{color:var(--text-secondary);line-height:1.8;font-size:15px;margin-bottom:20px}
+
+
+
+
+
+
+.skill-cats{display:flex;flex-wrap:wrap;gap:10px}
+
+
+
+
+
+
+.skill-cat{padding:8px 20px;border-radius:100px;font-size:13px;font-weight:500;cursor:default;transition:all .3s}
+
+
+
+
+
+
+.skill-cat.sc-purple{background:rgba(124,58,237,.2);color:var(--purple-light);border:1px solid rgba(124,58,237,.3)}
+
+
+
+
+
+
+.skill-cat.sc-green{background:rgba(22,163,74,.15);color:#4ade80;border:1px solid rgba(34,197,94,.2)}
+
+
+
+
+
+
+.skill-cat.sc-yellow{background:rgba(202,138,4,.15);color:#fbbf24;border:1px solid rgba(234,179,8,.2)}
+
+
+
+
+
+
+.skill-cat.sc-gray{background:var(--gray-mid);color:var(--text-secondary);border:1px solid var(--gray-border)}
+
+
+
+
+
+
+.skill-cat:hover{transform:scale(1.05)}
+
+
+
+
+
+
+.skills-right{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+
+
+
+
+
+
+.sk-card{background:var(--gray-dark);border:1px solid var(--gray-border);border-radius:14px;padding:20px;transition:all .3s;cursor:default}
+
+
+
+
+
+
+.sk-card:hover{border-color:var(--purple);transform:translateY(-4px);box-shadow:0 4px 16px rgba(124,58,237,.15)}
+
+
+
+
+
+
+.sk-card .sk-cat{font-family:'JetBrains Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px}
+
+
+
+
+
+
+.sk-card .sk-cat.c-sec{color:var(--purple-light)}
+
+
+
+
+
+
+.sk-card .sk-cat.c-net{color:#4ade80}
+
+
+
+
+
+
+.sk-card .sk-cat.c-cloud{color:#fbbf24}
+
+
+
+
+
+
+.sk-card .sk-cat.c-auto{color:var(--text-secondary)}
+
+
+
+
+
+
+.sk-card .sk-level{display:flex;align-items:center;gap:6px;font-size:11px;color:var(--text-muted);margin-bottom:8px}
+
+
+
+
+
+
+.sk-card .sk-level .dot-l{width:6px;height:6px;border-radius:50%}
+
+
+
+
+
+
+.sk-card h4{font-size:14px;font-weight:600;color:var(--text-primary)}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*=================================================================
+
+
+
+
+
+
+  DARK CTA BANNER
+
+
+
+
+
+
+=================================================================*/
+
+
+
+
+
+
+.dark-cta{padding:100px 0;background:linear-gradient(135deg,#0a0a0a 0%,#1a0a2e 40%,#110a20 70%,#0a0a0a 100%);background-size:300% 300%;animation:gradShift 12s ease infinite;position:relative;overflow:hidden}
+
+
+
+
+
+
+.dark-cta::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:800px;height:800px;background:radial-gradient(circle,rgba(124,58,237,.18) 0%,rgba(124,58,237,.06) 40%,transparent 70%);pointer-events:none;animation:pulse 8s ease-in-out infinite}
+
+
+
+
+
+
+.dark-cta::after{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(124,58,237,.08) 1px,transparent 1px);background-size:40px 40px;pointer-events:none}
+
+
+
+
+
+
+.dark-cta-inner{position:relative;z-index:2;display:grid;grid-template-columns:1fr auto;gap:56px;align-items:center}
+
+
+
+
+
+
+.dark-cta-inner h2{font-size:clamp(28px,4vw,52px);color:var(--text-primary);margin-bottom:16px;font-weight:800;line-height:1.15;background:linear-gradient(135deg,#ffffff 0%,#c4b5fd 50%,#a855f7 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+
+
+
+
+
+
+.dark-cta-inner p{color:rgba(232,232,232,.6);font-size:16px;line-height:1.8;max-width:520px}
+
+
+
+
+
+
+.dark-cta-form{display:flex;flex-direction:column;gap:12px;min-width:320px}
+
+
+
+
+
+
+.dark-cta-form input{padding:14px 18px;border:1px solid rgba(124,58,237,.2);border-radius:12px;background:rgba(124,58,237,.07);color:var(--text-primary);font-family:'Inter',sans-serif;font-size:14px;outline:none;transition:all .25s;backdrop-filter:blur(8px)}
+
+
+
+
+
+
+.dark-cta-form input::placeholder{color:rgba(232,232,232,.4)}
+
+
+
+
+
+
+.dark-cta-form input:focus{border-color:rgba(168,85,247,.6);box-shadow:0 0 0 3px rgba(124,58,237,.2),0 0 20px rgba(124,58,237,.1)}
+
+
+
+
+
+
+.dark-cta-form .btn-p{background:linear-gradient(135deg,#7c3aed,#9333ea);box-shadow:0 4px 24px rgba(124,58,237,.4);transition:all .3s;font-weight:700;letter-spacing:.02em}
+
+
+
+
+
+
+.dark-cta-form .btn-p:hover{transform:translateY(-3px);box-shadow:0 8px 40px rgba(124,58,237,.6)}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*=================================================================
+
+
+
+
+
+
+  LAVA BLOBS
+
+
+
+
+
+
+=================================================================*/
+
+
+
+
+
+
+.lava-bg{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+
+
+
+
+
+
+.lava-blob{position:absolute;border-radius:50%;filter:blur(80px);mix-blend-mode:screen;opacity:.6}
+
+
+
+
+
+
+.lb1{width:300px;height:300px;background:rgba(124,58,237,.35);top:10%;left:15%;animation:lavaMove 12s ease-in-out infinite}
+
+
+
+
+
+
+.lb2{width:250px;height:250px;background:rgba(168,85,247,.28);top:30%;right:10%;animation:lavaMove2 15s ease-in-out infinite}
+
+
+
+
+
+
+.lb3{width:200px;height:200px;background:rgba(109,40,217,.22);bottom:20%;left:40%;animation:lavaMove 18s ease-in-out infinite 2s}
+
+
+
+
+
+
+.lb4{width:180px;height:180px;background:rgba(192,132,252,.18);top:60%;right:30%;animation:lavaMove2 14s ease-in-out infinite 1s}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*=================================================================
+
+
+
+
+
+
+  IMPACT STATS
+
+
+
+
+
+
+=================================================================*/
+
+
+
+
+
+
+.impact-stats{padding:80px 0;background:var(--dark);position:relative;overflow:hidden}
+
+
+
+
+
+
+.impact-stats::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 30% 50%,rgba(124,58,237,.12),transparent 60%),radial-gradient(ellipse at 70% 50%,rgba(124,58,237,.08),transparent 60%);pointer-events:none}
+
+
+
+
+
+
+.impact-stats .container{position:relative;z-index:2}
+
+
+
+
+
+
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:32px}
+
+
+
+
+
+
+.stat-card{text-align:center;padding:40px 24px;border-radius:16px;background:rgba(124,58,237,.06);border:1px solid rgba(124,58,237,.18);transition:all .4s;position:relative;overflow:hidden}
+
+
+
+
+
+
+.stat-card::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:60px;height:3px;background:linear-gradient(90deg,var(--purple),var(--purple-light));border-radius:0 0 4px 4px;opacity:0;transition:opacity .4s}
+
+
+
+
+
+
+.stat-card:hover{border-color:rgba(124,58,237,.35);background:rgba(124,58,237,.1);transform:translateY(-4px)}
+
+
+
+
+
+
+.stat-card:hover::before{opacity:1}
+
+
+
+
+
+
+.stat-number{font-size:clamp(36px,5vw,56px);font-weight:800;background:linear-gradient(135deg,var(--purple-light),var(--purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1.1;margin-bottom:8px}
+
+
+
+
+
+
+.stat-suffix{font-size:.6em}
+
+
+
+
+
+
+.stat-label{font-size:14px;color:var(--text-secondary);font-weight:600;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:8px;font-family:'JetBrains Mono',monospace}
+
+
+
+
+
+
+.stat-desc{font-size:13px;color:var(--text-muted);line-height:1.6;max-width:200px;margin:0 auto}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*=================================================================
+
+
+
+
+
+
+  USE CASES
+
+
+
+
+
+
+=================================================================*/
+
+
+
+
+
+
+.use-cases{padding:80px 0;background:var(--black)}
+
+
+
+
+
+
+.uc-tabs{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-bottom:40px}
+
+
+
+
+
+
+.uc-tab{padding:10px 20px;border-radius:100px;font-size:13px;font-weight:600;cursor:pointer;border:1px solid var(--gray-border);color:var(--text-secondary);background:var(--gray-dark);transition:all .3s;font-family:'Inter',sans-serif}
+
+
+
+
+
+
+.uc-tab:hover,.uc-tab.active{background:var(--purple);color:#f0f0f0;border-color:var(--purple)}
+
+
+
+
+
+
+.uc-panel{display:none;animation:fadeIn .5s ease}
+
+
+
+
+
+
+.uc-panel.active{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+
+
+
+
+
+
+.uc-content h3{font-size:clamp(20px,2.5vw,28px);color:var(--text-primary);margin-bottom:16px}
+
+
+
+
+
+
+.uc-content p{color:var(--text-secondary);font-size:15px;line-height:1.8;margin-bottom:20px}
+
+
+
+
+
+
+.uc-content .caps{display:flex;flex-direction:column;gap:10px}
+
+
+
+
+
+
+.uc-content .cap{display:flex;align-items:center;gap:10px;font-size:14px;color:var(--text-secondary)}
+
+
+
+
+
+
+.uc-content .ck{color:var(--purple-light);font-weight:700}
+
+
+
+
+
+
+.uc-img-ph{background:linear-gradient(135deg,rgba(124,58,237,.1),var(--gray-dark));border-radius:16px;height:320px;display:flex;align-items:center;justify-content:center;border:1px dashed rgba(124,58,237,.3);position:relative;overflow:hidden}
+
+
+
+
+
+
+.uc-img-ph::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(124,58,237,.06),rgba(124,58,237,.04))}
+
+
+
+
+
+
+.uc-img-ph span{position:relative;font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--text-muted);padding:16px 24px;background:var(--gray-dark);border-radius:8px;border:1px solid var(--gray-border)}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*=================================================================
+
+
+
+
+
+
+  INTEGRATIONS
+
+
+
+
+
+
+=================================================================*/
+
+
+
+
+
+
+.integrations{padding:80px 0;background:var(--dark);position:relative;overflow:hidden}
+
+
+
+
+
+
+.integrations::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 50% 50%,rgba(124,58,237,.07),transparent);pointer-events:none}
+
+
+
+
+
+
+.integ-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:20px;max-width:1000px;margin:0 auto 40px}
+
+
+
+
+
+
+.integ-tile{background:rgba(124,58,237,.06);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-radius:18px;padding:32px 20px;text-align:center;border:1px solid rgba(124,58,237,.18);transition:all .35s cubic-bezier(.22,.68,0,1.2);cursor:default;display:flex;flex-direction:column;align-items:center;gap:14px;position:relative;overflow:hidden}
+
+
+
+
+
+
+.integ-tile::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(124,58,237,.08),transparent);opacity:0;transition:opacity .3s}
+
+
+
+
+
+
+.integ-tile:hover{border-color:rgba(124,58,237,.4);box-shadow:0 12px 40px rgba(124,58,237,.2),0 0 0 1px rgba(168,85,247,.2);transform:translateY(-6px) scale(1.03)}
+
+
+
+
+
+
+.integ-tile:hover::before{opacity:1}
+
+
+
+
+
+
+.integ-icon{width:56px;height:56px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:800;font-family:'JetBrains Mono',monospace;color:#f0f0f0;box-shadow:0 4px 16px rgba(0,0,0,.3);transition:transform .3s}
+
+
+
+
+
+
+.integ-tile:hover .integ-icon{transform:scale(1.12) rotate(-3deg)}
+
+
+
+
+
+
+.integ-icon.cisco{background:linear-gradient(135deg,#049fd9,#005073)}
+
+
+
+
+
+
+.integ-icon.forti{background:linear-gradient(135deg,#da291c,#8c1a11)}
+
+
+
+
+
+
+.integ-icon.splk{background:linear-gradient(135deg,#65a637,#3c6e1f)}
+
+
+
+
+
+
+.integ-icon.azure{background:linear-gradient(135deg,#0078d4,#004e8c)}
+
+
+
+
+
+
+.integ-icon.aws{background:linear-gradient(135deg,#ff9900,#cc7a00)}
+
+
+
+
+
+
+.integ-icon.mtik{background:linear-gradient(135deg,#293239,#0f1519)}
+
+
+
+
+
+
+.integ-icon.aruba{background:linear-gradient(135deg,#f5811f,#c66819)}
+
+
+
+
+
+
+.integ-icon.k8s{background:linear-gradient(135deg,#326ce5,#1e4a9e)}
+
+
+
+
+
+
+.integ-icon.ansi{background:linear-gradient(135deg,#ee0000,#a30000)}
+
+
+
+
+
+
+.integ-icon.tf{background:linear-gradient(135deg,#7b42bc,#5c2d91)}
+
+
+
+
+
+
+.integ-tile span{font-size:13px;font-weight:700;color:var(--text-secondary);letter-spacing:.02em}
+
+
+
+
+
+
+.integ-tile .partner-cert{font-size:10px;color:var(--purple-light);font-family:'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:.08em;background:rgba(124,58,237,.15);padding:2px 8px;border-radius:100px;border:1px solid rgba(124,58,237,.3)}
+
+
+
+
+
+
+.integ-cta{text-align:center;margin-top:8px}
+
+
+
+
+
+
+.integ-cta p{color:var(--text-secondary);font-size:14px;margin-bottom:16px}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*=================================================================
+
+
+
+
+
+
+  TESTIMONIALS
+
+
+
+
+
+
+=================================================================*/
+
+
+
+
+
+
+.testimonials{padding:80px 0;background:linear-gradient(135deg,#0a0a0a,#120828,#0a0a0a);position:relative;overflow:hidden}
+
+
+
+
+
+
+.testimonials::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(124,58,237,.4),transparent)}
+
+
+
+
+
+
+.test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+
+
+
+
+
+
+.test-card{background:rgba(124,58,237,.06);border:1px solid rgba(124,58,237,.18);border-radius:16px;padding:32px;transition:all .4s;display:flex;flex-direction:column}
+
+
+
+
+
+
+.test-card:hover{border-color:rgba(124,58,237,.35);background:rgba(124,58,237,.1);transform:translateY(-3px)}
+
+
+
+
+
+
+.test-card .stars{color:#fbbf24;font-size:14px;letter-spacing:2px;margin-bottom:16px}
+
+
+
+
+
+
+.test-quote{color:var(--text-secondary);font-size:14px;line-height:1.8;flex:1;margin-bottom:24px;font-style:italic}
+
+
+
+
+
+
+.test-quote::before{content:'C';font-size:32px;color:var(--purple-light);font-family:'Libre Baskerville',serif;line-height:0;vertical-align:-8px;margin-right:4px}
+
+
+
+
+
+
+.test-author{display:flex;align-items:center;gap:14px;padding-top:20px;border-top:1px solid rgba(124,58,237,.15)}
+
+
+
+
+
+
+.test-avatar{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--purple),#6d28d9);display:flex;align-items:center;justify-content:center;color:#f0f0f0;font-weight:700;font-size:16px;flex-shrink:0}
+
+
+
+
+
+
+.test-name{color:var(--text-primary);font-weight:600;font-size:14px}
+
+
+
+
+
+
+.test-role{color:var(--text-muted);font-size:12px;margin-top:2px}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*=================================================================
+
+
+
+
+
+
+  ANNOUNCEMENT BAR / AWARDS / RESOURCES
+
+
+
+
+
+
+=================================================================*/
+
+
+
+
+
+
+.announce-bar{background:linear-gradient(90deg,var(--purple),#9333ea,var(--purple));padding:10px 0;text-align:center;position:relative;z-index:101;overflow:hidden}
+
+
+
+
+
+
+.announce-bar::before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(255,255,255,.06),transparent);animation:gradShift 6s ease infinite}
+
+
+
+
+
+
+.announce-bar a{color:#f0f0f0;font-size:13px;font-weight:500;text-decoration:none;display:inline-flex;align-items:center;gap:8px;font-family:'Inter',sans-serif}
+
+
+
+
+
+
+.announce-bar a:hover{text-decoration:underline}
+
+
+
+
+
+
+.announce-bar .ann-badge{background:rgba(255,255,255,.15);padding:2px 10px;border-radius:100px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px}
+
+
+
+
+
+
+.announce-bar .ann-arrow{transition:transform .2s}
+
+
+
+
+
+
+.announce-bar a:hover .ann-arrow{transform:translateX(3px)}
+
+
+
+
+
+
+.awards{padding:80px 0;background:linear-gradient(180deg,var(--dark),#0a0514)}
+
+
+
+
+
+
+.awards .container{position:relative;z-index:2}
+
+
+
+
+
+
+.awards-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+
+
+
+
+
+
+.award-card{background:rgba(124,58,237,.06);border:1px solid rgba(124,58,237,.18);border-radius:20px;padding:0;overflow:hidden;transition:all .4s}
+
+
+
+
+
+
+.award-card:hover{border-color:rgba(124,58,237,.35);transform:translateY(-4px)}
+
+
+
+
+
+
+.award-img{height:180px;background:linear-gradient(135deg,rgba(124,58,237,.2),rgba(124,58,237,.1));display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+
+
+
+
+
+
+.award-img::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 60%,rgba(0,0,0,.4));pointer-events:none}
+
+
+
+
+
+
+.award-img span{position:relative;z-index:2;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--text-secondary);background:rgba(0,0,0,.5);padding:10px 18px;border-radius:8px;border:1px dashed rgba(124,58,237,.3)}
+
+
+
+
+
+
+.award-body{padding:24px}
+
+
+
+
+
+
+.award-eyebrow{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--purple-light);margin-bottom:10px;font-family:'JetBrains Mono',monospace}
+
+
+
+
+
+
+.award-body h3{font-size:18px;color:var(--text-primary);margin-bottom:10px;font-weight:700}
+
+
+
+
+
+
+.award-body p{font-size:13px;color:var(--text-secondary);line-height:1.7;margin-bottom:16px}
+
+
+
+
+
+
+.award-link{font-size:13px;color:var(--purple-light);font-weight:600;text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:gap .2s}
+
+
+
+
+
+
+.award-link:hover{gap:10px;color:var(--text-primary)}
+
+
+
+
+
+
+.resources{padding:80px 0;background:var(--dark)}
+
+
+
+
+
+
+.res-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+
+
+
+
+
+
+.res-card{background:var(--gray-dark);border-radius:16px;overflow:hidden;border:1px solid var(--gray-border);transition:all .3s;display:flex;flex-direction:column}
+
+
+
+
+
+
+.res-card:hover{border-color:var(--purple);box-shadow:0 16px 48px rgba(124,58,237,.12);transform:translateY(-5px)}
+
+
+
+
+
+
+.res-img{height:180px;background:linear-gradient(135deg,rgba(124,58,237,.15),var(--gray-dark));display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+
+
+
+
+
+
+.res-img::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(124,58,237,.08),rgba(124,58,237,.04))}
+
+
+
+
+
+
+.res-img span:not(.res-date){position:relative;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--text-muted);background:var(--gray-dark);padding:10px 18px;border-radius:8px;border:1px dashed var(--gray-border)}
+
+
+
+
+
+
+.res-date{position:absolute;top:14px;left:14px;background:var(--purple);color:#f0f0f0;font-size:11px;font-weight:700;padding:4px 12px;border-radius:100px;font-family:'JetBrains Mono',monospace;z-index:2}
+
+
+
+
+
+
+.res-body{padding:24px;flex:1;display:flex;flex-direction:column}
+
+
+
+
+
+
+.res-tag{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--purple-light);margin-bottom:10px;font-family:'JetBrains Mono',monospace}
+
+
+
+
+
+
+.res-body h3{font-size:17px;color:var(--text-primary);margin-bottom:10px;font-weight:700;line-height:1.4}
+
+
+
+
+
+
+.res-body p{font-size:13px;color:var(--text-secondary);line-height:1.7;flex:1}
+
+
+
+
+
+
+.res-link{margin-top:16px;font-size:13px;color:var(--purple-light);font-weight:600;text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:gap .2s}
+
+
+
+
+
+
+.res-link:hover{gap:10px;color:var(--text-primary)}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*=================================================================
+
+
+
+
+
+
+  SCROLL REVEAL
+
+
+
+
+
+
+=================================================================*/
+
+
+
+
+
+
+.grad-text-electric{background:linear-gradient(135deg,var(--purple-light) 0%,var(--purple) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+
+
+
+
+
+
+.grad-text-gold{background:linear-gradient(135deg,var(--purple-light) 0%,#c4b5fd 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+
+
+
+
+
+
+.glass-card{background:rgba(124,58,237,.06);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(124,58,237,.18);border-radius:20px;transition:all .35s cubic-bezier(.22,.68,0,1.2)}
+
+
+
+
+
+
+.glass-card:hover{transform:translateY(-6px);box-shadow:0 20px 60px rgba(124,58,237,.2),0 0 0 1px rgba(168,85,247,.3);border-color:rgba(168,85,247,.4)}
+
+
+
+
+
+
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .65s ease,transform .65s cubic-bezier(.22,.68,0,1.2)}
+
+
+
+
+
+
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+
+
+
+
+
+.reveal-scale{opacity:0;transform:scale(.95);transition:opacity .6s ease,transform .6s cubic-bezier(.22,.68,0,1.2)}
+
+
+
+
+
+
+.reveal-scale.visible{opacity:1;transform:scale(1)}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*=================================================================
+
+
+
+
+
+
+  RESPONSIVE
+
+
+
+
+
+
+=================================================================*/
+
+
+
+
+
+
+@media(max-width:1024px){
+
+
+
+
+
+
+  .svc-grid-home{grid-template-columns:repeat(2,1fr)}
+
+
+
+
+
+
+  .about-grid{grid-template-columns:1fr}
+
+
+
+
+
+
+  .cred-grid,.contact-grid{grid-template-columns:1fr}
+
+
+
+
+
+
+  .blog-grid{grid-template-columns:1fr 1fr}
+
+
+
+
+
+
+  .perks-grid{grid-template-columns:repeat(2,1fr)}
+
+
+
+
+
+
+  .fs-cta{grid-template-columns:1fr;text-align:center}
+
+
+
+
+
+
+  .orb{margin:0 auto}
+
+
+
+
+
+
+  .footer-grid{grid-template-columns:1fr 1fr}
+
+
+
+
+
+
+  .dd-grid{grid-template-columns:1fr}
+
+
+
+
+
+
+  .rm-container{grid-template-columns:1fr}
+
+
+
+
+
+
+  .skills-split{grid-template-columns:1fr}
+
+
+
+
+
+
+  .dark-cta-inner{grid-template-columns:1fr;text-align:center}
+
+
+
+
+
+
+  .dark-cta-form{margin:0 auto}
+
+
+
+
+
+
+  .stats-grid{grid-template-columns:repeat(2,1fr)}
+
+
+
+
+
+
+  .test-grid{grid-template-columns:1fr 1fr}
+
+
+
+
+
+
+  .uc-panel.active{grid-template-columns:1fr}
+
+
+
+
+
+
+  .awards-grid{grid-template-columns:1fr 1fr}
+
+
+
+
+
+
+  .res-grid{grid-template-columns:1fr 1fr}
+
+
+
+
+
+
+}
+
+
+
+
+
+
+@media(max-width:768px){
+
+
+
+
+
+
+  nav{display:none}
+
+
+
+
+
+
+  .mob-btn{display:block}
+
+
+
+
+
+
+  .svc-grid-home,.proj-grid,.pkg-grid,.blog-grid{grid-template-columns:1fr}
+
+
+
+
+
+
+  .stats-g{grid-template-columns:repeat(2,1fr)}
+
+
+
+
+
+
+  .certs-grid{grid-template-columns:repeat(2,1fr)}
+
+
+
+
+
+
+  .values-grid{grid-template-columns:1fr}
+
+
+
+
+
+
+  .perks-grid{grid-template-columns:1fr 1fr}
+
+
+
+
+
+
+  .form-row{grid-template-columns:1fr}
+
+
+
+
+
+
+  .footer-grid{grid-template-columns:1fr;gap:32px}
+
+
+
+
+
+
+  .footer-bottom{flex-direction:column;gap:16px;text-align:center}
+
+
+
+
+
+
+  .svc-body .caps{grid-template-columns:1fr}
+
+
+
+
+
+
+  .job-card{flex-direction:column;align-items:flex-start}
+
+
+
+
+
+
+  .rm-step-grid{grid-template-columns:1fr}
+  .rm-orbit{display:none}
+  .rm-cards{overflow:hidden;max-width:100%}
+  .rm-container{gap:32px}
+  .roadmap{overflow:hidden}
+
+
+
+
+
+
+  .skills-right{grid-template-columns:1fr}
+
+
+
+
+
+
+  .dark-cta-form{min-width:auto;width:100%}
+
+
+
+
+
+
+  .stats-grid{grid-template-columns:1fr}
+
+
+
+
+
+
+  .test-grid{grid-template-columns:1fr}
+
+
+
+
+
+
+  .integ-grid{grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:12px}
+
+
+
+
+
+
+  .uc-tabs{gap:8px}
+
+
+
+
+
+
+  .uc-tab{font-size:12px;padding:8px 14px}
+
+
+
+
+
+
+  .uc-img-ph{height:220px}
+
+
+
+
+
+
+  .awards-grid{grid-template-columns:1fr}
+
+
+
+
+
+
+  .res-grid{grid-template-columns:1fr}
+
+
+
+
+
+
+  .award-img{height:140px}
+
+
+
+
+
+
+  .res-img{height:140px}
+
+
+
+
+
+
+  .dark-cta-inner{grid-template-columns:1fr;text-align:center}
+
+
+
+
+
+
+}
+
+
+
+
+
+
+@media(max-width:900px){.integ-grid{grid-template-columns:repeat(3,1fr)}}
+
+
+
+
+
+
+@media(max-width:600px){.integ-grid{grid-template-columns:repeat(2,1fr)}}
+
+
+
+
+
+
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ═══════════ HEADER ═══════════ -->
+
+
+
+
+
+
+<!-- SPLUNK-INSPIRED: Announcement Ticker Bar -->
+
+
+
+
+
+
+<header>
+
+
+
+
+
+
+  <div class="inner">
+
+
+
+
+
+
+    <div class="logo-g" onclick="go(&#39;home&#39;)">
+
+
+
+
+
+
+      <div class="logo-t">RSquared <span>Technologies</span></div>
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+    <nav id="dNav">
+
+
+
+
+
+
+      <button class="nav-link active" data-page="home">Home</button>
+
+
+
+
+
+
+      <button class="nav-link" data-page="services">Services</button>
+
+
+
+
+
+
+      <button class="nav-link" data-page="about">About</button>
+
+
+
+
+
+
+      <button class="nav-link" data-page="contact">Contact</button>
+
+
+
+
+
+
+      <a class="btn btn-p" onclick="go(&#39;contact&#39;)" style="cursor:pointer">Get Started</a>
+
+
+
+
+
+
+    </nav>
+
+
+
+
+
+
+    <button class="mob-btn" onclick="document.getElementById(&#39;mNav&#39;).classList.add(&#39;open&#39;)" aria-label="Menu">
+
+
+
+
+
+
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="6" x2="20" y2="6"></line><line x1="4" y1="12" x2="20" y2="12"></line><line x1="4" y1="18" x2="20" y2="18"></line></svg>
+
+
+
+
+
+
+    </button>
+
+
+
+
+
+
+  </div>
+
+
+
+
+
+
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ═══════════ MOBILE NAV ═══════════ -->
+
+
+
+
+
+
+<div id="mNav" class="mob-nav">
+
+
+
+
+
+
+  <button class="cls" onclick="document.getElementById(&#39;mNav&#39;).classList.remove(&#39;open&#39;)">×</button>
+
+
+
+
+
+
+  <button class="nav-link active" data-page="home" onclick="document.getElementById(&#39;mNav&#39;).classList.remove(&#39;open&#39;)">Home</button>
+
+
+
+
+
+
+  <button class="nav-link" data-page="services" onclick="document.getElementById(&#39;mNav&#39;).classList.remove(&#39;open&#39;)">Services</button>
+
+
+
+
+
+
+  <button class="nav-link" data-page="about" onclick="document.getElementById(&#39;mNav&#39;).classList.remove(&#39;open&#39;)">About</button>
+
+
+
+
+
+
+  <button class="nav-link" data-page="contact" onclick="document.getElementById(&#39;mNav&#39;).classList.remove(&#39;open&#39;)">Contact</button>
+
+
+
+
+
+
+  <a class="btn btn-p" onclick="go(&#39;contact&#39;);document.getElementById(&#39;mNav&#39;).classList.remove(&#39;open&#39;)" style="cursor:pointer">Get Started</a>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ╔═══════════════════════════════════════════════════════════╗
+
+
+
+
+
+
+     ║  PAGE: HOME                                              ║
+
+
+
+
+
+
+     ╚═══════════════════════════════════════════════════════════╝ -->
+
+
+
+
+
+
+<div id="page-home" class="page active">
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Hero -->
+
+
+
+
+
+
+  <section class="hero">
+
+
+
+
+
+
+    <div class="hero-bg"><div class="gt"></div><div class="b1"></div><div class="b2"></div><div class="lava-bg"><div class="lava-blob lb1"></div><div class="lava-blob lb2"></div><div class="lava-blob lb3"></div><div class="lava-blob lb4"></div></div></div>
+
+    <img src="./Website%20images/welcome%20Homepage.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1;opacity:0.18;pointer-events:none;">
+
+
+
+
+
+
+    <div class="hero-c">
+
+
+
+
+
+
+      <div class="label anim-in"> Johannesburg — South Africa</div>
+
+
+
+
+
+
+      <h1 class="anim-up"><span class="l1">Engineered for</span><span class="l2"><span class="t">the </span><span class="e">enterprise.</span></span></h1>
+
+
+
+
+
+
+      <p class="sub anim-up d2">Network infrastructure, cybersecurity, and cloud automation architected for resilience, built for scale.</p>
+
+
+
+
+
+
+      <div class="hero-btns anim-up d4">
+
+
+
+
+
+
+        <a onclick="go(&#39;contact&#39;)" class="btn btn-p" style="cursor:pointer">Start a Project <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
+
+
+
+
+
+
+        <a onclick="go(&#39;services&#39;)" class="btn btn-s" style="cursor:pointer">Explore Services</a>
+
+
+
+
+
+
+      </div>
+
+
+
+
+
+
+      <div class="sc anim-up d6">
+
+
+
+
+
+
+        <div class="sc-bar">
+
+
+
+
+
+
+          <div class="l"><div class="dot"></div><span class="mono" style="font-size:12px;color:var(--text-secondary)">RSquared Infrastructure Monitor</span></div>
+
+
+
+
+
+
+          <div class="r"><div class="dg"></div><span class="mono" style="font-size:11px;color:var(--purple);text-transform:uppercase;letter-spacing:.05em">All systems operational</span></div>
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+        <div class="sc-items">
+
+
+
+
+
+
+          <div class="sc-i anim-sl d10"><span class="mono" style="font-size:12px;color:var(--text-secondary)"> Threat Detection</span><span class="badge bg-gn">Protected</span></div>
+
+
+
+
+
+
+          <div class="sc-i anim-sl d12"><span class="mono" style="font-size:12px;color:var(--text-secondary)"> Network Uptime</span><span class="badge bg-gn">99.98%</span></div>
+
+
+
+
+
+
+          <div class="sc-i anim-sl d14"><span class="mono" style="font-size:12px;color:var(--text-secondary)"> Cloud Services</span><span class="badge bg-gn">Healthy</span></div>
+
+
+
+
+
+
+          <div class="sc-i anim-sl d16"><span class="mono" style="font-size:12px;color:var(--text-secondary)"> Automation Pipeline</span><span class="badge bg-pr">Running</span></div>
+
+
+
+
+
+
+          <div class="sc-i anim-sl d18"><span class="mono" style="font-size:12px;color:var(--text-secondary)"> SIEM Monitoring</span><span class="badge bg-gn">Active</span></div>
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+      </div>
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Partners -->
+
+
+
+
+
+
+  <section class="partners">
+
+
+
+
+
+
+    <div class="container">
+
+
+
+
+
+
+      <p class="mono" style="text-align:center;font-size:11px;color:var(--text-muted);text-transform:uppercase;letter-spacing:.1em;margin-bottom:24px">Certified With</p>
+
+
+
+
+
+
+      <div class="partners-in"><span>CISCO</span><span>FORTINET</span><span>AWS</span><span>Microsoft</span><span>MikroTik</span><span>Splunk</span></div>
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Home Services Preview -->
+
+
+
+
+
+
+  <section class="home-svc">
+
+
+
+
+
+
+    <div class="container">
+
+
+
+
+
+
+      <div class="section-header">
+
+
+
+
+
+
+        <div class="label">What We Do</div>
+
+
+
+
+
+
+        <h2>Six pillars.<br><span class="m serif-i">One mission.</span></h2>
+
+
+
+
+
+
+        <p>End-to-end IT solutions from the access layer to the cloud edge.</p>
+
+
+
+
+
+
+      </div>
+
+
+
+
+
+
+      <div class="svc-grid-home">
+
+
+
+
+
+
+        <div class="svc-ch" onclick="go(&#39;services&#39;)"><div class="svc-icon ip"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path></svg></div><h3>Managed Security</h3><p>24/7 SOC monitoring, threat detection, incident response, and security policy management.</p><div class="tags"><span class="tag">SIEM</span><span class="tag">Splunk</span><span class="tag">FTD/FMC</span><span class="tag">FortiGate</span></div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="svc-ch" onclick="go(&#39;services&#39;)"><div class="svc-icon ig"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h.01"></path><path d="M2 8.82a15 15 0 0 1 20 0"></path><path d="M5 12.859a10 10 0 0 1 14 0"></path><path d="M8.5 16.429a5 5 0 0 1 7 0"></path></svg></div><h3>Network Infrastructure</h3><p>Enterprise LAN/WAN design, VLAN segmentation, wireless optimisation, and multi-vendor deployment.</p><div class="tags"><span class="tag">Cisco</span><span class="tag">MikroTik</span><span class="tag">Aruba</span><span class="tag">Ubiquiti</span></div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="svc-ch" onclick="go(&#39;services&#39;)"><div class="svc-icon iy"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"></path></svg></div><h3>Cloud &amp; SD-WAN</h3><p>AWS infrastructure, Azure cloud, SD-WAN overlays, and Infrastructure-as-Code with Terraform.</p><div class="tags"><span class="tag">AWS</span><span class="tag">Azure</span><span class="tag">SD-WAN</span><span class="tag">Terraform</span></div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="svc-ch" onclick="go(&#39;services&#39;)"><div class="svc-icon ip"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg></div><h3>Network Automation</h3><p>CI/CD pipelines Ansible, pyATS, GitHub Actions, and Python-based API integrations.</p><div class="tags"><span class="tag">Ansible</span><span class="tag">pyATS</span><span class="tag">GitHub Actions</span><span class="tag">Python</span></div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="svc-ch" onclick="go(&#39;services&#39;)"><div class="svc-icon ig"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"></path><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg></div><h3>Smart Building</h3><p>IoT-integrated networks, structured cabling, access control, and converged infrastructure.</p><div class="tags"><span class="tag">IoT</span><span class="tag">Cabling</span><span class="tag">Access Control</span></div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="svc-ch" onclick="go(&#39;services&#39;)"><div class="svc-icon igr"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="14" x="2" y="3" rx="2"></rect><line x1="8" x2="16" y1="21" y2="21"></line><line x1="12" x2="12" y1="17" y2="21"></line></svg></div><h3>Microsoft 365 &amp; Cloud</h3><p>M365 deployment, Azure AD, SharePoint intranets, Power Automate, and Teams governance.</p><div class="tags"><span class="tag">M365</span><span class="tag">Azure AD</span><span class="tag">SharePoint</span><span class="tag">Power Automate</span></div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="fs-cta">
+
+
+
+
+
+
+          <div><div class="label">End-to-End</div><h3>Full-stack infrastructure ownership</h3><p>From physical layer to application edge a single engineering team that architects, deploys, monitors, and automates your entire IT environment.</p><div class="tags"><span class="tag">Design</span><span class="tag">Deploy</span><span class="tag">Monitor</span><span class="tag">Automate</span><span class="tag">Secure</span></div></div>
+
+
+
+
+
+
+          
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+      </div>
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- INE-INSPIRED: Roadmap with orbits -->
+
+
+
+
+
+
+  <section class="roadmap">
+
+
+
+
+
+
+    <div class="container">
+
+
+
+
+
+
+      <div class="rm-container">
+
+
+
+
+
+
+        <div class="rm-text">
+
+          
+
+
+
+
+          <div class="label">Our Methodology</div>
+
+
+
+
+
+
+          <h2>A continuous <span class="typing" id="typingText">design automate</span> delivery model</h2>
+
+
+
+
+
+
+          <p>Award-winning, hands-on, and technically rigorous our four-phase approach ensures every deployment is validated, documented, and production-ready before it goes live.</p>
+
+
+
+
+
+
+          <a onclick="go('services')" class="btn btn-s" style="cursor:pointer">Explore Our Services <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 5l7 7-7 7"></path></svg></a>
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+        <div class="rm-cards">
+
+
+
+
+
+
+          <div class="rm-orbit">
+
+
+
+
+
+
+            <div class="o1"><div class="sat s1"></div></div>
+
+
+
+
+
+
+            <div class="o2"><div class="sat s2"></div></div>
+
+
+
+
+
+
+            <div class="o3"><div class="sat s3"></div></div>
+
+
+
+
+
+
+          </div>
+
+
+
+
+
+
+          <div class="rm-step-grid">
+
+
+
+
+
+
+            <div class="rm-step">
+
+
+
+
+
+
+              <div class="rm-icon" style="background:linear-gradient(135deg,var(--g100),var(--g200));border:1px solid var(--gray-border)"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--g700)" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></div>
+
+
+
+
+
+
+              <h4>Assess</h4>
+
+
+
+
+
+
+              <p style="font-size:12px;color:var(--text-muted);margin:6px 0 10px;line-height:1.5">Infrastructure audit, gap analysis &amp; risk benchmarking</p>
+
+
+
+
+
+
+              <div class="rm-img-wrap"><img src="images/methodology-assess.png" alt="Assessment phase — network audit and benchmarking" onerror="this.parentElement.style.display='none'" style="width:100%;border-radius:10px;margin-top:4px;border:1px solid rgba(124,58,237,0.25);display:block"></div>
+
+
+
+
+
+
+              <span class="rm-link">Audit &amp; Benchmark →</span>
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+            <div class="rm-step">
+
+
+
+
+
+
+              <div class="rm-icon" style="background:linear-gradient(135deg,var(--g100),var(--g200));border:1px solid var(--gray-border)"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--g700)" stroke-width="2"><path d="M2 20h20M5 20V8l7-5 7 5v12"/><path d="M9 20v-5h6v5"/></svg></div>
+
+
+
+
+
+
+              <h4>Architect</h4>
+
+
+
+
+
+
+              <p style="font-size:12px;color:var(--text-muted);margin:6px 0 10px;line-height:1.5">Solution design, HLD/LLD documentation &amp; vendor selection</p>
+
+
+
+
+
+
+              <div class="rm-img-wrap"><img src="images/methodology-architect.png" alt="Architecture phase — network design and documentation" onerror="this.parentElement.style.display='none'" style="width:100%;border-radius:10px;margin-top:4px;border:1px solid var(--gn200);display:block"></div>
+
+
+
+
+
+
+              <span class="rm-link">Design Solutions →</span>
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+            <div class="rm-step">
+
+
+
+
+
+
+              <div class="rm-icon" style="background:linear-gradient(135deg,var(--g100),var(--g200));border:1px solid var(--gray-border)"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--g700)" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
+
+
+
+
+
+
+              <h4>Deploy</h4>
+
+
+
+
+
+
+              <p style="font-size:12px;color:var(--text-muted);margin:6px 0 10px;line-height:1.5">CI/CD validated rollout with automated testing &amp; change control</p>
+
+
+
+
+
+
+              <div class="rm-img-wrap"><img src="images/methodology-deploy.png" alt="Deployment phase — CI/CD pipeline and automated rollout" onerror="this.parentElement.style.display='none'" style="width:100%;border-radius:10px;margin-top:4px;border:1px solid var(--y100);display:block"></div>
+
+
+
+
+
+
+              <span class="rm-link">CI/CD Validated →</span>
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+            <div class="rm-step">
+
+
+
+
+
+
+              <div class="rm-icon" style="background:linear-gradient(135deg,var(--g100),var(--g200));border:1px solid var(--gray-border)"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--g700)" stroke-width="2"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg></div>
+
+
+
+
+
+
+              <h4>Operate</h4>
+
+
+
+
+
+
+              <p style="font-size:12px;color:var(--text-muted);margin:6px 0 10px;line-height:1.5">24/7 SOC monitoring, incident response &amp; continuous optimisation</p>
+
+
+
+
+
+
+              <div class="rm-img-wrap"><img src="images/methodology-operate.png" alt="Operations phase — 24/7 monitoring and incident response" onerror="this.parentElement.style.display='none'" style="width:100%;border-radius:10px;margin-top:4px;border:1px solid var(--g200);display:block"></div>
+
+
+
+
+
+
+              <span class="rm-link">24/7 Monitoring →</span>
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+          </div>
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+      </div>
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- INE-INSPIRED: Deep-dive expertise (dark section) -->
+
+
+
+
+
+
+  <section class="deep-dive">
+
+
+
+
+
+
+    <div class="container">
+
+
+
+
+
+
+      <div class="dd-header">
+
+
+
+
+
+
+        <div class="label">Deep-Dive Expertise</div>
+
+
+
+
+
+
+        <h2>Technical depth across <span class="m serif-i">every domain.</span></h2>
+
+
+
+
+
+
+        <p>Our engineering capabilities span the full stack — from physical cabling to cloud-native security.</p>
+
+
+
+
+
+
+      </div>
+
+
+
+
+
+
+      <div class="dd-grid">
+
+
+
+
+
+
+        <div class="dd-card">
+
+
+
+
+
+
+          <h3>Network Infrastructure</h3>
+
+
+
+
+
+
+          <div class="dd-sub">Enterprise-grade networking across multi-vendor environments</div>
+
+
+
+
+
+
+          <div class="dd-techs">
+
+
+
+
+
+
+            <div class="dd-tech">Cisco IOS-XE, NX-OS: Advanced routing (OSPF, EIGRP, BGP), switching, QoS</div>
+
+
+
+
+
+
+            <div class="dd-tech">MikroTik RouterOS: Cost-effective routing, wireless, VPN for SMB/branch</div>
+
+
+
+
+
+
+            <div class="dd-tech">Aruba &amp; Cisco Wireless: Controller-based WiFi with seamless roaming</div>
+
+
+
+
+
+
+            <div class="dd-tech">Network Monitoring: SNMP, NetFlow, ThousandEyes, PRTG, Grafana</div>
+
+
+
+
+
+
+            <div class="dd-tech">High Availability: HSRP/VRRP gateway redundancy, EtherChannel/LACP</div>
+
+
+
+
+
+
+          </div>
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+        <div class="dd-card">
+
+
+
+
+
+
+          <h3>Cybersecurity</h3>
+
+
+
+
+
+
+          <div class="dd-sub">Comprehensive security from perimeter to endpoint</div>
+
+
+
+
+
+
+          <div class="dd-techs">
+
+
+
+
+
+
+            <div class="dd-tech">Next-Gen Firewalls: Cisco FTD/FMC, FortiGate with IPS &amp; SSL inspection</div>
+
+
+
+
+
+
+            <div class="dd-tech">SIEM: Splunk Enterprise Security for log aggregation &amp; threat hunting</div>
+
+
+
+
+
+
+            <div class="dd-tech">Vulnerability Mgmt: Nessus, Qualys, OpenVAS with prioritised remediation</div>
+
+
+
+
+
+
+            <div class="dd-tech">Pen Testing: OWASP Top 10, network exploitation, wireless assessment</div>
+
+
+
+
+
+
+            <div class="dd-tech">Identity &amp; Access: Azure AD, LDAP, RADIUS, certificate-based auth</div>
+
+
+
+
+
+
+          </div>
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+        <div class="dd-card">
+
+
+
+
+
+
+          <h3>Cloud &amp; DevOps</h3>
+
+
+
+
+
+
+          <div class="dd-sub">Modern cloud infrastructure and automation</div>
+
+
+
+
+
+
+          <div class="dd-techs">
+
+
+
+
+
+
+            <div class="dd-tech">AWS: VPC design, EC2, S3, RDS, Lambda, CloudFormation, cost optimisation</div>
+
+
+
+
+
+
+            <div class="dd-tech">Azure: Virtual Networks, Azure AD, ExpressRoute, hybrid connectivity</div>
+
+
+
+
+
+
+            <div class="dd-tech">IaC: Terraform &amp; CloudFormation for reproducible infrastructure</div>
+
+
+
+
+
+
+            <div class="dd-tech">CI/CD: GitHub Actions, GitLab CI for network &amp; application deployment</div>
+
+
+
+
+
+
+            <div class="dd-tech">Testing: pyATS/Genie for network validation &amp; automated testing</div>
+
+
+
+
+
+
+          </div>
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+        <div class="dd-card">
+
+
+
+
+
+
+          <h3>Microsoft 365 &amp; Productivity</h3>
+
+
+
+
+
+
+          <div class="dd-sub">Complete Microsoft cloud ecosystem</div>
+
+
+
+
+
+
+          <div class="dd-techs">
+
+
+
+
+
+
+            <div class="dd-tech">Azure AD: Conditional access, MFA, identity protection, SSO</div>
+
+
+
+
+
+
+            <div class="dd-tech">SharePoint Online: Modern intranets, document libraries, Power Apps</div>
+
+
+
+
+
+
+            <div class="dd-tech">Teams: Voice, video, collaboration, and third-party app integration</div>
+
+
+
+
+
+
+            <div class="dd-tech">Power Platform: Power Automate, Power Apps, Power BI reporting</div>
+
+
+
+
+
+
+            <div class="dd-tech">Security: Defender for O365, Cloud App Security, DLP</div>
+
+
+
+
+
+
+          </div>
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+      </div>
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- INE-INSPIRED: Skill categories & labs -->
+
+
+
+
+
+
+  <section class="skills-section">
+
+
+
+
+
+
+    <div class="container">
+
+
+
+
+
+
+      <div class="skills-split">
+
+
+
+
+
+
+        <div class="skills-left">
+
+
+
+
+
+
+          <div class="label">Hands-On Capabilities</div>
+
+
+
+
+
+
+          <h2>Real-world scenarios.<br><span class="grad-text">Battle-tested skills.</span></h2>
+
+
+
+
+
+
+          <p>We don't just design on paper — our team operates in live environments daily, troubleshooting production issues, responding to security incidents, and automating infrastructure at scale.</p>
+
+
+
+
+
+
+          <div class="skill-cats">
+
+
+
+
+
+
+            <span class="skill-cat sc-purple">Cybersecurity</span>
+
+
+
+
+
+
+            <span class="skill-cat sc-green">Networking</span>
+
+
+
+
+
+
+            <span class="skill-cat sc-yellow">Cloud</span>
+
+
+
+
+
+
+            <span class="skill-cat sc-gray">Automation</span>
+
+
+
+
+
+
+            <span class="skill-cat sc-purple">Compliance</span>
+
+
+
+
+
+
+            <span class="skill-cat sc-green">IoT / Smart Building</span>
+
+
+
+
+
+
+          </div>
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+        <div class="skills-right">
+
+
+
+
+
+
+          <div class="sk-card"><div class="sk-cat c-sec">CyberSecurity</div><div class="sk-level"><span class="dot-l" style="background:var(--p500)"></span>Advanced</div><h4>Splunk SIEM &amp; Threat Hunting</h4></div>
+
+
+
+
+
+
+          <div class="sk-card"><div class="sk-cat c-net">Networking</div><div class="sk-level"><span class="dot-l" style="background:var(--gn500)"></span>Advanced</div><h4>BGP, OSPF &amp; Multi-vendor Routing</h4></div>
+
+
+
+
+
+
+          <div class="sk-card"><div class="sk-cat c-cloud">Cloud</div><div class="sk-level"><span class="dot-l" style="background:var(--y500)"></span>Professional</div><h4>AWS VPC &amp; Azure Hybrid</h4></div>
+
+
+
+
+
+
+          <div class="sk-card"><div class="sk-cat c-auto">Automation</div><div class="sk-level"><span class="dot-l" style="background:var(--g500)"></span>Professional</div><h4>Ansible + pyATS CI/CD Pipelines</h4></div>
+
+
+
+
+
+
+          <div class="sk-card"><div class="sk-cat c-sec">CyberSecurity</div><div class="sk-level"><span class="dot-l" style="background:var(--p500)"></span>Professional</div><h4>Cisco FTD/FMC &amp; FortiGate</h4></div>
+
+
+
+
+
+
+          <div class="sk-card"><div class="sk-cat c-net">Networking</div><div class="sk-level"><span class="dot-l" style="background:var(--gn500)"></span>Professional</div><h4>MikroTik Multi-VLAN Design</h4></div>
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+      </div>
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- SPLUNK-INSPIRED: Impact Stats -->
+
+
+
+
+
+
+  <section class="impact-stats">
+
+
+
+
+
+
+    <div class="container">
+
+
+
+
+
+
+      <div class="section-intro" style="text-align:center;margin-bottom:56px">
+
+
+
+
+
+
+        <div class="label">Business Impact</div>
+
+
+
+
+
+
+        <h2 style="color:var(--text-secondary)">Measurable outcomes that <span class="serif-i" style="color:var(--purple-light)">matter.</span></h2>
+
+
+
+
+
+
+        <p style="color:var(--text-secondary);max-width:560px;margin:0 auto;font-size:15px;line-height:1.7">Every engagement is built around quantifiable results — faster response, lower risk, stronger infrastructure.</p>
+
+
+
+
+
+
+      </div>
+
+
+
+
+
+
+      <div class="stats-grid">
+
+
+
+
+
+
+        <div class="stat-card"><div class="stat-number"><span class="count" data-target="70">70</span><span class="stat-suffix">%</span></div><div class="stat-label">MTTR Reduction</div><div class="stat-desc">Mean time to resolution cut across managed endpoints</div></div>
+
+
+
+
+
+
+        <div class="stat-card"><div class="stat-number"><span class="count" data-target="285">285</span><span class="stat-suffix">+</span></div><div class="stat-label">Endpoints Secured</div><div class="stat-desc">Cisco MXDR deployment protecting enterprise assets 24/7</div></div>
+
+
+
+
+
+
+        <div class="stat-card"><div class="stat-number"><span class="count" data-target="99.9" data-decimal="1">99.9</span><span class="stat-suffix">%</span></div><div class="stat-label">Uptime SLA</div><div class="stat-desc">Network availability guaranteed across managed infrastructure</div></div>
+
+
+
+
+
+
+        <div class="stat-card"><div class="stat-number"><span class="count" data-target="3">3</span><span class="stat-suffix">x</span></div><div class="stat-label">Faster Deployment</div><div class="stat-desc">Automation-first CI/CD pipelines accelerate rollouts</div></div>
+
+
+
+
+
+
+      </div>
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- SPLUNK-INSPIRED: Use-Case Tabs -->
+
+
+
+
+
+
+  <section class="use-cases">
+
+
+
+
+
+
+    <div class="container">
+
+
+
+
+
+
+      <div class="section-intro" style="text-align:center;margin-bottom:48px">
+
+
+
+
+
+
+        <div class="label">Use Cases</div>
+
+
+
+
+
+
+        <h2>Solutions for every <span class="serif-i" style="color:var(--purple)">challenge.</span></h2>
+
+
+
+
+
+
+        <p style="color:var(--text-secondary);max-width:520px;margin:0 auto;font-size:15px;line-height:1.7">From compliance to automation, we deliver targeted outcomes across your technology stack.</p>
+
+
+
+
+
+
+      </div>
+
+
+
+
+
+
+      <div class="uc-tabs">
+
+
+
+
+
+
+        <div class="uc-tab" onclick="showUC(&#39;uc-threat&#39;,this)">Threat Detection</div>
+
+
+
+
+
+
+        <div class="uc-tab" onclick="showUC(&#39;uc-compliance&#39;,this)">Compliance</div>
+
+
+
+
+
+
+        <div class="uc-tab" onclick="showUC(&#39;uc-automation&#39;,this)">Network Automation</div>
+
+
+
+
+
+
+        <div class="uc-tab" onclick="showUC(&#39;uc-cloud&#39;,this)">Cloud Migration</div>
+
+
+
+
+
+
+        <div class="uc-tab active" onclick="showUC(&#39;uc-observability&#39;,this)">Observability</div>
+
+
+
+
+
+
+      </div>
+
+
+
+
+
+
+      <div id="uc-threat" class="uc-panel">
+
+
+
+
+
+
+        <div class="uc-content"><h3>Advanced Threat Detection &amp; Response</h3><p>Proactively identify and neutralise threats with SIEM-driven monitoring, endpoint detection, and automated incident response.</p><div class="caps"><div class="cap"><span class="ck">✓</span>Splunk SIEM log correlation &amp; alerting</div><div class="cap"><span class="ck">✓</span>Cisco MXDR endpoint protection</div><div class="cap"><span class="ck">✓</span>FortiGate &amp; FTD firewall threat intel</div><div class="cap"><span class="ck">✓</span>24/7 SOC monitoring &amp; forensics</div></div></div>
+
+
+
+
+
+
+        <div class="uc-img-ph"><img src="./Website%20images/getty-images-02LFRDKL6Hg-unsplash.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1;"></div>
+
+
+
+
+
+
+      </div>
+
+
+
+
+
+
+      <div id="uc-compliance" class="uc-panel">
+
+
+
+
+
+
+        <div class="uc-content"><h3>Regulatory Compliance &amp; Risk Management</h3><p>Meet POPIA, ISO 27001, and industry-specific compliance requirements with automated policy enforcement and continuous audit readiness.</p><div class="caps"><div class="cap"><span class="ck">✓</span>POPIA compliance assessment</div><div class="cap"><span class="ck">✓</span>Security policy development</div><div class="cap"><span class="ck">✓</span>Vulnerability scanning &amp; reporting</div><div class="cap"><span class="ck">✓</span>Risk framework alignment</div></div></div>
+
+
+
+
+
+
+        <div class="uc-img-ph"><img src="./Website%20images/george-prentzas-SRFG7iwktDk-unsplash.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1;"></div>
+
+
+
+
+
+
+      </div>
+
+
+
+
+
+
+      <div id="uc-automation" class="uc-panel">
+
+
+
+
+
+
+        <div class="uc-content"><h3>Network Automation &amp; CI/CD Pipelines</h3><p>Eliminate manual configuration with Ansible playbooks, pyATS testing, and Terraform provisioning — all driven by GitHub Actions CI/CD pipelines.</p><div class="caps"><div class="cap"><span class="ck">✓</span>Ansible network automation</div><div class="cap"><span class="ck">✓</span>pyATS automated testing</div><div class="cap"><span class="ck">✓</span>Terraform infrastructure as code</div><div class="cap"><span class="ck">✓</span>GitHub Actions CI/CD workflows</div></div></div>
+
+
+
+
+
+
+        <div class="uc-img-ph"><img src="./Website%20images/shahadat-rahman-gnyA8vd3Otc-unsplash.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1;"></div>
+
+
+
+
+
+
+      </div>
+
+
+
+
+
+
+      <div id="uc-cloud" class="uc-panel">
+
+
+
+
+
+
+        <div class="uc-content"><h3>Cloud Migration &amp; Hybrid Architecture</h3><p>Seamlessly migrate workloads to Azure or AWS with zero-downtime strategies, hybrid connectivity, and cloud-native security controls.</p><div class="caps"><div class="cap"><span class="ck">✓</span>Azure &amp; AWS cloud architecture</div><div class="cap"><span class="ck">✓</span>Microsoft 365 &amp; Azure AD SSO</div><div class="cap"><span class="ck">✓</span>Hybrid VPN &amp; SD-WAN connectivity</div><div class="cap"><span class="ck">✓</span>Cloud cost optimisation</div></div></div>
+
+
+
+
+
+
+        <div class="uc-img-ph"><img src="./Website%20images/getty-images-UC3JhMHh8zE-unsplash.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1;"></div>
+
+
+
+
+
+
+      </div>
+
+
+
+
+
+
+      <div id="uc-observability" class="uc-panel active">
+
+
+
+
+
+
+        <div class="uc-content"><h3>Full-Stack Observability &amp; Monitoring</h3><p>Gain unified visibility across network, application, and infrastructure layers with Grafana dashboards, Splunk analytics, and ThousandEyes intelligence.</p><div class="caps"><div class="cap"><span class="ck">✓</span>Grafana &amp; Splunk dashboards</div><div class="cap"><span class="ck">✓</span>ThousandEyes network path visibility</div><div class="cap"><span class="ck">✓</span>Microsoft Defender integration</div><div class="cap"><span class="ck">✓</span>Proactive alerting &amp; SLA tracking</div></div></div>
+
+
+
+
+
+
+        <div class="uc-img-ph"><img src="./Website%20images/luke-chesser-JKUTrJ4vK00-unsplash.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1;"></div>
+
+
+
+
+
+
+      </div>
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- SPLUNK-INSPIRED: Resources & Insights -->
+
+
+
+
+
+
+  <section class="resources">
+
+
+
+
+
+
+    <div class="container">
+
+
+
+
+
+
+      <div class="section-intro" style="text-align:center;margin-bottom:48px">
+
+
+
+
+
+
+        <div class="label">Resources</div>
+
+
+
+
+
+
+        <h2>Insights from the <span class="serif-i" style="color:var(--purple)">field.</span></h2>
+
+
+
+
+
+
+        <p style="color:var(--text-secondary);max-width:520px;margin:0 auto;font-size:15px;line-height:1.7">Technical deep-dives, case studies, and practical guides from our engineering team.</p>
+
+
+
+
+
+
+      </div>
+
+
+
+
+
+
+      <div class="res-grid">
+
+
+
+
+
+
+        <div class="res-card">
+
+
+
+
+
+
+          <div class="res-img"><span class="res-date">2025</span><img src="./Website%20images/getty-images-02LFRDKL6Hg-unsplash.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1;opacity:0.85;"></div>
+
+
+
+
+
+
+          <div class="res-body">
+
+
+
+
+
+
+            <div class="res-tag">Case Study</div>
+
+
+
+
+
+
+            <h3>Building an Enterprise SOC: Lessons from 285 Monitored Endpoints</h3>
+
+
+
+
+
+
+            <p>A mid-market financial services firm had no centralised threat visibility across 285 endpoints. We deployed a full SOC stack — log correlation, endpoint telemetry, and automated alerting — reducing mean time to respond (MTTR) by 70% within 90 days. This case study covers architecture decisions, integration challenges, and the measurable outcomes delivered.</p>
+
+
+
+
+
+
+            
+
+
+
+
+
+
+          </div>
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+        <div class="res-card">
+
+
+
+
+
+
+          <div class="res-img"><span class="res-date">2025</span><img src="./Website%20images/markus-spiske-MgtHZ4zlC1U-unsplash.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1;opacity:0.85;"></div>
+
+
+
+
+
+
+          <div class="res-body">
+
+
+
+
+
+
+            <div class="res-tag">Automation</div>
+
+
+
+
+
+
+            <h3>Network Automation CI/CD: A Practical Implementation Guide</h3>
+
+
+
+
+
+
+            <p>This guide walks through building a fully automated network CI/CD pipeline — from repository structure and playbook design to automated testing and change control. Learn how to validate configuration changes against a live network before promotion to production, implement rollback logic, and integrate pipeline status into your team's existing workflow. Designed for network engineers making their first move into automation.</p>
+
+
+
+
+
+
+            
+
+
+
+
+
+
+          </div>
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+        <div class="res-card">
+
+
+
+
+
+
+          <div class="res-img"><span class="res-date">2025</span><img src="./Website%20images/george-prentzas-SRFG7iwktDk-unsplash.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1;opacity:0.85;"></div>
+
+
+
+
+
+
+          <div class="res-body">
+
+
+
+
+
+
+            <div class="res-tag">Compliance</div>
+
+
+
+
+
+
+            <h3>POPIA Compliance for IT Infrastructure: What You Need to Know</h3>
+
+
+
+
+
+
+            <p>POPIA imposes clear obligations on organisations that process personal information — including requirements around access control, breach notification, and data retention. This article translates those legal requirements into concrete network and security controls: which firewall policies to review, how to segment data flows, what logging you need to retain, and how to demonstrate compliance to an Information Regulator audit. Written for IT managers and security teams operating in the South African market.</p>
+
+
+
+
+
+
+            
+
+
+
+
+
+
+          </div>
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+      </div>
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- INE-INSPIRED: Dark bottom CTA banner -->
+
+
+
+
+
+
+  
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ╔═══════════════════════════════════════════════════════════╗
+
+
+
+
+
+
+     ║  PAGE: SERVICES                                          ║
+
+
+
+
+
+
+     ╚═══════════════════════════════════════════════════════════╝ -->
+
+
+
+
+
+
+<div id="page-services" class="page">
+
+
+
+
+
+
+  <div class="svc-page">
+
+
+
+
+
+
+    <div class="hero-mini"><div class="container"><div class="label">Our Services</div><h1>Everything your infrastructure <span class="serif-i" style="color:var(--text-muted)">needs.</span></h1><p>Click any service below to explore capabilities, tools, and how we deliver results.</p></div></div>
+
+
+
+
+
+
+    <div class="container" style="padding-top:40px;padding-bottom:80px">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <!-- 6. Network and Security Consultation -->
+
+
+
+
+
+
+      <div class="svc-expand" id="svc-consultation" onclick="this.classList.toggle('open')">
+
+
+
+
+
+
+        <div class="svc-head"><div class="svc-icon ip"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2v-4M9 21H5a2 2 0 0 1-2-2v-4m0 0h18"/></svg></div><div class="svc-head-text"><h3>Network &amp; Security Consultation</h3><p>Expert advisory on Cisco &amp; Fortinet network and security products and solutions</p></div><div class="svc-arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></div></div>
+
+
+
+
+
+
+        <div class="svc-body" onclick="event.stopPropagation()">
+
+
+
+
+
+
+          <h4>Key Capabilities</h4>
+
+
+
+
+
+
+          <div class="caps">
+
+
+
+
+
+
+            <div class="cap"><span class="ck">✓</span>Cisco &amp; Fortinet Network and Security Products &amp; Solutions</div>
+
+
+
+
+
+
+            <div class="cap"><span class="ck">✓</span>Firewall Management (Cisco FTD/FMC, FortiGate NGFW)</div>
+
+
+
+
+
+
+            <div class="cap"><span class="ck">✓</span>SD-WAN Design &amp; Implementation (Cisco Viptela, FortiSD-WAN)</div>
+
+
+
+
+
+
+            <div class="cap"><span class="ck">✓</span>Network Segmentation &amp; Zero-Trust Architecture</div>
+
+
+
+
+
+
+            <div class="cap"><span class="ck">✓</span>Threat Intelligence &amp; Threat Hunting</div>
+
+
+
+
+
+
+            <div class="cap"><span class="ck">✓</span>Security Policy Review &amp; Hardening</div>
+
+
+
+
+
+
+            <div class="cap"><span class="ck">✓</span>VPN &amp; Remote Access Solutions (Cisco AnyConnect, FortiClient)</div>
+
+
+
+
+
+
+            <div class="cap"><span class="ck">✓</span>Network Security Architecture Assessment</div>
+
+
+
+
+
+
+            <div class="cap"><span class="ck">✓</span>Intrusion Prevention Systems (IPS/IDS) Tuning</div>
+
+
+
+
+
+
+            <div class="cap"><span class="ck">✓</span>Wireless Security &amp; NAC Implementation</div>
+
+
+
+
+
+
+          </div>
+
+
+
+
+
+
+          <p class="desc">Our Network &amp; Security Consultation practice brings certified Cisco and Fortinet expertise directly to your organisation. Whether you're evaluating new security products, planning a network refresh, or hardening an existing environment, we provide vendor-neutral advice backed by hands-on engineering experience across both platforms.</p>
+
+
+
+
+
+
+          <p class="desc">We assess your current Cisco and Fortinet estate — routers, switches, firewalls, wireless controllers, and SD-WAN fabrics — identifying misconfigurations, coverage gaps, and optimisation opportunities. Every recommendation is grounded in real-world deployment experience, not vendor literature.</p>
+
+
+
+
+
+
+          <p class="desc">From designing micro-segmented campus networks with Cisco Catalyst and ISE to deploying FortiGate clusters with FortiAnalyzer and FortiManager for centralised policy management, we deliver end-to-end advisory and implementation support. Our consultants hold CCNP Security, CCNP Enterprise, and Fortinet NSE certifications to ensure best-practice guidance at every engagement.</p>
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <!-- 1. Managed Security -->
+
+
+
+
+
+
+      <div class="svc-expand" id="svc-security" onclick="this.classList.toggle('open')">
+
+
+
+
+
+
+        <div class="svc-head"><div class="svc-icon ip"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path></svg></div><div class="svc-head-text"><h3>Managed Security (MSSP)</h3><p>Enterprise-grade threat protection with 24/7 monitoring and rapid incident response</p></div><div class="svc-arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></div></div>
+
+
+
+
+
+
+        <div class="svc-body" onclick="event.stopPropagation()">
+
+
+
+
+
+
+          <h4>Key Capabilities</h4>
+
+
+
+
+
+
+          <div class="caps">
+
+
+
+
+
+
+
+
+
+            <div class="cap"><span class="ck">✓</span>SIEM Implementation &amp; Management (Splunk)</div>
+
+
+
+
+
+
+            <div class="cap"><span class="ck">✓</span>Firewall Management (Cisco FTD/FMC, FortiGate)</div>
+
+
+
+
+
+
+            <div class="cap"><span class="ck">✓</span>Vulnerability Assessment &amp; Penetration Testing</div>
+
+
+
+
+
+
+            <div class="cap"><span class="ck">✓</span>Incident Response &amp; Forensics</div>
+
+
+
+
+
+
+            <div class="cap"><span class="ck">✓</span>Security Policy Development</div>
+
+
+
+
+
+
+            <div class="cap"><span class="ck">✓</span>Compliance &amp; Risk Management</div>
+
+
+
+
+
+
+            <div class="cap"><span class="ck">✓</span>Endpoint Detection &amp; Response (EDR)</div>
+
+
+
+
+
+
+          </div>
+
+
+
+
+
+
+          <p class="desc">Our MSSP offering delivers enterprise-grade threat protection with around-the-clock monitoring and rapid incident response. We combine advanced SIEM platforms with expert analysts to provide comprehensive security coverage across your entire infrastructure.</p>
+
+
+
+
+
+
+          <p class="desc">Our SOC monitors your network 24/7, using Splunk Enterprise Security, Cisco Firepower, and FortiGate next-generation firewalls to detect and neutralise threats before they impact your business. We conduct regular vulnerability assessments and penetration testing to identify and remediate security gaps proactively.</p>
+
+
+
+
+
+
+          <p class="desc">Beyond monitoring, we implement defence-in-depth strategies including network segmentation, zero-trust architectures, and multi-factor authentication across all critical systems. We also provide comprehensive compliance support for frameworks including ISO 27001, POPI Act, and industry-specific regulations.</p>
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <!-- 2. Network Infrastructure -->
+
+
+
+
+
+
+      <div class="svc-expand" id="svc-network" onclick="this.classList.toggle('open')">
+
+
+
+
+
+
+        <div class="svc-head"><div class="svc-icon ig"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h.01"></path><path d="M2 8.82a15 15 0 0 1 20 0"></path><path d="M5 12.859a10 10 0 0 1 14 0"></path><path d="M8.5 16.429a5 5 0 0 1 7 0"></path></svg></div><div class="svc-head-text"><h3>Network Infrastructure</h3><p>Enterprise LAN/WAN design across multi-vendor environments</p></div><div class="svc-arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></div></div>
+
+
+
+
+
+
+        <div class="svc-body" onclick="event.stopPropagation()">
+
+
+
+
+
+
+          <h4>Key Capabilities</h4>
+
+
+
+
+
+
+          <div class="caps">
+
+
+
+
+
+
+            <div class="cap"><span class="ck">✓</span>Enterprise LAN/WAN Design &amp; Implementation</div>
+
+
+
+
+
+
+            <div class="cap"><span class="ck">✓</span>VLAN Segmentation &amp; Inter-VLAN Routing</div>
+
+
+
+
+
+
+            <div class="cap"><span class="ck">✓</span>High Availability &amp; Redundancy</div>
+
+
+
+
+
+
+            <div class="cap"><span class="ck">✓</span>Wireless Network Design (Aruba, Cisco, Ubiquiti)</div>
+
+
+
+
+
+
+            <div class="cap"><span class="ck">✓</span>Multi-Vendor Integration</div>
+
+
+
+
+
+
+            <div class="cap"><span class="ck">✓</span>Network Monitoring &amp; Performance Tuning</div>
+
+
+
+
+
+
+            <div class="cap"><span class="ck">✓</span>Quality of Service (QoS) Implementation</div>
+
+
+
+
+
+
+            <div class="cap"><span class="ck">✓</span>Structured Cabling &amp; Physical Infrastructure</div>
+
+
+
+
+
+
+          </div>
+
+
+
+
+
+
+          <p class="desc">We design and deploy robust network infrastructures that form the backbone of modern enterprises. Our expertise spans multi-vendor environments including Cisco, MikroTik, Aruba, Ruijie, and Ubiquiti, allowing us to recommend the optimal solution for your specific requirements and budget.</p>
+
+
+
+
+
+
+          <p class="desc">Our network designs prioritise resilience, scalability, and performance. We implement redundant topologies with HSRP and VRRP for gateway redundancy, combined with link aggregation for high availability. Every design includes proper VLAN segmentation to isolate traffic types and improve security posture.</p>
+
+
+
+
+
+
+          <p class="desc">Our wireless deployments leverage controller-based architectures from Aruba and Cisco to provide seamless roaming, centralised management, and advanced security features. We perform RF site surveys, heat mapping, and ongoing optimisation to ensure consistent coverage.</p>
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <!-- 3. Cloud & SD-WAN -->
+
+
+
+
+
+
+      <div class="svc-expand" id="svc-cloud" onclick="this.classList.toggle('open')">
+
+
+
+
+
+
+        <div class="svc-head"><div class="svc-icon iy"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"></path></svg></div><div class="svc-head-text"><h3>Cloud &amp; SD-WAN</h3><p>Modern cloud infrastructure and software-defined networking</p></div><div class="svc-arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></div></div>
+
+
+
+
+
+
+        <div class="svc-body" onclick="event.stopPropagation()">
+
+
+
+
+
+
+          <h4>Key Capabilities</h4>
+
+
+
+
+
+
+          <div class="caps">
+
+
+
+
+
+
+            <div class="cap"><span class="ck">✓</span>AWS Infrastructure Design &amp; Migration</div>
+
+
+
+
+
+
+            <div class="cap"><span class="ck">✓</span>Azure Cloud Services &amp; Networking</div>
+
+
+
+
+
+
+            <div class="cap"><span class="ck">✓</span>SD-WAN Implementation &amp; Management</div>
+
+
+
+
+
+
+            <div class="cap"><span class="ck">✓</span>Infrastructure-as-Code (Terraform, CloudFormation)</div>
+
+
+
+
+
+
+            <div class="cap"><span class="ck">✓</span>Hybrid Cloud Connectivity</div>
+
+
+
+
+
+
+            <div class="cap"><span class="ck">✓</span>Cloud Security &amp; Compliance</div>
+
+
+
+
+
+
+            <div class="cap"><span class="ck">✓</span>Cost Optimisation &amp; Governance</div>
+
+
+
+
+
+
+            <div class="cap"><span class="ck">✓</span>Disaster Recovery &amp; Business Continuity</div>
+
+
+
+
+
+
+          </div>
+
+
+
+
+
+
+          <p class="desc">Our cloud services bridge the gap between traditional infrastructure and modern cloud platforms. We specialise in AWS and Microsoft Azure, providing end-to-end solutions from initial migration planning through ongoing optimisation and cost management.</p>
+
+
+
+
+
+
+          <p class="desc">We architect cloud-native and hybrid infrastructures using Infrastructure-as-Code principles with Terraform and CloudFormation. For organisations with multiple sites or remote workers, we implement SD-WAN solutions that intelligently route traffic across multiple links, reducing costs while improving application performance.</p>
+
+
+
+
+
+
+          <p class="desc">We also provide comprehensive Azure services including virtual networking, ExpressRoute connectivity, and integration with Microsoft 365. Our cloud architectures emphasise security with proper network segmentation, identity management, and encryption both in transit and at rest.</p>
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <!-- 4. Network Automation -->
+
+
+
+
+
+
+      <div class="svc-expand" id="svc-automation" onclick="this.classList.toggle('open')">
+
+
+
+
+
+
+        <div class="svc-head"><div class="svc-icon ip"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg></div><div class="svc-head-text"><h3>Network Automation</h3><p>CI/CD pipelines and Infrastructure-as-Code for network operations</p></div><div class="svc-arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></div></div>
+
+
+
+
+
+
+        <div class="svc-body" onclick="event.stopPropagation()">
+
+
+
+
+
+
+          <h4>Key Capabilities</h4>
+
+
+
+
+
+
+          <div class="caps">
+
+
+
+
+
+
+            <div class="cap"><span class="ck">✓</span>CI/CD Pipeline Development (GitHub Actions, GitLab)</div>
+
+
+
+
+
+
+            <div class="cap"><span class="ck">✓</span>Configuration Management (Ansible)</div>
+
+
+
+
+
+
+            <div class="cap"><span class="ck">✓</span>Network Testing &amp; Validation (pyATS, Genie)</div>
+
+
+
+
+
+
+            <div class="cap"><span class="ck">✓</span>Infrastructure-as-Code for Networks</div>
+
+
+
+
+
+
+            <div class="cap"><span class="ck">✓</span>Custom Automation Scripts (Python)</div>
+
+
+
+
+
+
+            <div class="cap"><span class="ck">✓</span>API Integration (REST, NETCONF, gRPC)</div>
+
+
+
+
+
+
+            <div class="cap"><span class="ck">✓</span>Automated Compliance Checking</div>
+
+
+
+
+
+
+            <div class="cap"><span class="ck">✓</span>Documentation Generation &amp; Version Control</div>
+
+
+
+
+
+
+          </div>
+
+
+
+
+
+
+          <p class="desc">Network automation transforms how infrastructure is deployed, configured, and maintained. We build comprehensive CI/CD pipelines that treat network configurations as code, enabling rapid deployments with reduced human error and complete audit trails.</p>
+
+
+
+
+
+
+          <p class="desc">Our automation frameworks leverage Ansible for configuration management, combined with pyATS and Genie for pre- and post-deployment validation. We integrate with GitHub Actions or GitLab CI/CD, providing a developer-friendly workflow where network engineers can propose changes via pull requests, trigger automated testing, and deploy only after peer review.</p>
+
+
+
+
+
+
+          <p class="desc">Beyond configuration, we automate operational tasks including compliance checking, backup management, and documentation generation. Our Python-based solutions interact with device APIs, parse operational data, and generate reports for real-time visibility into network health.</p>
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <!-- 5. Smart Building -->
+
+
+
+
+
+
+      <div class="svc-expand" id="svc-building" onclick="this.classList.toggle('open')">
+
+
+
+
+
+
+        <div class="svc-head"><div class="svc-icon ig"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"></path><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg></div><div class="svc-head-text"><h3>Smart Building</h3><p>Converged technology infrastructure for modern workspaces</p></div><div class="svc-arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></div></div>
+
+
+
+
+
+
+        <div class="svc-body" onclick="event.stopPropagation()">
+
+
+
+
+
+
+          <h4>Key Capabilities</h4>
+
+
+
+
+
+
+          <div class="caps">
+
+
+
+
+
+
+            <div class="cap"><span class="ck">✓</span>Structured Cabling Design &amp; Installation</div>
+
+
+
+
+
+
+            <div class="cap"><span class="ck">✓</span>IoT Network Design &amp; Segmentation</div>
+
+
+
+
+
+
+            <div class="cap"><span class="ck">✓</span>IP-based Access Control Systems</div>
+
+
+
+
+
+
+            <div class="cap"><span class="ck">✓</span>Video Surveillance (IP Cameras, NVR)</div>
+
+
+
+
+
+
+            <div class="cap"><span class="ck">✓</span>Building Management System Integration</div>
+
+
+
+
+
+
+            <div class="cap"><span class="ck">✓</span>Visitor Management Solutions</div>
+
+
+
+
+
+
+            <div class="cap"><span class="ck">✓</span>Environmental Monitoring</div>
+
+
+
+
+
+
+            <div class="cap"><span class="ck">✓</span>Physical Security Consulting</div>
+
+
+
+
+
+
+          </div>
+
+
+
+
+
+
+          <p class="desc">Modern buildings require integrated technology infrastructure that supports traditional IT alongside IoT devices, building management systems, and physical security. We deliver comprehensive smart building solutions that converge multiple systems onto a unified network platform.</p>
+
+
+
+
+
+
+          <p class="desc">Our structured cabling installations follow ANSI/TIA standards, providing certified Category 6A and fibre optic infrastructure designed to support current and future requirements. For access control and physical security, we integrate IP-based systems that leverage the existing network infrastructure.</p>
+
+
+
+
+
+
+          <p class="desc">We also implement dedicated networks for building IoT including HVAC sensors, lighting controls, occupancy sensors, and environmental monitoring — properly segmented from corporate networks while still allowing centralised management and data collection.</p>
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <!-- 7. Microsoft 365 -->
+
+
+
+
+
+
+      <div class="svc-expand" id="svc-m365" onclick="this.classList.toggle('open')">
+
+
+
+
+
+
+        <div class="svc-head"><div class="svc-icon igr"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="14" x="2" y="3" rx="2"></rect><line x1="8" x2="16" y1="21" y2="21"></line><line x1="12" x2="12" y1="17" y2="21"></line></svg></div><div class="svc-head-text"><h3>Microsoft 365 &amp; Productivity</h3><p>Complete Microsoft cloud ecosystem deployment and management</p></div><div class="svc-arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></div></div>
+
+
+
+
+
+
+        <div class="svc-body" onclick="event.stopPropagation()">
+
+
+
+
+
+
+          <h4>Key Capabilities</h4>
+
+
+
+
+
+
+          <div class="caps">
+
+
+
+
+
+
+            <div class="cap"><span class="ck">✓</span>Microsoft 365 Tenant Design &amp; Migration</div>
+
+
+
+
+
+
+            <div class="cap"><span class="ck">✓</span>Azure Active Directory Implementation</div>
+
+
+
+
+
+
+            <div class="cap"><span class="ck">✓</span>SharePoint Online Intranet Development</div>
+
+
+
+
+
+
+            <div class="cap"><span class="ck">✓</span>Microsoft Teams Deployment &amp; Governance</div>
+
+
+
+
+
+
+            <div class="cap"><span class="ck">✓</span>Power Automate Workflow Development</div>
+
+
+
+
+
+
+            <div class="cap"><span class="ck">✓</span>Power Apps Custom Application Development</div>
+
+
+
+
+
+
+            <div class="cap"><span class="ck">✓</span>Exchange Online &amp; Email Security</div>
+
+
+
+
+
+
+            <div class="cap"><span class="ck">✓</span>Compliance &amp; Data Loss Prevention</div>
+
+
+
+
+
+
+          </div>
+
+
+
+
+
+
+          <p class="desc">Microsoft 365 represents a complete productivity and collaboration platform, and we help organisations fully leverage its capabilities. Our deployments go beyond basic email migration to include SharePoint intranets, Teams collaboration, and Power Platform automation.</p>
+
+
+
+
+
+
+          <p class="desc">We start with a proper identity foundation using Azure Active Directory with conditional access policies, multi-factor authentication, and seamless single sign-on. Our SharePoint implementations create modern intranets that serve as central hubs for company information and business process automation.</p>
+
+
+
+
+
+
+          <p class="desc">Power Automate workflows eliminate repetitive tasks by connecting Microsoft 365 services with third-party applications. We develop automated approval processes, data synchronisation, notification systems, and document generation that improve efficiency and reduce manual errors.</p>
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+  </div>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ╔═══════════════════════════════════════════════════════════╗
+
+
+
+
+
+
+     ║  PAGE: ABOUT                                             ║
+
+
+
+
+
+
+     ╚═══════════════════════════════════════════════════════════╝ -->
+
+
+
+
+
+
+<div id="page-about" class="page">
+
+
+
+
+
+
+  <div class="about-hero"><div class="container"><div class="label">About Us</div><h1>Built by an engineer.<br><span class="serif-i" style="color:var(--text-muted)">Trusted by enterprise.</span></h1><p>The story of RSquared Technologies — from hands-on engineering to end-to-end infrastructure ownership.</p></div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Story -->
+
+
+
+
+
+
+  <section class="about-story">
+
+
+
+
+
+
+    <div class="container">
+
+
+
+
+
+
+      <div class="about-grid">
+
+
+
+
+
+
+        <div class="about-left">
+
+
+
+
+
+
+          <h2>Engineering-first,<br><span class="grad-text">client-focused.</span></h2>
+
+
+
+
+
+
+          <p>RSquared Technologies was founded in Sandton, Johannesburg, with a simple mission: to bring enterprise-grade IT infrastructure, security, and automation to organisations across South Africa — delivered with the rigour and precision of a hands-on engineer.</p>
+
+
+
+
+
+
+          <p>What sets us apart is depth. We don't just specify and hand over — we design, deploy, monitor, and automate. From VLAN segmentation across multi-vendor environments to building full CI/CD pipelines for network infrastructure, we operate at the intersection of traditional networking and modern DevOps.</p>
+
+
+
+
+
+
+          <p>Our approach combines deep technical certifications (CCNP Security, CCNP Enterprise, AWS SysOps, Fortinet NSE, Cisco DevNet, and more) with real-world operational experience across SOC/NOC monitoring, incident response, firewall management, and cloud automation.</p>
+
+
+
+
+
+
+          <p>We believe that exceptional IT infrastructure is invisible when it works and invaluable when it matters. Every solution we deliver is architected for resilience, documented for clarity, and automated for consistency.</p>
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+        <div class="about-right">
+
+
+
+
+
+
+          <div class="founder-card">
+
+
+
+
+
+
+            <div class="fc-label">Founder &amp; Lead Engineer</div>
+
+
+
+
+
+
+            <h3>Khutso Malatji</h3>
+
+
+
+
+
+
+            <div class="fc-role">Network &amp; Security Engineer</div>
+
+
+
+
+
+
+            <p>With deep expertise spanning Cisco, Fortinet, Splunk, AWS, Azure, and MikroTik, Khutso leads every engagement from architecture through deployment. Holding CCNP Security, CCNP Enterprise, AWS SysOps Administrator, Fortinet NSE, and Cisco DevNet Associate certifications — combined with hands-on experience in SOC operations, penetration testing, and network automation — he brings both breadth and depth to every project.</p>
+
+
+
+
+
+
+          </div>
+
+
+
+
+
+
+          <div style="margin-top:16px;padding:20px;background:rgba(124,58,237,0.08);border:1px solid rgba(124,58,237,0.25);border-radius:12px">
+
+
+
+
+
+
+            <p style="font-size:14px;color:var(--purple);font-weight:500;margin-bottom:4px">Our Philosophy</p>
+
+
+
+
+
+
+            <p style="font-size:14px;color:var(--text-secondary);line-height:1.7;font-style:italic">"Infrastructure should be treated as code, security should be proactive not reactive, and every deployment should be validated before it touches production."</p>
+
+
+
+
+
+
+          </div>
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+      </div>
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Values -->
+
+
+
+
+
+
+  <section class="values-section">
+
+    <img src="./Website%20images/getty-images-pvxvQTq3LcI-unsplash.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;opacity:0.15;pointer-events:none;">
+
+    <div class="container" style="position:relative;z-index:1;">
+
+
+
+
+
+
+      <div class="section-header"><div class="label">Our Values</div><h2>What drives <span class="m serif-i">everything.</span></h2></div>
+
+
+
+
+
+
+      <div class="values-grid">
+
+
+
+
+
+
+        <div class="value-card"><div class="v-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/><line x1="12" y1="2" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="22"/><line x1="2" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="22" y2="12"/></svg></div><h3>Engineering Rigour</h3><p>Every solution is designed with industry best practices, tested before deployment, and documented for long-term maintainability. We treat infrastructure as code and apply DevOps principles to networking.</p></div>
+
+
+
+
+
+
+        <div class="value-card"><div class="v-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg></div><h3>Security-First Mindset</h3><p>Security isn't an add-on — it's embedded in every design. From zero-trust architectures to defence-in-depth strategies, protection is built into the foundation of every deployment.</p></div>
+
+
+
+
+
+
+        <div class="value-card"><div class="v-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg></div><h3>Continuous Improvement</h3><p>We monitor, measure, and optimise relentlessly. Automated compliance checking, performance benchmarking, and proactive vulnerability management ensure your infrastructure evolves with your business.</p></div>
+
+
+
+
+
+
+        <div class="value-card"><div class="v-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><h3>Transparent Partnership</h3><p>Clear communication, detailed documentation, and honest assessments. We share what we find, recommend what's right, and deliver what we promise — no upselling, no unnecessary complexity.</p></div>
+
+
+
+
+
+
+        <div class="value-card"><div class="v-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><h3>Multi-Vendor Excellence</h3><p>We're not locked into a single vendor. Cisco, Fortinet, MikroTik, Aruba, AWS, Azure — we recommend the best fit for your requirements, environment, and budget.</p></div>
+
+
+
+
+
+
+        <div class="value-card"><div class="v-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div><h3>Knowledge Transfer</h3><p>We don't just build and leave. Administrator training, end-user onboarding, and comprehensive documentation ensure your team can confidently manage what we deploy.</p></div>
+
+
+
+
+
+
+      </div>
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Timeline -->
+
+
+
+
+
+
+  <section class="timeline-section">
+
+
+
+
+
+
+    <div class="container">
+
+
+
+
+
+
+      <div class="section-header"><div class="label">Our Journey</div><h2>Milestones &amp; <span class="m serif-i">momentum.</span></h2></div>
+
+
+
+
+
+
+      <div class="timeline">
+
+
+
+
+
+
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-content"><div class="tl-year">Foundation</div><div class="tl-title">RSquared Technologies Established</div><div class="tl-desc">Founded in Sandton, Johannesburg, to deliver enterprise IT infrastructure, cybersecurity, and cloud automation services across South Africa.</div></div></div>
+
+
+
+
+
+
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-content"><div class="tl-year">Certifications</div><div class="tl-title">8+ Industry Certifications Achieved</div><div class="tl-desc">Earned CCNP Security, CCNP Enterprise, AWS SysOps Admin, Fortinet NSE, Cisco DevNet Associate, ITIL 4 Foundation, Splunk Certified, and MikroTik MTCNA.</div></div></div>
+
+
+
+
+
+
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-content"><div class="tl-year">Enterprise Delivery</div><div class="tl-title">Multi-Site Enterprise Deployments</div><div class="tl-desc">Delivered multi-vendor VLAN segmentation, CI/CD network automation pipelines, penetration testing engagements, and M365 intranet deployments for enterprise clients.</div></div></div>
+
+
+
+
+
+
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-content"><div class="tl-year">Automation</div><div class="tl-title">Open-Source Network Automation Framework</div><div class="tl-desc">Published an enterprise-grade Network Automation CI/CD pipeline on GitHub — GitHub Actions, Ansible, pyATS, and Terraform for Cisco environments.</div></div></div>
+
+
+
+
+
+
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-content"><div class="tl-year">Today</div><div class="tl-title">Growing &amp; Scaling</div><div class="tl-desc">Expanding service offerings, deepening cloud and security capabilities, and building long-term partnerships with enterprises across Gauteng and beyond.</div></div></div>
+
+
+
+
+
+
+      </div>
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Certs -->
+
+
+
+
+
+
+  <section class="certs-section">
+
+    <img src="./Website%20images/getty-images-Z5FUS7eG1pI-unsplash.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;opacity:0.15;pointer-events:none;">
+
+    <div class="container" style="position:relative;z-index:1;">
+
+
+
+
+
+
+      <div class="section-header"><div class="label">Credentials</div><h2>Backed by <span class="m serif-i">the best.</span></h2><p>Verified expertise across the industry's most demanding certification programmes.</p></div>
+
+
+
+
+
+
+      <div class="certs-grid">
+
+
+
+
+
+
+        <div class="cert-c"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--purple)" stroke-width="1.5"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path></svg><div class="cn">CCNP Security</div><div class="cv">Cisco</div></div>
+
+
+
+
+
+
+        <div class="cert-c"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="1.5"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg><div class="cn">CCNP Enterprise</div><div class="cv">Cisco</div></div>
+
+
+
+
+
+
+        <div class="cert-c"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#a16207" stroke-width="1.5"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg><div class="cn">NSE Certified</div><div class="cv">Fortinet</div></div>
+
+
+
+
+
+
+        <div class="cert-c"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--purple)" stroke-width="1.5"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"></path></svg><div class="cn">SysOps Admin</div><div class="cv">AWS</div></div>
+
+
+
+
+
+
+        <div class="cert-c"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--purple)" stroke-width="1.5"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg><div class="cn">DevNet Associate</div><div class="cv">Cisco</div></div>
+
+
+
+
+
+
+        <div class="cert-c"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="1.5"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"></path><circle cx="12" cy="8" r="6"></circle></svg><div class="cn">ITIL 4 Foundation</div><div class="cv">PeopleCert</div></div>
+
+
+
+
+
+
+        <div class="cert-c"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#a16207" stroke-width="1.5"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline><polyline points="16 7 22 7 22 13"></polyline></svg><div class="cn">Splunk Certified</div><div class="cv">Splunk</div></div>
+
+
+
+
+
+
+        <div class="cert-c"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--text-secondary)" stroke-width="1.5"><circle cx="12" cy="12" r="10"></circle></svg><div class="cn">MTCNA</div><div class="cv">MikroTik</div></div>
+
+
+
+
+
+
+        <div class="cert-c"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--purple)" stroke-width="1.5"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path><circle cx="12" cy="12" r="3"></circle></svg><div class="cn">ThousandEyes</div><div class="cv">Cisco</div></div>
+
+
+
+
+
+
+      </div>
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+  </section>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ╔═══════════════════════════════════════════════════════════╗
+
+
+
+
+
+
+     ║  PAGE: PROJECTS                                          ║
+
+
+
+
+
+
+     ╚═══════════════════════════════════════════════════════════╝ -->
+
+
+
+
+
+
+<div id="page-contact" class="page">
+
+  <div class="hero-mini"><div class="container"><div class="label">Contact Us</div><h1>Let's Build <span class="serif-i" style="color:var(--text-muted)">Together.</span></h1><p>Tell us about your infrastructure challenge and we'll come back with a clear, actionable plan.</p></div></div>
+
+  <section style="padding:4rem 0 4rem">
+
+
+
+
+
+
+    <div class="container">
+
+
+
+
+
+
+      <div class="contact-grid">
+
+
+
+
+
+
+        <div class="contact-info">
+
+
+
+
+
+
+          <h2>Let's build <span class="grad-text">together.</span></h2>
+
+
+
+
+
+
+          <p>Tell us about your project, infrastructure challenges, or security concerns. We'll respond within one business day with an initial assessment and recommended next steps.</p>
+
+
+
+
+
+
+          <div class="contact-details">
+
+
+
+
+
+
+            <div class="contact-item">
+
+
+
+
+
+
+              <div class="contact-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></div>
+
+
+
+
+
+
+              <div class="contact-text"><span class="label">Email</span><a href="mailto:infor@rsquaredit.com" style="color:var(--purple-light)">infor@rsquaredit.com</a></div>
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+            <div class="contact-item">
+
+
+
+
+
+
+              <div class="contact-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></div>
+
+
+
+
+
+
+              <div class="contact-text"><span class="label">Phone</span><a href="tel:+27684301721">+27 68 430 1721</a></div>
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+            <div class="contact-item">
+
+
+
+
+
+
+              <div class="contact-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
+
+
+
+
+
+
+              <div class="contact-text"><span class="label">Location</span><p>Johannesburg, South Africa</p></div>
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+          </div>
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+        <div class="contact-form-card">
+
+
+
+
+
+
+          <h3>Send us a message</h3>
+
+
+
+
+
+
+          <form onsubmit="event.preventDefault();const f=this;const body='Name: '+f.name.value+'%0AEmail: '+f.email.value+'%0ACompany: '+(f.company.value||'N/A')+'%0AService: '+(f.service.value||'N/A')+'%0A%0AMessage:%0A'+encodeURIComponent(f.message.value);window.location.href='mailto:sales@rsquaredit.com?subject=New Enquiry from '+encodeURIComponent(f.name.value)+'&body='+body;setTimeout(function(){alert('Thank you! Your email client has opened. We will respond within one business day.');f.reset()},500)">
+
+
+
+
+
+
+            <div class="form-row"><div class="form-group"><label for="c-name">Name</label><input type="text" id="c-name" name="name" required=""></div><div class="form-group"><label for="c-email">Email</label><input type="email" id="c-email" name="email" required=""></div></div>
+
+
+
+
+
+
+            <div class="form-group"><label for="c-company">Company</label><input type="text" id="c-company" name="company"></div>
+
+
+
+
+
+
+            <div class="form-group"><label for="c-service">Service Interest</label><select id="c-service" name="service"><option value="">Select a service</option><option value="consultation">Network &amp; Security Consultation</option><option value="security">Managed Security</option><option value="network">Network Infrastructure</option><option value="cloud">Cloud &amp; SD-WAN</option><option value="automation">Network Automation</option><option value="building">Smart Building</option><option value="m365">Microsoft 365</option></select></div>
+
+
+
+
+
+
+            <div class="form-group"><label for="c-message">Message</label><textarea id="c-message" name="message" required="" spellcheck="false"></textarea></div>
+
+
+
+
+
+
+            <button type="submit" class="btn btn-p" style="width:100%;justify-content:center">Send Message <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></button>
+
+
+
+
+
+
+          </form>
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+      </div>
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+  </section>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ═══════════ FOOTER ═══════════ -->
+
+
+
+
+
+
+<footer class="site-footer">
+
+
+
+
+
+
+  <div class="container">
+
+
+
+
+
+
+    <div class="footer-grid">
+
+
+
+
+
+
+      <div class="footer-brand">
+
+
+
+
+
+
+        <div class="logo-g" onclick="go(&#39;home&#39;)"><div class="logo-t">RSquared <span>Technologies</span></div></div>
+
+
+
+
+
+
+        <p>Enterprise IT infrastructure, cybersecurity, and cloud automation services from Sandton, Johannesburg.</p>
+
+
+
+
+
+
+      </div>
+
+
+
+
+
+
+      <div class="footer-col">
+
+
+
+
+
+
+        <h4>Navigation</h4>
+
+
+
+
+
+
+        <ul><li><button class="nav-link active" data-page="home">Home</button></li><li><button class="nav-link" data-page="services">Services</button></li><li><button class="nav-link" data-page="about">About</button></li><li><button class="nav-link" data-page="contact">Contact</button></li></ul>
+
+
+
+
+
+
+      </div>
+
+
+
+
+
+
+      <div class="footer-col">
+
+
+
+
+
+
+        <h4>Services</h4>
+
+
+
+
+
+
+        <ul><li><a onclick="goService('svc-consultation')" style="cursor:pointer">Network &amp; Security Consultation</a></li><li><a onclick="goService('svc-security')" style="cursor:pointer">Managed Security</a></li><li><a onclick="goService('svc-network')" style="cursor:pointer">Network Infrastructure</a></li><li><a onclick="goService('svc-cloud')" style="cursor:pointer">Cloud &amp; SD-WAN</a></li><li><a onclick="goService('svc-automation')" style="cursor:pointer">Network Automation</a></li><li><a onclick="goService('svc-building')" style="cursor:pointer">Smart Building</a></li><li><a onclick="goService('svc-m365')" style="cursor:pointer">Microsoft 365 &amp; Productivity</a></li></ul>
+
+
+
+
+
+
+      </div>
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+    <div class="footer-bottom">
+
+
+
+
+
+
+      <p>© 2026 RSquared Technologies. All rights reserved.</p>
+
+
+
+
+
+
+      <div style="display:flex;gap:1.5rem"><a href="http://www.rsquaredit.com/#" style="font-size:.875rem;color:var(--text-muted);text-decoration:none">Privacy Policy</a><a href="http://www.rsquaredit.com/#" style="font-size:.875rem;color:var(--text-muted);text-decoration:none">Terms of Service</a></div>
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+  </div>
+
+
+
+
+
+
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ═══════════ ROUTER + TYPING ANIMATION ═══════════ -->
+
+
+
+
+
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="./RSquared Technologies — Enterprise IT Infrastructure, Security &amp; Automation_files/email-decode.min.js.download"></script><script>
+
+
+
+
+
+
+function go(page) {
+
+
+
+
+
+
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+
+
+
+
+
+
+  const target = document.getElementById('page-' + page);
+
+
+
+
+
+
+  if (target) target.classList.add('active');
+
+
+
+
+
+
+  document.querySelectorAll('.nav-link').forEach(l => {
+
+
+
+
+
+
+    l.classList.toggle('active', l.dataset.page === page);
+
+
+
+
+
+
+  });
+
+
+
+
+
+
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+
+
+
+
+
+
+  history.pushState(null, '', '#' + page);
+
+
+
+
+
+
+}
+
+
+
+
+
+
+document.querySelectorAll('.nav-link[data-page]').forEach(link => {
+
+
+
+
+
+
+  link.addEventListener('click', () => go(link.dataset.page));
+
+
+
+
+
+
+});
+
+
+
+
+
+
+window.addEventListener('popstate', () => {
+
+
+
+
+
+
+  const hash = location.hash.replace('#', '') || 'home';
+
+
+
+
+
+
+  go(hash);
+
+
+
+
+
+
+});
+
+
+
+
+
+
+window.addEventListener('DOMContentLoaded', () => {
+
+
+
+
+
+
+  const hash = location.hash.replace('#', '') || 'home';
+
+
+
+
+
+
+  go(hash);
+
+
+
+
+
+
+
+
+
+
+
+
+
+  // Typing animation for roadmap section
+
+
+
+
+
+
+  const phrases = ['assess → deploy', 'design → automate', 'monitor → secure', 'test → validate'];
+
+
+
+
+
+
+  let pi = 0, ci = 0, deleting = false;
+
+
+
+
+
+
+  const el = document.getElementById('typingText');
+
+
+
+
+
+
+  if (el) {
+
+
+
+
+
+
+    function typeStep() {
+
+
+
+
+
+
+      const phrase = phrases[pi];
+
+
+
+
+
+
+      if (!deleting) {
+
+
+
+
+
+
+        el.textContent = phrase.substring(0, ci + 1);
+
+
+
+
+
+
+        ci++;
+
+
+
+
+
+
+        if (ci === phrase.length) { deleting = true; setTimeout(typeStep, 2000); return; }
+
+
+
+
+
+
+        setTimeout(typeStep, 80);
+
+
+
+
+
+
+      } else {
+
+
+
+
+
+
+        el.textContent = phrase.substring(0, ci - 1);
+
+
+
+
+
+
+        ci--;
+
+
+
+
+
+
+        if (ci === 0) { deleting = false; pi = (pi + 1) % phrases.length; setTimeout(typeStep, 400); return; }
+
+
+
+
+
+
+        setTimeout(typeStep, 40);
+
+
+
+
+
+
+      }
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+    setTimeout(typeStep, 1500);
+
+
+
+
+
+
+  }
+
+
+
+
+
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Navigate to services page and open a specific accordion
+function goService(svcId) {
+  go('services');
+  setTimeout(function() {
+    // Close all open accordions first
+    document.querySelectorAll('.svc-expand.open').forEach(function(el) {
+      el.classList.remove('open');
+    });
+    var target = document.getElementById(svcId);
+    if (target) {
+      target.classList.add('open');
+      setTimeout(function() {
+        target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }, 100);
+    }
+  }, 80);
+}
+
+// Use-case tab switching
+
+
+
+
+
+
+function showUC(id, el) {
+
+
+
+
+
+
+  document.querySelectorAll('.uc-panel').forEach(p => p.classList.remove('active'));
+
+
+
+
+
+
+  document.querySelectorAll('.uc-tab').forEach(t => t.classList.remove('active'));
+
+
+
+
+
+
+  var panel = document.getElementById(id);
+
+
+
+
+
+
+  if (panel) panel.classList.add('active');
+
+
+
+
+
+
+  if (el) el.classList.add('active');
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Counter animation - numbers count up when section scrolls into view
+
+
+
+
+
+
+function animateCounters() {
+
+
+
+
+
+
+  var counters = document.querySelectorAll('.count');
+
+
+
+
+
+
+  var animated = new Set();
+
+
+
+
+
+
+  function runCount() {
+
+
+
+
+
+
+    counters.forEach(function(counter) {
+
+
+
+
+
+
+      if (animated.has(counter)) return;
+
+
+
+
+
+
+      var rect = counter.getBoundingClientRect();
+
+
+
+
+
+
+      if (rect.top < window.innerHeight && rect.bottom > 0) {
+
+
+
+
+
+
+        animated.add(counter);
+
+
+
+
+
+
+        var target = parseFloat(counter.getAttribute('data-target'));
+
+
+
+
+
+
+        var decimal = counter.getAttribute('data-decimal') ? parseInt(counter.getAttribute('data-decimal')) : 0;
+
+
+
+
+
+
+        var duration = 2000;
+
+
+
+
+
+
+        var start = 0;
+
+
+
+
+
+
+        var startTime = null;
+
+
+
+
+
+
+        function step(timestamp) {
+
+
+
+
+
+
+          if (!startTime) startTime = timestamp;
+
+
+
+
+
+
+          var progress = Math.min((timestamp - startTime) / duration, 1);
+
+
+
+
+
+
+          var eased = 1 - Math.pow(1 - progress, 3);
+
+
+
+
+
+
+          var current = start + (target - start) * eased;
+
+
+
+
+
+
+          counter.textContent = decimal > 0 ? current.toFixed(decimal) : Math.floor(current);
+
+
+
+
+
+
+          if (progress < 1) requestAnimationFrame(step);
+
+
+
+
+
+
+        }
+
+
+
+
+
+
+        requestAnimationFrame(step);
+
+
+
+
+
+
+      }
+
+
+
+
+
+
+    });
+
+
+
+
+
+
+  }
+
+
+
+
+
+
+  window.addEventListener('scroll', runCount);
+
+
+
+
+
+
+  runCount();
+
+
+
+
+
+
+}
+
+
+
+
+
+
+animateCounters();
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ── Intersection Observer: scroll-reveal animations ──
+
+
+
+
+
+
+(function(){
+
+
+
+
+
+
+  var io = new IntersectionObserver(function(entries){
+
+
+
+
+
+
+    entries.forEach(function(e){
+
+
+
+
+
+
+      if(e.isIntersecting){
+
+
+
+
+
+
+        e.target.classList.add('visible');
+
+
+
+
+
+
+        io.unobserve(e.target);
+
+
+
+
+
+
+      }
+
+
+
+
+
+
+    });
+
+
+
+
+
+
+  },{threshold:0.12,rootMargin:'0px 0px -40px 0px'});
+
+
+
+
+
+
+
+
+
+
+
+
+
+  // Attach reveal class to key elements if not already present
+
+
+
+
+
+
+  var selectors = [
+
+
+
+
+
+
+    '.integ-tile','.dd-card','.cert-c','.value-card',
+
+
+
+
+
+
+    '.res-card','.tl-item','.svc-expand','.rm-step',
+
+
+
+
+
+
+    '.test-card','.award-card','.stat-card','.uc-panel.active'
+
+
+
+
+
+
+  ];
+
+
+
+
+
+
+  selectors.forEach(function(sel){
+
+
+
+
+
+
+    document.querySelectorAll(sel).forEach(function(el,i){
+
+
+
+
+
+
+      if(!el.classList.contains('reveal') && !el.classList.contains('reveal-scale')){
+
+
+
+
+
+
+        el.classList.add('reveal');
+
+
+
+
+
+
+        el.style.transitionDelay = (i * 0.07) + 's';
+
+
+
+
+
+
+      }
+
+
+
+
+
+
+      io.observe(el);
+
+
+
+
+
+
+    });
+
+
+
+
+
+
+  });
+
+
+
+
+
+
+
+
+
+
+
+
+
+  // Also observe any manually marked .reveal/.reveal-scale elements
+
+
+
+
+
+
+  document.querySelectorAll('.reveal,.reveal-scale').forEach(function(el){
+
+
+
+
+
+
+    io.observe(el);
+
+
+
+
+
+
+  });
+
+
+
+
+
+
+})();
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
