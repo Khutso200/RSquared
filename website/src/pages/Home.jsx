@@ -2,6 +2,8 @@ import { Link } from 'react-router-dom'
 import Eyebrow from '../components/Eyebrow'
 import Button from '../components/Button'
 import Icon from '../components/Icon'
+import ImagePlaceholder from '../components/ImagePlaceholder'
+import EngagementLoop from '../components/EngagementLoop'
 import { services } from '../data/services'
 
 const statusRows = [
@@ -182,65 +184,55 @@ export default function Home() {
 
       {/* Our Approach */}
       <section className="overflow-hidden bg-[#0f0f14] py-26">
-        <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-14 px-6 lg:grid-cols-[1.05fr_0.95fr]">
-          <div>
-            <Eyebrow dark>Our Approach</Eyebrow>
-            <h2 className="mt-5 mb-6 text-balance text-3xl font-extrabold tracking-tight text-white sm:text-[2.6rem]">
-              Straightforward engineering. No vendor lock-in.
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="mx-auto mb-16 max-w-2xl text-center">
+            <Eyebrow dark className="mx-auto">Our Approach</Eyebrow>
+            <h2 className="mt-5 text-balance text-3xl font-extrabold tracking-tight text-white sm:text-[2.6rem]">
+              Why teams trust RSquared with <span className="text-brand-300">infrastructure that can't go down.</span>
             </h2>
-
-            <div className="mb-7 flex gap-10">
-              {approachStats.map((stat) => (
-                <div key={stat.label}>
-                  <div className="mb-1 bg-gradient-to-br from-brand-400 to-brand-200 bg-clip-text text-4xl font-extrabold text-transparent">
-                    {stat.value}
-                  </div>
-                  <div className="max-w-[9rem] text-[0.8rem] leading-snug font-semibold text-white/60">
-                    {stat.label}
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <p className="mb-7 max-w-md text-[1.02rem] leading-relaxed text-white/70">
-              We work as an extension of your team — assessing honestly, recommending the right-sized solution,
-              and staying accountable after go-live.
-            </p>
-
-            <div className="mb-8 max-w-md rounded-2xl border border-white/10 bg-white/5 px-6 py-5">
-              <p className="mb-1.5 text-sm font-bold text-brand-300">Our Philosophy</p>
-              <p className="text-sm leading-relaxed text-white/70 italic">
-                "Infrastructure should be resilient by design, security should be proactive not reactive, and
-                every recommendation should be one we'd make to our own network."
-              </p>
-              <p className="mt-3 text-xs font-semibold text-white/40">— RSquared Engineering Team</p>
-            </div>
-
-            <div className="flex flex-wrap gap-3.5">
-              <Button to="/contact">Talk to a Consultant</Button>
-              <Button to="/services" variant="ghostOnDark">Explore Services</Button>
-            </div>
           </div>
 
-          <div className="rounded-[20px] border border-white/10 bg-white/5 p-8">
-            <div className="mb-6 font-mono text-xs font-bold tracking-[0.1em] text-white/40 uppercase">
-              How an engagement runs
-            </div>
-            <div className="flex flex-col">
-              {methodSteps.map((step, i) => (
-                <div key={step.num} className="relative flex gap-5 pb-7 last:pb-0">
-                  {i !== methodSteps.length - 1 && (
-                    <span className="absolute top-9 left-4.5 h-full w-px bg-white/10" />
-                  )}
-                  <span className="relative flex h-9 w-9 flex-none items-center justify-center rounded-full border border-brand-400/40 bg-brand-500/20 font-mono text-xs font-bold text-brand-300">
-                    {step.num}
-                  </span>
-                  <div>
-                    <h4 className="mb-1 text-[1rem] font-bold text-white">{step.title}</h4>
-                    <p className="text-[0.86rem] leading-relaxed text-white/60">{step.copy}</p>
+          <div className="grid grid-cols-1 items-center gap-14 lg:grid-cols-[1fr_1.05fr]">
+            <div>
+              <div className="mb-7 flex gap-10">
+                {approachStats.map((stat) => (
+                  <div key={stat.label}>
+                    <div className="mb-1 bg-gradient-to-br from-brand-400 to-brand-200 bg-clip-text text-4xl font-extrabold text-transparent">
+                      {stat.value}
+                    </div>
+                    <div className="max-w-[9rem] text-[0.8rem] leading-snug font-semibold text-white/60">
+                      {stat.label}
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
+
+              <h3 className="mb-3 text-[1.3rem] font-extrabold text-white">
+                Straightforward engineering. No vendor lock-in.
+              </h3>
+              <p className="mb-7 max-w-md text-[1.02rem] leading-relaxed text-white/70">
+                We work as an extension of your team — assessing honestly, recommending the right-sized
+                solution, and staying accountable after go-live.
+              </p>
+
+              <div className="mb-8 max-w-md rounded-2xl border border-white/10 bg-white/5 px-6 py-5">
+                <p className="mb-1.5 text-sm font-bold text-brand-300">Our Philosophy</p>
+                <p className="text-sm leading-relaxed text-white/70 italic">
+                  "Infrastructure should be resilient by design, security should be proactive not reactive,
+                  and every recommendation should be one we'd make to our own network."
+                </p>
+                <p className="mt-3 text-xs font-semibold text-white/40">— RSquared Engineering Team</p>
+              </div>
+
+              <div className="flex flex-wrap gap-3.5">
+                <Button to="/contact">Talk to a Consultant</Button>
+                <Button to="/services" variant="ghostOnDark">Explore Services</Button>
+              </div>
+            </div>
+
+            <div className="relative pb-10 sm:pb-14">
+              <ImagePlaceholder label="Add engagement photo" className="aspect-[4/5] w-full" />
+              <EngagementLoop steps={methodSteps} className="absolute inset-x-6 -bottom-2 sm:inset-x-10" />
             </div>
           </div>
         </div>
