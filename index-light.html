@@ -7,9 +7,9 @@
 <meta name="description" content="RSquared IT Technologies delivers network consultation, security consultation, network &amp; security infrastructure, penetration testing, and ICT hardware &amp; software from Johannesburg, South Africa.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpolygon points='50,3 93,26 93,74 50,97 7,74 7,26' fill='%23f3eefc' stroke='%237c3aed' stroke-width='6'/%3E%3C/svg%3E">
 <style>
-/*==========================================================
+/*=================================================================
   RESET & VARIABLES
-==========================================================*/
+=================================================================*/
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
   --purple:#7c3aed;
@@ -27,6 +27,8 @@
   --panel:#f5f3f9;
   --border:#e6e2ef;
   --border-soft:#eeebf5;
+  --good:#16a34a;
+  --good-bg:#eafcf1;
   --radius:16px;
   --shadow-sm:0 1px 3px rgba(20,10,50,.06);
   --shadow-md:0 8px 24px rgba(40,20,90,.08);
@@ -35,635 +37,790 @@
 html{scroll-behavior:smooth}
 body{
   font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Roboto,Helvetica,Arial,sans-serif;
-  background:var(--white);
-  color:var(--ink);
-  line-height:1.6;
-  -webkit-font-smoothing:antialiased;
+  background:var(--white);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;
 }
 .mono{font-family:'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace}
 img{max-width:100%;display:block}
 a{color:inherit}
 ul{list-style:none}
+button{font:inherit}
 .container{width:100%;max-width:1180px;margin:0 auto;padding:0 24px}
 section{position:relative}
 .eyebrow{
   display:inline-flex;align-items:center;gap:8px;
-  font-family:'SFMono-Regular',Consolas,monospace;
-  font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;
-  color:var(--purple-dark);font-weight:600;
-  background:var(--purple-tint);border:1px solid var(--purple-tint-2);
-  padding:6px 14px;border-radius:100px;margin-bottom:18px;
+  font-family:'SFMono-Regular',Consolas,monospace;font-size:.75rem;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--purple-dark);font-weight:600;
+  background:var(--purple-tint);border:1px solid var(--purple-tint-2);padding:6px 14px;border-radius:100px;margin-bottom:18px;
 }
 .eyebrow::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--purple);flex:none}
-h1,h2,h3,h4{font-weight:800;letter-spacing:-.02em;color:var(--ink)}
+h1,h2,h3,h4{font-weight:800;letter-spacing:-.02em;color:var(--ink);text-wrap:balance}
 h2{font-size:clamp(1.8rem,3.4vw,2.6rem);margin-bottom:14px}
 .section-head{max-width:640px;margin:0 auto 56px;text-align:center}
 .section-head p{color:var(--text-secondary);font-size:1.05rem}
-.section-head.left{margin:0 0 48px;text-align:left}
+.serif-m{color:var(--text-muted)}
 
 /*==========================================================
   BUTTONS
 ==========================================================*/
 .btn{
-  display:inline-flex;align-items:center;justify-content:center;gap:8px;
-  padding:14px 28px;border-radius:10px;font-weight:700;font-size:.95rem;
-  text-decoration:none;cursor:pointer;border:none;transition:transform .15s ease,box-shadow .15s ease,background .15s ease;
-  white-space:nowrap;
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 28px;
+  border-radius:10px;font-weight:700;font-size:.95rem;text-decoration:none;cursor:pointer;border:none;
+  transition:transform .15s ease,box-shadow .15s ease,background .15s ease;white-space:nowrap;font-family:inherit;
 }
 .btn-primary{background:var(--purple);color:#fff;box-shadow:0 6px 20px rgba(124,58,237,.28)}
 .btn-primary:hover{background:var(--purple-dark);transform:translateY(-2px);box-shadow:0 10px 26px rgba(124,58,237,.36)}
-.btn-outline{background:#fff;color:var(--ink);border:1.5px solid var(--border);}
+.btn-outline{background:#fff;color:var(--ink);border:1.5px solid var(--border)}
 .btn-outline:hover{border-color:var(--purple);color:var(--purple-dark);transform:translateY(-2px)}
-.btn-ghost{background:transparent;color:var(--purple-dark);padding:14px 8px}
-.btn-ghost:hover{color:var(--purple)}
 .btn svg{flex:none}
 
 /*==========================================================
   HEADER / NAV
 ==========================================================*/
-.site-header{
-  position:sticky;top:0;z-index:100;
-  background:rgba(255,255,255,.85);
-  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
-  border-bottom:1px solid var(--border-soft);
+header{
+  position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.86);
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--border-soft);
 }
-.nav-wrap{display:flex;align-items:center;justify-content:space-between;height:78px}
-.brand{display:flex;align-items:center;gap:12px;text-decoration:none;flex:none}
-.brand-mark{width:42px;height:42px;flex:none}
-.brand-text{display:flex;flex-direction:column;line-height:1.05}
-.brand-text .name{font-weight:800;font-size:1.15rem;color:var(--ink);letter-spacing:-.01em}
-.brand-text .sub{font-family:'SFMono-Regular',Consolas,monospace;font-size:.58rem;letter-spacing:.16em;color:var(--purple);font-weight:700}
-.nav-links{display:flex;align-items:center;gap:4px}
-.nav-links a{
-  padding:10px 16px;border-radius:8px;text-decoration:none;color:var(--ink-soft);
-  font-weight:600;font-size:.92rem;transition:all .15s ease;
+header .inner{display:flex;align-items:center;justify-content:space-between;height:76px;max-width:1180px;margin:0 auto;padding:0 24px}
+.logo-g{display:flex;align-items:center;gap:12px;text-decoration:none;cursor:pointer;flex:none;background:none;border:none}
+.logo-g svg{width:40px;height:40px;flex:none}
+.logo-t{display:flex;flex-direction:column;line-height:1.05;text-align:left}
+.logo-t .n{font-weight:800;font-size:1.12rem;color:var(--ink);letter-spacing:-.01em}
+.logo-t .s{font-family:'SFMono-Regular',Consolas,monospace;font-size:.56rem;letter-spacing:.16em;color:var(--purple);font-weight:700}
+nav#dNav{display:flex;align-items:center;gap:6px}
+.nav-link{
+  padding:10px 16px;border-radius:8px;text-decoration:none;color:var(--ink-soft);font-weight:600;font-size:.92rem;
+  transition:all .15s ease;cursor:pointer;background:none;border:none;font-family:inherit;position:relative;
 }
-.nav-links a:hover{background:var(--purple-tint);color:var(--purple-dark)}
-.nav-actions{display:flex;align-items:center;gap:12px}
-.nav-actions .btn{padding:11px 22px;font-size:.9rem}
-.nav-toggle{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px}
-.nav-toggle span{width:24px;height:2px;background:var(--ink);border-radius:2px;transition:.2s}
-.mobile-nav{display:none;flex-direction:column;gap:4px;padding:16px 24px 24px;border-top:1px solid var(--border-soft);background:#fff}
-.mobile-nav a{padding:12px 8px;text-decoration:none;color:var(--ink-soft);font-weight:600;border-bottom:1px solid var(--border-soft)}
-.mobile-nav .btn{margin-top:12px}
-.site-header.open .mobile-nav{display:flex}
+.nav-link:hover{background:var(--purple-tint);color:var(--purple-dark)}
+.nav-link.active{color:var(--purple-dark)}
+.nav-link.active::after{content:'';position:absolute;bottom:0;left:16px;right:16px;height:2px;background:var(--purple);border-radius:2px}
+nav#dNav .btn-primary{margin-left:10px;padding:11px 22px;font-size:.9rem}
+.mob-btn{display:none;background:none;border:none;cursor:pointer;padding:8px;color:var(--ink)}
 
 /*==========================================================
-  HERO
+  MOBILE NAV
 ==========================================================*/
-.hero{padding:88px 0 96px;overflow:hidden;position:relative}
-.hero::before{
-  content:'';position:absolute;top:-160px;right:-120px;width:560px;height:560px;border-radius:50%;
-  background:radial-gradient(circle,rgba(124,58,237,.14),rgba(124,58,237,0) 70%);pointer-events:none;
-}
-.hero::after{
-  content:'';position:absolute;bottom:-200px;left:-140px;width:480px;height:480px;border-radius:50%;
-  background:radial-gradient(circle,rgba(168,85,247,.10),rgba(168,85,247,0) 70%);pointer-events:none;
-}
+.mob-nav{display:none;position:fixed;inset:0;z-index:2000;background:rgba(255,255,255,.98);backdrop-filter:blur(20px);flex-direction:column;align-items:center;justify-content:center;gap:1.6rem}
+.mob-nav.open{display:flex}
+.mob-nav .nav-link{font-size:1.4rem;color:var(--ink);font-weight:700}
+.mob-nav .cls{position:absolute;top:1.4rem;right:1.4rem;background:none;border:none;font-size:2rem;cursor:pointer;color:var(--text-muted)}
+
+/*==========================================================
+  PAGE CONTAINER
+==========================================================*/
+.page{display:none}
+.page.active{display:block}
+
+/*==========================================================
+  HOME — HERO
+==========================================================*/
+.hero{padding:88px 0 80px;overflow:hidden;position:relative}
+.hero::before{content:'';position:absolute;top:-160px;right:-120px;width:560px;height:560px;border-radius:50%;background:radial-gradient(circle,rgba(124,58,237,.14),rgba(124,58,237,0) 70%);pointer-events:none}
+.hero::after{content:'';position:absolute;bottom:-200px;left:-140px;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle,rgba(168,85,247,.10),rgba(168,85,247,0) 70%);pointer-events:none}
 .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;position:relative;z-index:1}
 .hero h1{font-size:clamp(2.4rem,4.6vw,3.6rem);line-height:1.08;margin-bottom:22px}
 .hero h1 .accent{color:var(--purple)}
 .hero p.lead{font-size:1.15rem;color:var(--text-secondary);max-width:520px;margin-bottom:32px}
-.hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:44px}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:44px}
 .hero-stats{display:flex;gap:36px;flex-wrap:wrap}
 .hero-stats .stat b{display:block;font-size:1.7rem;font-weight:800;color:var(--ink)}
 .hero-stats .stat span{font-size:.82rem;color:var(--text-muted);font-weight:600}
 
 .hero-visual{position:relative}
-.hero-card{
-  background:var(--white);border:1px solid var(--border);border-radius:20px;
-  box-shadow:var(--shadow-lg);padding:32px;position:relative;
-}
-.hero-card .hc-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:22px}
-.hero-card .hc-top .dot-row{display:flex;gap:6px}
-.hero-card .hc-top .dot-row span{width:9px;height:9px;border-radius:50%;background:var(--border)}
-.hc-badge{font-family:'SFMono-Regular',Consolas,monospace;font-size:.7rem;color:#16a34a;background:#eafcf1;padding:5px 12px;border-radius:100px;font-weight:700;display:flex;align-items:center;gap:6px}
-.hc-badge::before{content:'';width:6px;height:6px;border-radius:50%;background:#16a34a}
+.hero-card{background:var(--white);border:1px solid var(--border);border-radius:20px;box-shadow:var(--shadow-lg);padding:32px;position:relative}
+.hc-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:22px}
+.hc-top .dot-row{display:flex;gap:6px}
+.hc-top .dot-row span{width:9px;height:9px;border-radius:50%;background:var(--border)}
+.hc-badge{font-family:'SFMono-Regular',Consolas,monospace;font-size:.7rem;color:var(--good);background:var(--good-bg);padding:5px 12px;border-radius:100px;font-weight:700;display:flex;align-items:center;gap:6px}
+.hc-badge::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--good)}
 .hc-row{display:flex;align-items:center;justify-content:space-between;padding:14px 0;border-bottom:1px solid var(--border-soft)}
 .hc-row:last-child{border-bottom:none}
 .hc-row .lbl{display:flex;align-items:center;gap:12px;font-weight:600;font-size:.92rem;color:var(--ink-soft)}
 .hc-row .lbl .ic{width:34px;height:34px;border-radius:9px;background:var(--purple-tint);display:flex;align-items:center;justify-content:center;color:var(--purple)}
 .hc-row .val{font-family:'SFMono-Regular',Consolas,monospace;font-size:.78rem;color:var(--text-muted);font-weight:600}
-.hc-row .val.ok{color:#16a34a}
-.float-chip{
-  position:absolute;background:#fff;border:1px solid var(--border);border-radius:12px;
-  padding:12px 16px;box-shadow:var(--shadow-md);display:flex;align-items:center;gap:10px;font-weight:700;font-size:.85rem;
-}
+.hc-row .val.ok{color:var(--good)}
+.float-chip{position:absolute;background:#fff;border:1px solid var(--border);border-radius:12px;padding:12px 16px;box-shadow:var(--shadow-md);display:flex;align-items:center;gap:10px;font-weight:700;font-size:.85rem}
 .float-chip.c1{top:-18px;left:-28px}
 .float-chip.c2{bottom:-20px;right:-20px}
 .float-chip .ic{width:30px;height:30px;border-radius:8px;background:var(--purple);color:#fff;display:flex;align-items:center;justify-content:center;flex:none}
 
 /*==========================================================
-  LOGO STRIP
+  STRIP
 ==========================================================*/
-.strip{padding:34px 0;border-top:1px solid var(--border-soft);border-bottom:1px solid var(--border-soft);background:var(--off-white)}
-.strip-inner{display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;text-align:center}
-.strip-inner span{color:var(--text-muted);font-weight:600;font-size:.9rem}
-.strip-tags{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
-.strip-tags .tag{background:#fff;border:1px solid var(--border);padding:7px 16px;border-radius:100px;font-size:.82rem;font-weight:600;color:var(--ink-soft)}
+.strip{padding:32px 0;border-top:1px solid var(--border-soft);border-bottom:1px solid var(--border-soft);background:var(--off-white)}
+.strip-inner{display:flex;align-items:center;justify-content:center;gap:36px;flex-wrap:wrap}
+.strip-inner .lbl{font-family:'SFMono-Regular',Consolas,monospace;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--text-muted);font-weight:700}
+.strip-brands{display:flex;gap:34px;flex-wrap:wrap;justify-content:center}
+.strip-brands span{font-weight:800;letter-spacing:.02em;color:var(--text-secondary);font-size:.95rem;transition:color .2s}
+.strip-brands span:hover{color:var(--purple-dark)}
 
 /*==========================================================
-  SERVICES
+  HOME SERVICES PREVIEW
 ==========================================================*/
-.services{padding:104px 0}
-.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.svc-card{
-  background:var(--white);border:1px solid var(--border);border-radius:var(--radius);
-  padding:32px 28px;transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease;
-  display:flex;flex-direction:column;
-}
-.svc-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);border-color:var(--purple-tint-2)}
-.svc-icon{width:52px;height:52px;border-radius:13px;background:var(--purple-tint);display:flex;align-items:center;justify-content:center;color:var(--purple-dark);margin-bottom:22px}
-.svc-num{font-family:'SFMono-Regular',Consolas,monospace;font-size:.72rem;color:var(--text-muted);font-weight:700;margin-bottom:10px}
-.svc-card h3{font-size:1.15rem;margin-bottom:10px}
-.svc-card p{color:var(--text-secondary);font-size:.92rem;margin-bottom:18px;flex:1}
-.svc-list{display:flex;flex-direction:column;gap:8px}
-.svc-list li{display:flex;align-items:flex-start;gap:8px;font-size:.84rem;color:var(--ink-soft);font-weight:500}
-.svc-list li svg{flex:none;margin-top:3px;color:var(--purple)}
-.svc-card.wide{grid-column:span 1}
+.home-svc{padding:104px 0}
+.svc-grid-home{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.svc-ch{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:30px 26px;transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease;cursor:pointer;text-align:left}
+.svc-ch:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);border-color:var(--purple-tint-2)}
+.svc-icon{width:48px;height:48px;border-radius:12px;background:var(--purple-tint);display:flex;align-items:center;justify-content:center;color:var(--purple-dark);margin-bottom:20px;flex:none}
+.svc-ch h3{font-size:1.08rem;margin-bottom:8px}
+.svc-ch p{font-size:.9rem;color:var(--text-secondary);margin-bottom:16px}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tag{font-family:'SFMono-Regular',Consolas,monospace;font-size:.68rem;color:var(--purple-dark);background:var(--purple-tint);padding:4px 10px;border-radius:100px;font-weight:700}
+.fs-cta{grid-column:1/-1;background:linear-gradient(135deg,var(--purple-dark),var(--purple) 60%,var(--purple-light));border-radius:var(--radius);padding:44px;color:#fff;display:flex;align-items:center;justify-content:space-between;gap:28px;flex-wrap:wrap;position:relative;overflow:hidden}
+.fs-cta::before{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.15) 1px,transparent 1px);background-size:26px 26px;opacity:.35}
+.fs-cta>*{position:relative;z-index:1}
+.fs-cta h3{color:#fff;font-size:1.35rem;margin-bottom:8px}
+.fs-cta p{color:rgba(255,255,255,.85);font-size:.92rem;max-width:440px;margin-bottom:14px}
+.fs-cta .tags .tag{background:rgba(255,255,255,.18);color:#fff}
+.fs-cta .btn-outline{background:#fff;color:var(--purple-dark);border-color:#fff;flex:none}
 
 /*==========================================================
-  APPROACH / WHY US
+  METHODOLOGY
 ==========================================================*/
-.approach{padding:100px 0;background:var(--panel)}
-.approach-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:center}
-.approach-list{display:flex;flex-direction:column;gap:28px;margin-top:8px}
-.approach-item{display:flex;gap:18px}
-.approach-item .num{
-  width:44px;height:44px;border-radius:12px;background:#fff;border:1px solid var(--border);
-  display:flex;align-items:center;justify-content:center;font-weight:800;color:var(--purple);flex:none;
-  font-family:'SFMono-Regular',Consolas,monospace;font-size:.9rem;
-}
-.approach-item h4{font-size:1.02rem;margin-bottom:6px}
-.approach-item p{color:var(--text-secondary);font-size:.92rem}
-.approach-panel{
-  background:#fff;border:1px solid var(--border);border-radius:20px;padding:36px;box-shadow:var(--shadow-md);
-}
-.approach-panel h3{font-size:1.3rem;margin-bottom:6px}
-.approach-panel .sub{color:var(--text-muted);font-size:.88rem;margin-bottom:26px}
-.metric-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-.metric{padding:18px;border-radius:14px;background:var(--off-white);border:1px solid var(--border-soft)}
-.metric b{display:block;font-size:1.6rem;font-weight:800;color:var(--purple-dark)}
-.metric span{font-size:.78rem;color:var(--text-muted);font-weight:600}
-
-/*==========================================================
-  ABOUT
-==========================================================*/
-.about{padding:104px 0}
-.about-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:60px;align-items:center}
-.about-visual{
-  background:linear-gradient(160deg,var(--purple-tint),#fff 60%);
-  border:1px solid var(--purple-tint-2);border-radius:22px;padding:44px;
-  display:flex;align-items:center;justify-content:center;min-height:340px;
-}
-.about-visual .mark{width:180px;height:180px}
-.about p{color:var(--text-secondary);margin-bottom:16px;font-size:1rem}
-.about-tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
-.about-tags span{background:var(--purple-tint);color:var(--purple-dark);font-weight:700;font-size:.78rem;padding:8px 14px;border-radius:100px}
+.method{padding:0 0 104px}
+.method-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.method-step{background:var(--panel);border:1px solid var(--border-soft);border-radius:16px;padding:26px}
+.method-num{font-family:'SFMono-Regular',Consolas,monospace;font-size:.72rem;color:var(--purple-dark);font-weight:700;margin-bottom:14px}
+.method-step h4{font-size:1.02rem;margin-bottom:6px}
+.method-step p{font-size:.86rem;color:var(--text-secondary)}
 
 /*==========================================================
   CTA BAND
 ==========================================================*/
-.cta-band{
-  margin:0 24px 104px;max-width:1180px;margin-left:auto;margin-right:auto;
-  background:linear-gradient(135deg,var(--purple-dark),var(--purple) 55%,var(--purple-light));
-  border-radius:24px;padding:64px 56px;color:#fff;position:relative;overflow:hidden;
-  display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap;
-}
+.cta-band{margin:0 24px 104px;max-width:1180px;margin-left:auto;margin-right:auto;background:linear-gradient(135deg,var(--purple-dark),var(--purple) 55%,var(--purple-light));border-radius:24px;padding:64px 56px;color:#fff;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap}
 .cta-band::before{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.15) 1px,transparent 1px);background-size:26px 26px;opacity:.4}
-.cta-band > *{position:relative;z-index:1}
+.cta-band>*{position:relative;z-index:1}
 .cta-band h2{color:#fff;margin-bottom:8px;font-size:clamp(1.5rem,2.8vw,2.1rem)}
 .cta-band p{color:rgba(255,255,255,.85);max-width:440px}
 .cta-band .btn-outline{background:#fff;color:var(--purple-dark);border-color:#fff}
-.cta-band .btn-outline:hover{background:var(--purple-tint)}
+.cta-band .btn-ghost-w{background:rgba(255,255,255,.14);color:#fff;border:1.5px solid rgba(255,255,255,.4)}
 
 /*==========================================================
-  CONTACT
+  HERO MINI (services/about/contact headers)
 ==========================================================*/
-.contact{padding:100px 0 110px;background:var(--panel)}
+.hero-mini{padding:64px 0 44px;text-align:center;background:var(--off-white);border-bottom:1px solid var(--border-soft)}
+.hero-mini h1{font-size:clamp(2rem,4.4vw,3rem);margin-bottom:14px}
+.hero-mini p{color:var(--text-secondary);max-width:560px;margin:0 auto;font-size:1.02rem}
+
+/*==========================================================
+  SERVICES PAGE (accordion)
+==========================================================*/
+.svc-page-body{padding:56px 0 100px}
+.svc-expand{border:1px solid var(--border);border-radius:16px;margin-bottom:16px;overflow:hidden;background:var(--white);transition:border-color .2s ease,box-shadow .2s ease}
+.svc-expand:hover{border-color:var(--purple-tint-2);box-shadow:var(--shadow-md)}
+.svc-expand.open{border-color:var(--purple);box-shadow:var(--shadow-md)}
+.svc-head{display:flex;align-items:center;gap:20px;padding:26px 30px;cursor:pointer;user-select:none;transition:background .15s}
+.svc-head:hover{background:var(--off-white)}
+.svc-expand.open .svc-head{background:var(--purple-tint);border-bottom:1px solid var(--purple-tint-2)}
+.svc-head .svc-icon{flex-shrink:0;margin-bottom:0}
+.svc-head-text{flex:1}
+.svc-head-text h3{font-size:1.12rem;margin-bottom:4px}
+.svc-head-text p{font-size:.9rem;color:var(--text-secondary)}
+.svc-arrow{width:34px;height:34px;border-radius:9px;background:var(--panel);display:flex;align-items:center;justify-content:center;transition:all .25s;flex-shrink:0;color:var(--text-secondary)}
+.svc-expand.open .svc-arrow{background:var(--purple);color:#fff;transform:rotate(180deg)}
+.svc-body{display:none;padding:30px}
+.svc-expand.open .svc-body{display:block}
+.svc-body h4{font-size:1.05rem;font-weight:700;margin-bottom:14px;color:var(--purple-dark)}
+.svc-body .caps{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:24px}
+.svc-body .cap{display:flex;align-items:flex-start;gap:9px;font-size:.87rem;color:var(--ink-soft);line-height:1.5;font-weight:500}
+.svc-body .cap .ck{color:var(--purple);flex-shrink:0;margin-top:3px}
+.svc-body .desc{font-size:.92rem;color:var(--text-secondary);line-height:1.75;margin-bottom:16px;max-width:800px}
+.svc-cta-strip{margin-top:44px;background:var(--panel);border:1px solid var(--border-soft);border-radius:16px;padding:32px 36px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.svc-cta-strip h3{font-size:1.1rem;margin-bottom:4px}
+.svc-cta-strip p{color:var(--text-secondary);font-size:.9rem}
+
+/*==========================================================
+  ABOUT PAGE
+==========================================================*/
+.about-story{padding:64px 0}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.about-left p{color:var(--text-secondary);line-height:1.8;margin-bottom:16px;font-size:.98rem}
+.team-card{background:linear-gradient(150deg,var(--purple-tint),#fff 65%);border:1px solid var(--purple-tint-2);border-radius:18px;padding:36px;position:relative;overflow:hidden}
+.team-card .fc-label{font-family:'SFMono-Regular',Consolas,monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:var(--purple-dark);font-weight:700;margin-bottom:14px}
+.team-card h3{font-size:1.3rem;margin-bottom:4px}
+.team-card .fc-role{font-size:.9rem;color:var(--purple-dark);font-weight:700;margin-bottom:18px}
+.team-card p{font-size:.9rem;color:var(--text-secondary);line-height:1.7}
+.philosophy-box{margin-top:16px;padding:22px 24px;background:var(--panel);border:1px solid var(--border-soft);border-radius:14px}
+.philosophy-box .p-lbl{font-size:.82rem;color:var(--purple-dark);font-weight:700;margin-bottom:6px}
+.philosophy-box p{font-size:.9rem;color:var(--text-secondary);line-height:1.7;font-style:italic}
+
+.values-section{padding:100px 0;background:var(--panel)}
+.values-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.value-card{background:#fff;border:1px solid var(--border);border-radius:16px;padding:28px;transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+.value-card:hover{border-color:var(--purple-tint-2);transform:translateY(-4px);box-shadow:var(--shadow-md)}
+.v-icon{width:48px;height:48px;border-radius:13px;background:var(--purple-tint);border:1px solid var(--purple-tint-2);display:flex;align-items:center;justify-content:center;color:var(--purple-dark);margin-bottom:16px;transition:all .25s}
+.value-card:hover .v-icon{background:var(--purple);border-color:var(--purple-dark);color:#fff}
+.value-card h3{font-size:1.02rem;margin-bottom:8px}
+.value-card p{font-size:.87rem;color:var(--text-secondary);line-height:1.6}
+
+.timeline-section{padding:100px 0}
+.timeline{position:relative;max-width:700px;margin:0 auto}
+.timeline::before{content:'';position:absolute;left:15px;top:6px;bottom:6px;width:2px;background:linear-gradient(180deg,var(--purple),var(--purple-tint-2))}
+.tl-item{display:flex;gap:24px;margin-bottom:32px;position:relative}
+.tl-item:last-child{margin-bottom:0}
+.tl-dot{width:12px;height:12px;border-radius:50%;background:var(--purple);border:3px solid #fff;box-shadow:0 0 0 2px var(--purple);flex-shrink:0;margin-top:5px;position:relative;left:10px;z-index:2}
+.tl-content{flex:1;padding-left:14px}
+.tl-year{font-family:'SFMono-Regular',Consolas,monospace;font-size:.72rem;color:var(--purple-dark);font-weight:700;margin-bottom:4px;text-transform:uppercase;letter-spacing:.06em}
+.tl-title{font-size:1.02rem;font-weight:700;margin-bottom:4px}
+.tl-desc{font-size:.9rem;color:var(--text-secondary);line-height:1.6}
+
+.certs-section{padding:100px 0 110px;background:var(--panel)}
+.certs-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.cert-c{background:#fff;border:1px solid var(--border);border-radius:14px;padding:20px;text-align:center;transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+.cert-c:hover{border-color:var(--purple-tint-2);transform:translateY(-4px);box-shadow:var(--shadow-md)}
+.cert-c svg{margin:0 auto 10px}
+.cert-c .cn{font-size:.84rem;color:var(--ink-soft);margin-bottom:2px;font-weight:700}
+.cert-c .cv{font-size:.72rem;color:var(--text-muted)}
+
+/*==========================================================
+  CONTACT PAGE
+==========================================================*/
+.contact-body{padding:64px 0 110px}
 .contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px}
-.contact-info h2{margin-bottom:10px}
 .contact-info>p{color:var(--text-secondary);margin-bottom:32px}
 .contact-item{display:flex;gap:16px;align-items:flex-start;margin-bottom:24px}
-.contact-item .ic{width:42px;height:42px;border-radius:11px;background:#fff;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--purple);flex:none}
+.contact-item .ic{width:42px;height:42px;border-radius:11px;background:var(--panel);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--purple);flex:none}
 .contact-item .lbl{font-size:.78rem;color:var(--text-muted);font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin-bottom:2px}
 .contact-item a,.contact-item p{font-weight:600;color:var(--ink);text-decoration:none;font-size:.98rem}
 .contact-item a:hover{color:var(--purple-dark)}
-
-.contact-form{background:#fff;border:1px solid var(--border);border-radius:20px;padding:40px;box-shadow:var(--shadow-md)}
-.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}
-.field{display:flex;flex-direction:column;gap:6px}
-.field.full{grid-column:1/-1}
-.field label{font-size:.82rem;font-weight:700;color:var(--ink-soft)}
-.field input,.field select,.field textarea{
-  padding:12px 14px;border:1.5px solid var(--border);border-radius:10px;font-size:.92rem;
-  font-family:inherit;background:var(--off-white);transition:border-color .15s;color:var(--ink);
+.contact-form-card{background:#fff;border:1px solid var(--border);border-radius:20px;padding:40px;box-shadow:var(--shadow-md)}
+.contact-form-card h3{font-size:1.2rem;margin-bottom:22px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.form-group{display:flex;flex-direction:column;gap:6px;margin-bottom:16px}
+.form-group label{font-size:.82rem;font-weight:700;color:var(--ink-soft)}
+.form-group input,.form-group select,.form-group textarea{
+  padding:12px 14px;border:1.5px solid var(--border);border-radius:10px;font-size:.92rem;font-family:inherit;
+  background:var(--off-white);transition:border-color .15s;color:var(--ink);
 }
-.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--purple);background:#fff}
-.field textarea{resize:vertical;min-height:110px}
-.contact-form .btn{width:100%;margin-top:6px}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{outline:none;border-color:var(--purple);background:#fff}
+.form-group textarea{resize:vertical;min-height:110px}
+.contact-form-card .btn{width:100%}
 .form-note{font-size:.78rem;color:var(--text-muted);margin-top:12px;text-align:center}
-.form-success{display:none;text-align:center;padding:40px 10px}
-.form-success .ic{width:56px;height:56px;border-radius:50%;background:#eafcf1;color:#16a34a;display:flex;align-items:center;justify-content:center;margin:0 auto 16px}
-.form-success h3{margin-bottom:8px}
-.form-success p{color:var(--text-secondary);font-size:.92rem}
 
 /*==========================================================
   FOOTER
 ==========================================================*/
 .site-footer{background:#0f0f14;color:#c7c7d1;padding:64px 0 28px}
 .footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:40px;margin-bottom:48px}
-.footer-brand{display:flex;align-items:center;gap:12px;margin-bottom:16px}
-.footer-brand .name{font-weight:800;color:#fff;font-size:1.1rem}
-.footer-brand .sub{font-family:'SFMono-Regular',Consolas,monospace;font-size:.55rem;letter-spacing:.16em;color:var(--purple-light);font-weight:700}
+.footer-brand .logo-g{margin-bottom:16px}
+.footer-brand .logo-t .n{color:#fff}
+.footer-brand .logo-t .s{color:var(--purple-light)}
+.footer-brand p{color:#8f8f9c;font-size:.9rem;max-width:280px;line-height:1.7}
 .footer-col h4{color:#fff;font-size:.82rem;text-transform:uppercase;letter-spacing:.06em;margin-bottom:16px;font-weight:700}
 .footer-col ul{display:flex;flex-direction:column;gap:11px}
-.footer-col a{color:#9a9aa8;text-decoration:none;font-size:.9rem;transition:color .15s}
-.footer-col a:hover{color:var(--purple-light)}
-.footer-desc{color:#8f8f9c;font-size:.9rem;max-width:280px;line-height:1.7}
+.footer-col a,.footer-col .nav-link{color:#9a9aa8;text-decoration:none;font-size:.9rem;transition:color .15s;padding:0;text-align:left}
+.footer-col a:hover,.footer-col .nav-link:hover{color:var(--purple-light);background:none}
 .footer-bottom{border-top:1px solid #232330;padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
 .footer-bottom p{font-size:.82rem;color:#75758a}
-.footer-social{display:flex;gap:10px}
-.footer-social a{width:36px;height:36px;border-radius:9px;background:#1a1a24;display:flex;align-items:center;justify-content:center;color:#c7c7d1;text-decoration:none;transition:.15s}
-.footer-social a:hover{background:var(--purple);color:#fff}
 
 /*==========================================================
   RESPONSIVE
 ==========================================================*/
 @media (max-width:960px){
-  .hero-grid,.approach-grid,.about-grid,.contact-grid{grid-template-columns:1fr}
+  .hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}
   .hero-visual{order:-1}
-  .svc-grid{grid-template-columns:repeat(2,1fr)}
+  .svc-grid-home,.method-grid,.values-grid{grid-template-columns:repeat(2,1fr)}
+  .certs-grid{grid-template-columns:repeat(3,1fr)}
   .footer-grid{grid-template-columns:1fr 1fr}
-  .nav-links,.nav-actions .btn-outline{display:none}
-  .nav-toggle{display:flex}
+  nav#dNav{display:none}
+  .mob-btn{display:flex}
 }
 @media (max-width:640px){
-  .svc-grid{grid-template-columns:1fr}
+  .svc-grid-home,.method-grid,.values-grid,.certs-grid{grid-template-columns:1fr}
+  .svc-body .caps{grid-template-columns:1fr}
   .form-row{grid-template-columns:1fr}
   .footer-grid{grid-template-columns:1fr;gap:32px}
   .cta-band{padding:44px 28px;text-align:center;justify-content:center}
   .hero-stats{gap:24px}
   .float-chip{display:none}
-  .nav-actions .btn-primary{padding:9px 16px;font-size:.82rem}
+  .svc-head{padding:20px}
+  .svc-cta-strip{text-align:center;justify-content:center}
 }
 </style>
 </head>
 <body>
 
-<!-- ===================== HEADER ===================== -->
-<header class="site-header" id="siteHeader">
-  <div class="container nav-wrap">
-    <a href="#home" class="brand">
-      <svg class="brand-mark" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+<!-- ═══════════ HEADER ═══════════ -->
+<header>
+  <div class="inner">
+    <button class="logo-g" onclick="go('home')" aria-label="RSquared IT Technologies — Home">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
         <polygon points="50,4 92,27 92,73 50,96 8,73 8,27" fill="#f3eefc" stroke="#7c3aed" stroke-width="6"/>
         <text x="50" y="62" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-weight="800" font-size="34" fill="#0f0f14">R<tspan font-size="20" dy="-14">2</tspan></text>
       </svg>
-      <div class="brand-text">
-        <span class="name">RSquared</span>
-        <span class="sub mono">IT TECHNOLOGIES</span>
-      </div>
-    </a>
-    <nav class="nav-links">
-      <a href="#home">Home</a>
-      <a href="#services">Services</a>
-      <a href="#about">About</a>
-      <a href="#approach">Approach</a>
-      <a href="#contact">Contact</a>
+      <span class="logo-t"><span class="n">RSquared</span><span class="s mono">IT TECHNOLOGIES</span></span>
+    </button>
+    <nav id="dNav">
+      <button class="nav-link active" data-page="home">Home</button>
+      <button class="nav-link" data-page="services">Services</button>
+      <button class="nav-link" data-page="about">About</button>
+      <button class="nav-link" data-page="contact">Contact</button>
+      <a class="btn btn-primary" onclick="go('contact')" style="cursor:pointer">Get a Quote</a>
     </nav>
-    <div class="nav-actions">
-      <a href="tel:+27684301721" class="btn btn-outline">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-        +27 68 430 1721
-      </a>
-      <a href="#contact" class="btn btn-primary">Get a Quote</a>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
-    </div>
-  </div>
-  <div class="mobile-nav" id="mobileNav">
-    <a href="#home">Home</a>
-    <a href="#services">Services</a>
-    <a href="#about">About</a>
-    <a href="#approach">Approach</a>
-    <a href="#contact">Contact</a>
-    <a href="#contact" class="btn btn-primary">Get a Quote</a>
+    <button class="mob-btn" onclick="document.getElementById('mNav').classList.add('open')" aria-label="Open menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="6" x2="20" y2="6"></line><line x1="4" y1="12" x2="20" y2="12"></line><line x1="4" y1="18" x2="20" y2="18"></line></svg>
+    </button>
   </div>
 </header>
 
-<!-- ===================== HERO ===================== -->
-<section class="hero" id="home">
-  <div class="container hero-grid">
-    <div>
-      <div class="eyebrow">Johannesburg, South Africa</div>
-      <h1>Enterprise IT infrastructure, built <span class="accent">secure</span> from the ground up.</h1>
-      <p class="lead">RSquared IT Technologies helps organisations plan, secure, and run resilient networks — from strategic consultation through to hands-on deployment, testing, and hardware supply.</p>
-      <div class="hero-cta">
-        <a href="#contact" class="btn btn-primary">
-          Talk to a Consultant
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
-        </a>
-        <a href="#services" class="btn btn-outline">Explore Services</a>
+<!-- ═══════════ MOBILE NAV ═══════════ -->
+<div id="mNav" class="mob-nav">
+  <button class="cls" onclick="document.getElementById('mNav').classList.remove('open')" aria-label="Close menu">×</button>
+  <button class="nav-link active" data-page="home" onclick="document.getElementById('mNav').classList.remove('open')">Home</button>
+  <button class="nav-link" data-page="services" onclick="document.getElementById('mNav').classList.remove('open')">Services</button>
+  <button class="nav-link" data-page="about" onclick="document.getElementById('mNav').classList.remove('open')">About</button>
+  <button class="nav-link" data-page="contact" onclick="document.getElementById('mNav').classList.remove('open')">Contact</button>
+  <a class="btn btn-primary" onclick="go('contact');document.getElementById('mNav').classList.remove('open')" style="cursor:pointer">Get a Quote</a>
+</div>
+
+<!-- ╔═══════════════════════════════════════════════════════════╗
+     ║  PAGE: HOME                                              ║
+     ╚═══════════════════════════════════════════════════════════╝ -->
+<div id="page-home" class="page active">
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="eyebrow">Johannesburg, South Africa</div>
+        <h1>Enterprise IT infrastructure, built <span class="accent">secure</span> from the ground up.</h1>
+        <p class="lead">RSquared IT Technologies helps organisations plan, secure, and run resilient networks — from strategic consultation through to hands-on deployment, testing, and hardware supply.</p>
+        <div class="hero-btns">
+          <a onclick="go('contact')" class="btn btn-primary" style="cursor:pointer">
+            Talk to a Consultant
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+          </a>
+          <a onclick="go('services')" class="btn btn-outline" style="cursor:pointer">Explore Services</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><b>5</b><span>Core Service Lines</span></div>
+          <div class="stat"><b>24/7</b><span>Monitoring &amp; Support</span></div>
+          <div class="stat"><b>100%</b><span>Vendor-Neutral Advice</span></div>
+        </div>
       </div>
-      <div class="hero-stats">
-        <div class="stat"><b>5</b><span>Core Service Lines</span></div>
-        <div class="stat"><b>24/7</b><span>Monitoring &amp; Support</span></div>
-        <div class="stat"><b>100%</b><span>Vendor-Neutral Advice</span></div>
+      <div class="hero-visual">
+        <div class="float-chip c1"><div class="ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4z"></path></svg></div>Secured Network</div>
+        <div class="hero-card">
+          <div class="hc-top">
+            <div class="dot-row"><span></span><span></span><span></span></div>
+            <div class="hc-badge">All Systems Operational</div>
+          </div>
+          <div class="hc-row"><div class="lbl"><span class="ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"></rect><path d="M8 21h8M12 17v4"></path></svg></span>Network Uptime</div><div class="val ok">99.98%</div></div>
+          <div class="hc-row"><div class="lbl"><span class="ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4z"></path></svg></span>Threats Blocked (30d)</div><div class="val">1,204</div></div>
+          <div class="hc-row"><div class="lbl"><span class="ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.3-4.3"></path></svg></span>Last Pentest Findings</div><div class="val ok">Resolved</div></div>
+          <div class="hc-row"><div class="lbl"><span class="ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7h-9M14 17H5M17 3l3 4-3 4M7 21l-3-4 3-4"></path></svg></span>Hardware Rollout</div><div class="val">On Track</div></div>
+        </div>
+        <div class="float-chip c2"><div class="ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.3-4.3"></path></svg></div>Pentest Verified</div>
       </div>
     </div>
-    <div class="hero-visual">
-      <div class="float-chip c1"><div class="ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4z"></path></svg></div>Secured Network</div>
-      <div class="hero-card">
-        <div class="hc-top">
-          <div class="dot-row"><span></span><span></span><span></span></div>
-          <div class="hc-badge">All Systems Operational</div>
-        </div>
-        <div class="hc-row">
-          <div class="lbl"><span class="ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"></rect><path d="M8 21h8M12 17v4"></path></svg></span>Network Uptime</div>
-          <div class="val ok">99.98%</div>
-        </div>
-        <div class="hc-row">
-          <div class="lbl"><span class="ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4z"></path></svg></span>Threats Blocked (30d)</div>
-          <div class="val">1,204</div>
-        </div>
-        <div class="hc-row">
-          <div class="lbl"><span class="ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.3-4.3"></path></svg></span>Last Pentest Findings</div>
-          <div class="val ok">Resolved</div>
-        </div>
-        <div class="hc-row">
-          <div class="lbl"><span class="ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7h-9M14 17H5M17 3l3 4-3 4M7 21l-3-4 3-4"></path></svg></span>Hardware Rollout</div>
-          <div class="val">On Track</div>
-        </div>
-      </div>
-      <div class="float-chip c2"><div class="ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.3-4.3"></path></svg></div>Pentest Verified</div>
+  </section>
+
+  <!-- Certified With strip -->
+  <div class="strip">
+    <div class="container strip-inner">
+      <span class="lbl mono">Certified With</span>
+      <div class="strip-brands"><span>CISCO</span><span>FORTINET</span><span>AWS</span><span>Microsoft</span><span>MikroTik</span></div>
     </div>
   </div>
-</section>
 
-<div class="strip">
-  <div class="container strip-inner">
-    <span>Trusted for:</span>
-    <div class="strip-tags">
-      <span class="tag">Network Design</span>
-      <span class="tag">Cybersecurity</span>
-      <span class="tag">Infrastructure Rollouts</span>
-      <span class="tag">Penetration Testing</span>
-      <span class="tag">Hardware &amp; Software Supply</span>
+  <!-- Home Services Preview -->
+  <section class="home-svc">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow" style="margin-left:auto;margin-right:auto">What We Do</div>
+        <h2>Everything your network and security posture needs.</h2>
+        <p>Five focused service lines covering strategy, defence, deployment, testing, and supply — so you can work with one accountable partner.</p>
+      </div>
+      <div class="svc-grid-home">
+        <button class="svc-ch" onclick="goService('consultation-network')">
+          <div class="svc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"></path></svg></div>
+          <h3>Network Consultation</h3>
+          <p>Vendor-neutral assessment and design of your network architecture for performance and scale.</p>
+          <div class="tags"><span class="tag">Architecture</span><span class="tag">Capacity Planning</span><span class="tag">LAN/WAN</span></div>
+        </button>
+        <button class="svc-ch" onclick="goService('consultation-security')">
+          <div class="svc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4z"></path></svg></div>
+          <h3>Security Consultation</h3>
+          <p>Risk assessments and security strategy aligned with best practice and regulatory requirements.</p>
+          <div class="tags"><span class="tag">Risk Assessment</span><span class="tag">Compliance</span><span class="tag">Policy</span></div>
+        </button>
+        <button class="svc-ch" onclick="goService('infrastructure')">
+          <div class="svc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"></rect><path d="M8 21h8M12 17v4"></path></svg></div>
+          <h3>Network &amp; Security Infrastructure</h3>
+          <p>End-to-end deployment and management of firewalls, switches, routers, and VPNs.</p>
+          <div class="tags"><span class="tag">Firewalls</span><span class="tag">VPN</span><span class="tag">Switching</span></div>
+        </button>
+        <button class="svc-ch" onclick="goService('pentesting')">
+          <div class="svc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.3-4.3"></path></svg></div>
+          <h3>Penetration Testing</h3>
+          <p>Real-world attack simulations across network, application, wireless, and people.</p>
+          <div class="tags"><span class="tag">Network</span><span class="tag">Web App</span><span class="tag">Wireless</span></div>
+        </button>
+        <button class="svc-ch" onclick="goService('hardware')">
+          <div class="svc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"></rect><path d="M8 20h8M12 16v4"></path></svg></div>
+          <h3>ICT Hardware &amp; Software</h3>
+          <p>Procurement, supply, installation, and support of enterprise hardware and software.</p>
+          <div class="tags"><span class="tag">Servers</span><span class="tag">Licensing</span><span class="tag">Support</span></div>
+        </button>
+        <div class="fs-cta">
+          <div>
+            <div class="eyebrow" style="background:rgba(255,255,255,.16);border-color:rgba(255,255,255,.3);color:#fff">Not Sure Where To Start?</div>
+            <h3>Full-stack infrastructure ownership.</h3>
+            <p>Tell us about your environment and we'll recommend the right service, or a combination, backed by one accountable engineering team.</p>
+            <div class="tags"><span class="tag">Assess</span><span class="tag">Design</span><span class="tag">Deploy</span><span class="tag">Support</span></div>
+          </div>
+          <a onclick="go('contact')" class="btn btn-outline" style="cursor:pointer">Get a Free Consultation</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Methodology -->
+  <section class="method">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow" style="margin-left:auto;margin-right:auto">Our Approach</div>
+        <h2>Straightforward engineering. No vendor lock-in.</h2>
+        <p>We work as an extension of your team — assessing honestly, recommending the right-sized solution, and staying accountable after go-live.</p>
+      </div>
+      <div class="method-grid">
+        <div class="method-step"><div class="method-num mono">01</div><h4>Assess</h4><p>Infrastructure audit, gap analysis &amp; risk benchmarking against your environment and goals.</p></div>
+        <div class="method-step"><div class="method-num mono">02</div><h4>Design</h4><p>Clear, documented architecture and security plans your team can actually maintain.</p></div>
+        <div class="method-step"><div class="method-num mono">03</div><h4>Deploy &amp; Test</h4><p>Hands-on implementation followed by independent testing to verify it holds up.</p></div>
+        <div class="method-step"><div class="method-num mono">04</div><h4>Support</h4><p>Ongoing monitoring, hardware/software support, and a direct line to our engineers.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Band -->
+  <div class="cta-band">
+    <div>
+      <h2>Ready to secure your infrastructure?</h2>
+      <p>Book a free consultation and we'll come back with a clear, actionable plan for your network and security posture.</p>
+    </div>
+    <div style="display:flex;gap:14px;flex-wrap:wrap">
+      <a onclick="go('contact')" class="btn btn-outline" style="cursor:pointer">Book a Consultation</a>
+      <a href="mailto:infor@rsquaredit.com" class="btn btn-ghost-w">Email Us</a>
+    </div>
+  </div>
+
+</div>
+
+<!-- ╔═══════════════════════════════════════════════════════════╗
+     ║  PAGE: SERVICES                                          ║
+     ╚═══════════════════════════════════════════════════════════╝ -->
+<div id="page-services" class="page">
+
+  <div class="hero-mini"><div class="container"><div class="eyebrow" style="margin-left:auto;margin-right:auto">Our Services</div><h1>Everything your infrastructure <span class="serif-m">needs.</span></h1><p>Click any service below to explore capabilities and how we deliver results.</p></div></div>
+
+  <div class="svc-page-body">
+    <div class="container">
+
+      <!-- 1. Network Consultation -->
+      <div class="svc-expand" id="svc-consultation-network" onclick="this.classList.toggle('open')">
+        <div class="svc-head">
+          <div class="svc-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"></path></svg></div>
+          <div class="svc-head-text"><h3>Network Consultation</h3><p>Vendor-neutral assessment and design of your network architecture.</p></div>
+          <div class="svc-arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></div>
+        </div>
+        <div class="svc-body" onclick="event.stopPropagation()">
+          <h4>Key Capabilities</h4>
+          <div class="caps">
+            <div class="cap"><span class="ck">✓</span>Architecture &amp; capacity planning</div>
+            <div class="cap"><span class="ck">✓</span>LAN, WAN &amp; Wi-Fi design</div>
+            <div class="cap"><span class="ck">✓</span>Multi-vendor network audits</div>
+            <div class="cap"><span class="ck">✓</span>Scalability &amp; performance benchmarking</div>
+            <div class="cap"><span class="ck">✓</span>Structured cabling planning</div>
+            <div class="cap"><span class="ck">✓</span>Network segmentation strategy</div>
+            <div class="cap"><span class="ck">✓</span>Redundancy &amp; high-availability design</div>
+            <div class="cap"><span class="ck">✓</span>Technology roadmap development</div>
+          </div>
+          <p class="desc">Our Network Consultation practice starts with your environment, not a vendor catalogue. We assess your current LAN, WAN, and wireless estate — identifying coverage gaps, capacity constraints, and single points of failure — before recommending a right-sized architecture.</p>
+          <p class="desc">Whether you're planning a new site, refreshing ageing infrastructure, or preparing for growth, we deliver clear, documented designs your own team can implement and maintain, with vendor-neutral recommendations grounded in hands-on engineering experience rather than sales targets.</p>
+        </div>
+      </div>
+
+      <!-- 2. Security Consultation -->
+      <div class="svc-expand" id="svc-consultation-security" onclick="this.classList.toggle('open')">
+        <div class="svc-head">
+          <div class="svc-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4z"></path></svg></div>
+          <div class="svc-head-text"><h3>Security Consultation</h3><p>Risk assessments and security strategy aligned to best practice and regulation.</p></div>
+          <div class="svc-arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></div>
+        </div>
+        <div class="svc-body" onclick="event.stopPropagation()">
+          <h4>Key Capabilities</h4>
+          <div class="caps">
+            <div class="cap"><span class="ck">✓</span>Risk &amp; maturity assessments</div>
+            <div class="cap"><span class="ck">✓</span>Security policy &amp; governance development</div>
+            <div class="cap"><span class="ck">✓</span>Compliance guidance (ISO 27001, POPIA)</div>
+            <div class="cap"><span class="ck">✓</span>Security architecture review</div>
+            <div class="cap"><span class="ck">✓</span>Zero-trust strategy design</div>
+            <div class="cap"><span class="ck">✓</span>Incident response planning</div>
+            <div class="cap"><span class="ck">✓</span>Security awareness programme design</div>
+            <div class="cap"><span class="ck">✓</span>Vendor &amp; third-party risk review</div>
+          </div>
+          <p class="desc">We help organisations understand where they actually stand: assessing security maturity against recognised frameworks, identifying gaps in policy and practice, and prioritising remediation by real business risk rather than checklist compliance.</p>
+          <p class="desc">Every engagement produces a practical roadmap — not just a findings report — covering governance, incident response readiness, and regulatory alignment, so your leadership team can make informed decisions about where to invest next.</p>
+        </div>
+      </div>
+
+      <!-- 3. Network & Security Infrastructure -->
+      <div class="svc-expand" id="svc-infrastructure" onclick="this.classList.toggle('open')">
+        <div class="svc-head">
+          <div class="svc-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"></rect><path d="M8 21h8M12 17v4"></path></svg></div>
+          <div class="svc-head-text"><h3>Network &amp; Security Infrastructure</h3><p>End-to-end deployment and management of firewalls, switches, routers, and VPNs.</p></div>
+          <div class="svc-arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></div>
+        </div>
+        <div class="svc-body" onclick="event.stopPropagation()">
+          <h4>Key Capabilities</h4>
+          <div class="caps">
+            <div class="cap"><span class="ck">✓</span>Firewall deployment &amp; hardening</div>
+            <div class="cap"><span class="ck">✓</span>VPN &amp; secure remote access</div>
+            <div class="cap"><span class="ck">✓</span>Switching &amp; routing infrastructure</div>
+            <div class="cap"><span class="ck">✓</span>Network segmentation &amp; VLANs</div>
+            <div class="cap"><span class="ck">✓</span>Wireless infrastructure deployment</div>
+            <div class="cap"><span class="ck">✓</span>High-availability &amp; failover configuration</div>
+            <div class="cap"><span class="ck">✓</span>Ongoing monitoring &amp; management</div>
+            <div class="cap"><span class="ck">✓</span>Change control &amp; documentation</div>
+          </div>
+          <p class="desc">We design and deploy the infrastructure that carries your business — firewalls, switches, routers, and VPNs — engineered to work as one secure system rather than a collection of disconnected boxes.</p>
+          <p class="desc">Beyond initial rollout, we provide ongoing management: policy tuning, firmware and patch management, capacity monitoring, and documented change control, so your network stays secure and predictable as it grows.</p>
+        </div>
+      </div>
+
+      <!-- 4. Penetration Testing -->
+      <div class="svc-expand" id="svc-pentesting" onclick="this.classList.toggle('open')">
+        <div class="svc-head">
+          <div class="svc-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.3-4.3"></path></svg></div>
+          <div class="svc-head-text"><h3>Penetration Testing</h3><p>Real-world attack simulations across your network, applications, and people.</p></div>
+          <div class="svc-arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></div>
+        </div>
+        <div class="svc-body" onclick="event.stopPropagation()">
+          <h4>Key Capabilities</h4>
+          <div class="caps">
+            <div class="cap"><span class="ck">✓</span>Internal &amp; external network testing</div>
+            <div class="cap"><span class="ck">✓</span>Web application testing</div>
+            <div class="cap"><span class="ck">✓</span>Wireless security assessment</div>
+            <div class="cap"><span class="ck">✓</span>Social engineering &amp; phishing simulations</div>
+            <div class="cap"><span class="ck">✓</span>Vulnerability scanning &amp; prioritisation</div>
+            <div class="cap"><span class="ck">✓</span>Configuration &amp; hardening review</div>
+            <div class="cap"><span class="ck">✓</span>Detailed findings &amp; remediation reports</div>
+            <div class="cap"><span class="ck">✓</span>Retesting &amp; validation</div>
+          </div>
+          <p class="desc">We simulate the tactics real attackers use — from the internet-facing perimeter to the internal network, web applications, wireless estate, and your people — to find weaknesses before someone else does.</p>
+          <p class="desc">Every engagement ends with a clear, prioritised report: what we found, how we got there, and exactly how to fix it — followed by retesting to confirm remediation actually closed the gap.</p>
+        </div>
+      </div>
+
+      <!-- 5. ICT Hardware & Software -->
+      <div class="svc-expand" id="svc-hardware" onclick="this.classList.toggle('open')">
+        <div class="svc-head">
+          <div class="svc-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"></rect><path d="M8 20h8M12 16v4"></path></svg></div>
+          <div class="svc-head-text"><h3>ICT Hardware &amp; Software</h3><p>Procurement, supply, and support of enterprise hardware and software.</p></div>
+          <div class="svc-arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></div>
+        </div>
+        <div class="svc-body" onclick="event.stopPropagation()">
+          <h4>Key Capabilities</h4>
+          <div class="caps">
+            <div class="cap"><span class="ck">✓</span>Servers, workstations &amp; networking hardware</div>
+            <div class="cap"><span class="ck">✓</span>Software licensing &amp; deployment</div>
+            <div class="cap"><span class="ck">✓</span>Vendor sourcing &amp; procurement</div>
+            <div class="cap"><span class="ck">✓</span>Installation &amp; configuration</div>
+            <div class="cap"><span class="ck">✓</span>Asset &amp; lifecycle management</div>
+            <div class="cap"><span class="ck">✓</span>Warranty &amp; support coordination</div>
+            <div class="cap"><span class="ck">✓</span>Hardware refresh planning</div>
+            <div class="cap"><span class="ck">✓</span>Break-fix &amp; on-site support</div>
+          </div>
+          <p class="desc">We source, supply, and support the hardware and software your infrastructure runs on — servers, workstations, networking gear, and licensing — sourced from trusted vendors and deployed to spec.</p>
+          <p class="desc">From initial procurement through installation, warranty coordination, and lifecycle refresh planning, we keep your estate current and supported, with break-fix and on-site assistance when something needs a hands-on fix.</p>
+        </div>
+      </div>
+
+      <div class="svc-cta-strip">
+        <div><h3>Not sure which service you need?</h3><p>Tell us about your environment and we'll recommend the right service, or a combination.</p></div>
+        <a onclick="go('contact')" class="btn btn-primary" style="cursor:pointer">Get a Free Consultation</a>
+      </div>
+
     </div>
   </div>
 </div>
 
-<!-- ===================== SERVICES ===================== -->
-<section class="services" id="services">
-  <div class="container">
-    <div class="section-head">
-      <div class="eyebrow" style="margin-left:auto;margin-right:auto">What We Do</div>
-      <h2>Everything your network and security posture needs.</h2>
-      <p>Five focused service lines covering strategy, defence, deployment, testing, and supply — so you can work with one accountable partner.</p>
-    </div>
+<!-- ╔═══════════════════════════════════════════════════════════╗
+     ║  PAGE: ABOUT                                             ║
+     ╚═══════════════════════════════════════════════════════════╝ -->
+<div id="page-about" class="page">
 
-    <div class="svc-grid">
-      <!-- 1 -->
-      <div class="svc-card">
-        <div class="svc-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"></path></svg></div>
-        <div class="svc-num mono">01</div>
-        <h3>Network Consultation</h3>
-        <p>Vendor-neutral assessment and design of your network architecture — built for performance, scalability, and long-term reliability.</p>
-        <ul class="svc-list">
-          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg>Architecture &amp; capacity planning</li>
-          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg>LAN, WAN &amp; Wi-Fi design</li>
-          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg>Scalability &amp; performance audits</li>
-        </ul>
-      </div>
-      <!-- 2 -->
-      <div class="svc-card">
-        <div class="svc-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4z"></path></svg></div>
-        <div class="svc-num mono">02</div>
-        <h3>Security Consultation</h3>
-        <p>Risk assessments and security strategy that align your organisation with best practice and regulatory requirements.</p>
-        <ul class="svc-list">
-          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg>Risk &amp; maturity assessments</li>
-          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg>Policy &amp; compliance guidance</li>
-          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg>Security roadmaps</li>
-        </ul>
-      </div>
-      <!-- 3 -->
-      <div class="svc-card">
-        <div class="svc-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"></rect><path d="M8 21h8M12 17v4"></path></svg></div>
-        <div class="svc-num mono">03</div>
-        <h3>Network &amp; Security Infrastructure</h3>
-        <p>End-to-end deployment and management of firewalls, switches, routers, and VPNs — engineered to work as one secure system.</p>
-        <ul class="svc-list">
-          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg>Firewall &amp; VPN deployment</li>
-          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg>Switching &amp; routing infrastructure</li>
-          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg>Ongoing monitoring &amp; management</li>
-        </ul>
-      </div>
-      <!-- 4 -->
-      <div class="svc-card">
-        <div class="svc-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.3-4.3"></path></svg></div>
-        <div class="svc-num mono">04</div>
-        <h3>Penetration Testing</h3>
-        <p>Real-world attack simulations across your network, applications, and people — with clear, actionable remediation reports.</p>
-        <ul class="svc-list">
-          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg>Internal &amp; external network testing</li>
-          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg>Web application &amp; wireless testing</li>
-          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg>Detailed findings &amp; remediation support</li>
-        </ul>
-      </div>
-      <!-- 5 -->
-      <div class="svc-card">
-        <div class="svc-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"></rect><path d="M8 20h8M12 16v4"></path></svg></div>
-        <div class="svc-num mono">05</div>
-        <h3>ICT Hardware &amp; Software</h3>
-        <p>Procurement, supply, and support of enterprise hardware and software — sourced, licensed, and deployed to spec.</p>
-        <ul class="svc-list">
-          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg>Servers, workstations &amp; networking gear</li>
-          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg>Software licensing &amp; deployment</li>
-          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg>Installation, support &amp; lifecycle management</li>
-        </ul>
-      </div>
-      <!-- 6: CTA card -->
-      <div class="svc-card" style="background:var(--purple-tint);border-color:var(--purple-tint-2);justify-content:center;align-items:flex-start">
-        <div class="svc-icon" style="background:#fff"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 12h8M12 8v8"></path><circle cx="12" cy="12" r="9"></circle></svg></div>
-        <h3>Not sure where to start?</h3>
-        <p>Tell us about your environment and we'll recommend the right service — or a combination.</p>
-        <a href="#contact" class="btn btn-primary" style="width:100%">Get a Free Consultation</a>
-      </div>
-    </div>
-  </div>
-</section>
+  <div class="hero-mini"><div class="container"><div class="eyebrow" style="margin-left:auto;margin-right:auto">About Us</div><h1>Built by engineers.<br><span class="serif-m">Trusted by enterprise.</span></h1><p>The story of RSquared IT Technologies — from hands-on engineering to end-to-end infrastructure ownership.</p></div></div>
 
-<!-- ===================== APPROACH ===================== -->
-<section class="approach" id="approach">
-  <div class="container approach-grid">
-    <div>
-      <div class="eyebrow">Our Approach</div>
-      <h2>Straightforward engineering. No vendor lock-in.</h2>
-      <p style="color:var(--text-secondary)">We work as an extension of your team — assessing honestly, recommending the right-sized solution, and staying accountable after go-live.</p>
-      <div class="approach-list">
-        <div class="approach-item">
-          <div class="num mono">01</div>
-          <div><h4>Assess</h4><p>We start with your environment, risk profile, and goals — not a pre-set product list.</p></div>
+  <!-- Story -->
+  <section class="about-story">
+    <div class="container about-grid">
+      <div class="about-left">
+        <h2>Engineering-first,<br>client-focused.</h2>
+        <p>RSquared IT Technologies was founded in Johannesburg, South Africa, with a simple mission: bring enterprise-grade network infrastructure and cybersecurity to organisations of every size, delivered with the rigour and precision of a hands-on engineering team.</p>
+        <p>What sets us apart is depth. We don't just specify and hand over — we consult, design, deploy, test, and support. From initial network consultation through to penetration testing and hardware supply, we stay involved end-to-end so nothing gets lost between the strategy deck and the server rack.</p>
+        <p>Our approach combines deep technical certifications with real-world operational experience across network engineering, security consulting, and infrastructure delivery — so every recommendation is grounded in practice, not vendor literature.</p>
+      </div>
+      <div>
+        <div class="team-card">
+          <div class="fc-label">Our Engineering Team</div>
+          <h3>Our Engineers</h3>
+          <div class="fc-role">Network, Security &amp; Infrastructure Specialists</div>
+          <p>With expertise spanning enterprise networking, firewall and VPN infrastructure, penetration testing, and ICT procurement, our engineers lead every engagement from initial assessment through deployment and support. Our team brings both breadth and hands-on depth to every project.</p>
         </div>
-        <div class="approach-item">
-          <div class="num mono">02</div>
-          <div><h4>Design</h4><p>Clear, documented architecture and security plans your team can actually maintain.</p></div>
-        </div>
-        <div class="approach-item">
-          <div class="num mono">03</div>
-          <div><h4>Deploy &amp; Test</h4><p>Hands-on implementation followed by independent testing to verify it holds up.</p></div>
-        </div>
-        <div class="approach-item">
-          <div class="num mono">04</div>
-          <div><h4>Support</h4><p>Ongoing monitoring, hardware/software support, and a direct line to our engineers.</p></div>
+        <div class="philosophy-box">
+          <p class="p-lbl">Our Philosophy</p>
+          <p>"Infrastructure should be resilient by design, security should be proactive not reactive, and every recommendation should be one we'd make to our own network."</p>
         </div>
       </div>
     </div>
-    <div class="approach-panel">
-      <h3>Why teams choose RSquared</h3>
-      <p class="sub">Measured commitments, not marketing claims.</p>
-      <div class="metric-grid">
-        <div class="metric"><b>5</b><span>Integrated service lines</span></div>
-        <div class="metric"><b>24/7</b><span>Infrastructure monitoring</span></div>
-        <div class="metric"><b>0</b><span>Vendor bias in recommendations</span></div>
-        <div class="metric"><b>1</b><span>Accountable point of contact</span></div>
+  </section>
+
+  <!-- Values -->
+  <section class="values-section">
+    <div class="container">
+      <div class="section-head"><div class="eyebrow" style="margin-left:auto;margin-right:auto">Our Values</div><h2>What drives everything.</h2></div>
+      <div class="values-grid">
+        <div class="value-card"><div class="v-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/><line x1="12" y1="2" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="22"/><line x1="2" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="22" y2="12"/></svg></div><h3>Engineering Rigour</h3><p>Every solution is designed with industry best practice, tested before deployment, and documented for long-term maintainability.</p></div>
+        <div class="value-card"><div class="v-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4z"/></svg></div><h3>Security-First Mindset</h3><p>Security isn't an add-on — it's embedded in every design, from zero-trust architecture to defence-in-depth strategies.</p></div>
+        <div class="value-card"><div class="v-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg></div><h3>Continuous Improvement</h3><p>We monitor, measure, and optimise relentlessly — proactive vulnerability management over reactive firefighting.</p></div>
+        <div class="value-card"><div class="v-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><h3>Transparent Partnership</h3><p>Clear communication, detailed documentation, and honest assessments — no upselling, no unnecessary complexity.</p></div>
+        <div class="value-card"><div class="v-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><h3>Vendor-Neutral Advice</h3><p>We're not locked into a single vendor. We recommend the best fit for your requirements, environment, and budget.</p></div>
+        <div class="value-card"><div class="v-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div><h3>Knowledge Transfer</h3><p>We don't just build and leave. Documentation and hand-over ensure your team can confidently manage what we deploy.</p></div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ===================== ABOUT ===================== -->
-<section class="about" id="about">
-  <div class="container about-grid">
-    <div class="about-visual">
-      <svg class="mark" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-        <polygon points="50,4 92,27 92,73 50,96 8,73 8,27" fill="#f3eefc" stroke="#7c3aed" stroke-width="5"/>
-        <text x="50" y="63" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-weight="800" font-size="36" fill="#0f0f14">R<tspan font-size="21" dy="-15">2</tspan></text>
-      </svg>
-    </div>
-    <div>
-      <div class="eyebrow">About RSquared</div>
-      <h2>Enterprise-grade IT, delivered with engineering rigour.</h2>
-      <p>RSquared IT Technologies was founded in Johannesburg, South Africa, with a simple mission: bring enterprise-grade network infrastructure and cybersecurity to organisations of every size — delivered with the precision of a hands-on engineering team, not a call centre.</p>
-      <p>From initial consultation through to deployment, testing, and hardware supply, we stay involved end-to-end — so nothing gets lost between the strategy deck and the server rack.</p>
-      <div class="about-tags">
-        <span>Vendor-Neutral</span>
-        <span>Locally Based</span>
-        <span>Engineer-Led</span>
-        <span>End-to-End Delivery</span>
+  <!-- Timeline -->
+  <section class="timeline-section">
+    <div class="container">
+      <div class="section-head"><div class="eyebrow" style="margin-left:auto;margin-right:auto">Our Journey</div><h2>Milestones &amp; momentum.</h2></div>
+      <div class="timeline">
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-content"><div class="tl-year">Foundation</div><div class="tl-title">RSquared IT Technologies Established</div><div class="tl-desc">Founded in Johannesburg, to deliver enterprise network infrastructure and cybersecurity services across South Africa.</div></div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-content"><div class="tl-year">Certifications</div><div class="tl-title">Industry Certifications Achieved</div><div class="tl-desc">Our engineers earned certifications across network, security, and cloud platforms to back every recommendation with verified expertise.</div></div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-content"><div class="tl-year">Service Expansion</div><div class="tl-title">Five Core Service Lines Defined</div><div class="tl-desc">Formalised our offering around network consultation, security consultation, infrastructure delivery, penetration testing, and ICT hardware &amp; software.</div></div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-content"><div class="tl-year">Client Delivery</div><div class="tl-title">Enterprise Engagements Delivered</div><div class="tl-desc">Delivered network infrastructure rollouts, security assessments, and penetration testing engagements for clients across Gauteng.</div></div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-content"><div class="tl-year">Today</div><div class="tl-title">Growing &amp; Scaling</div><div class="tl-desc">Expanding our engineering team and deepening security capabilities, building long-term partnerships with enterprises across South Africa.</div></div></div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ===================== CTA BAND ===================== -->
-<div class="cta-band">
-  <div>
-    <h2>Ready to secure your infrastructure?</h2>
-    <p>Book a free consultation and we'll come back with a clear, actionable plan for your network and security posture.</p>
-  </div>
-  <div style="display:flex;gap:14px;flex-wrap:wrap">
-    <a href="#contact" class="btn btn-outline">Book a Consultation</a>
-    <a href="mailto:infor@rsquaredit.com" class="btn" style="background:rgba(255,255,255,.14);color:#fff;border:1.5px solid rgba(255,255,255,.4)">Email Us</a>
-  </div>
+  <!-- Certs -->
+  <section class="certs-section">
+    <div class="container">
+      <div class="section-head"><div class="eyebrow" style="margin-left:auto;margin-right:auto">Credentials</div><h2>Backed by the best.</h2><p>Verified expertise across the industry's most demanding certification programmes.</p></div>
+      <div class="certs-grid">
+        <div class="cert-c"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="1.5"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path></svg><div class="cn">CCNP Security</div><div class="cv">Cisco</div></div>
+        <div class="cert-c"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="1.5"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg><div class="cn">CCNP Enterprise</div><div class="cv">Cisco</div></div>
+        <div class="cert-c"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#a16207" stroke-width="1.5"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg><div class="cn">NSE Certified</div><div class="cv">Fortinet</div></div>
+        <div class="cert-c"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="1.5"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.3-4.3"></path></svg><div class="cn">CEH</div><div class="cv">EC-Council</div></div>
+        <div class="cert-c"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="1.5"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"></path><circle cx="12" cy="8" r="6"></circle></svg><div class="cn">OSCP</div><div class="cv">Offensive Security</div></div>
+        <div class="cert-c"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#a16207" stroke-width="1.5"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline><polyline points="16 7 22 7 22 13"></polyline></svg><div class="cn">ITIL 4 Foundation</div><div class="cv">PeopleCert</div></div>
+        <div class="cert-c"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="1.5"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="m6 8 4 4-4 4M12 16h6"/></svg><div class="cn">Security+</div><div class="cv">CompTIA</div></div>
+        <div class="cert-c"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#5c5c68" stroke-width="1.5"><circle cx="12" cy="12" r="10"></circle></svg><div class="cn">MTCNA</div><div class="cv">MikroTik</div></div>
+      </div>
+    </div>
+  </section>
+
 </div>
 
-<!-- ===================== CONTACT ===================== -->
-<section class="contact" id="contact">
-  <div class="container contact-grid">
-    <div class="contact-info">
-      <div class="eyebrow">Contact Us</div>
-      <h2>Let's build together.</h2>
-      <p>Tell us about your infrastructure challenge and we'll come back with a clear, actionable plan.</p>
+<!-- ╔═══════════════════════════════════════════════════════════╗
+     ║  PAGE: CONTACT                                           ║
+     ╚═══════════════════════════════════════════════════════════╝ -->
+<div id="page-contact" class="page">
 
-      <div class="contact-item">
-        <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z" opacity="0"></path><path d="M22 6l-10 7L2 6"></path><rect x="2" y="4" width="20" height="16" rx="2"></rect></svg></div>
-        <div><div class="lbl">Email</div><a href="mailto:infor@rsquaredit.com">infor@rsquaredit.com</a></div>
+  <div class="hero-mini"><div class="container"><div class="eyebrow" style="margin-left:auto;margin-right:auto">Contact Us</div><h1>Let's build <span class="serif-m">together.</span></h1><p>Tell us about your infrastructure challenge and we'll come back with a clear, actionable plan.</p></div></div>
+
+  <section class="contact-body">
+    <div class="container contact-grid">
+      <div class="contact-info">
+        <h2>Get in touch.</h2>
+        <p>Tell us about your project, infrastructure challenges, or security concerns. We'll respond within one business day with an initial assessment and recommended next steps.</p>
+
+        <div class="contact-item">
+          <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"></rect><polyline points="22,6 12,13 2,6"></polyline></svg></div>
+          <div><div class="lbl">Email</div><a href="mailto:infor@rsquaredit.com">infor@rsquaredit.com</a></div>
+        </div>
+        <div class="contact-item">
+          <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></div>
+          <div><div class="lbl">Phone</div><a href="tel:+27684301721">+27 68 430 1721</a></div>
+        </div>
+        <div class="contact-item">
+          <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
+          <div><div class="lbl">Location</div><p>Johannesburg, South Africa</p></div>
+        </div>
+        <div class="contact-item">
+          <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg></div>
+          <div><div class="lbl">Response Time</div><p>Within 1 business day</p></div>
+        </div>
       </div>
-      <div class="contact-item">
-        <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></div>
-        <div><div class="lbl">Phone</div><a href="tel:+27684301721">+27 68 430 1721</a></div>
-      </div>
-      <div class="contact-item">
-        <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
-        <div><div class="lbl">Location</div><p>Johannesburg, South Africa</p></div>
-      </div>
-      <div class="contact-item">
-        <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg></div>
-        <div><div class="lbl">Response Time</div><p>Within 1 business day</p></div>
+
+      <div class="contact-form-card">
+        <h3>Send us a message</h3>
+        <form onsubmit="event.preventDefault();const f=this;const body='Name: '+f.name.value+'%0AEmail: '+f.email.value+'%0ACompany: '+(f.company.value||'N/A')+'%0AService: '+(f.service.value||'N/A')+'%0A%0AMessage:%0A'+encodeURIComponent(f.message.value);window.location.href='mailto:infor@rsquaredit.com?subject=New Enquiry from '+encodeURIComponent(f.name.value)+'&body='+body;setTimeout(function(){alert('Thank you! Your email client has opened. We will respond within one business day.');f.reset()},400)">
+          <div class="form-row">
+            <div class="form-group"><label for="c-name">Full Name</label><input type="text" id="c-name" name="name" required></div>
+            <div class="form-group"><label for="c-company">Company</label><input type="text" id="c-company" name="company"></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label for="c-email">Email</label><input type="email" id="c-email" name="email" required></div>
+            <div class="form-group"><label for="c-phone">Phone</label><input type="tel" id="c-phone" name="phone"></div>
+          </div>
+          <div class="form-group">
+            <label for="c-service">Service of Interest</label>
+            <select id="c-service" name="service">
+              <option value="">Select a service</option>
+              <option>Network Consultation</option>
+              <option>Security Consultation</option>
+              <option>Network &amp; Security Infrastructure</option>
+              <option>Penetration Testing</option>
+              <option>ICT Hardware &amp; Software</option>
+              <option>Not sure yet</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="c-message">Message</label>
+            <textarea id="c-message" name="message" required placeholder="Tell us about your environment and what you need..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+          <p class="form-note">We typically respond within one business day.</p>
+        </form>
       </div>
     </div>
+  </section>
+</div>
 
-    <div class="contact-form">
-      <form id="contactForm">
-        <div class="form-row">
-          <div class="field"><label>Full Name</label><input type="text" required placeholder="Your name"></div>
-          <div class="field"><label>Company</label><input type="text" placeholder="Company name"></div>
-        </div>
-        <div class="form-row">
-          <div class="field"><label>Email</label><input type="email" required placeholder="you@company.com"></div>
-          <div class="field"><label>Phone</label><input type="tel" placeholder="+27 ..."></div>
-        </div>
-        <div class="field full" style="margin-bottom:16px">
-          <label>Service of Interest</label>
-          <select>
-            <option>Network Consultation</option>
-            <option>Security Consultation</option>
-            <option>Network &amp; Security Infrastructure</option>
-            <option>Penetration Testing</option>
-            <option>ICT Hardware &amp; Software</option>
-            <option>Not sure yet</option>
-          </select>
-        </div>
-        <div class="field full" style="margin-bottom:20px">
-          <label>Message</label>
-          <textarea placeholder="Tell us about your environment and what you need..." required></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary">Send Message</button>
-        <p class="form-note">We typically respond within one business day.</p>
-      </form>
-      <div class="form-success" id="formSuccess">
-        <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg></div>
-        <h3>Message sent</h3>
-        <p>Thanks for reaching out — a member of our team will be in touch within one business day.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== FOOTER ===================== -->
+<!-- ═══════════ FOOTER ═══════════ -->
 <footer class="site-footer">
   <div class="container">
     <div class="footer-grid">
-      <div>
-        <div class="footer-brand">
+      <div class="footer-brand">
+        <button class="logo-g" onclick="go('home')">
           <svg width="38" height="38" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
             <polygon points="50,4 92,27 92,73 50,96 8,73 8,27" fill="#241a38" stroke="#a855f7" stroke-width="6"/>
             <text x="50" y="62" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-weight="800" font-size="34" fill="#e8e0f7">R<tspan font-size="20" dy="-14">2</tspan></text>
           </svg>
-          <div>
-            <div class="name">RSquared</div>
-            <div class="sub mono">IT TECHNOLOGIES</div>
-          </div>
-        </div>
-        <p class="footer-desc">Network consultation, security consultation, infrastructure, penetration testing, and ICT hardware &amp; software — from Johannesburg, South Africa.</p>
+          <span class="logo-t"><span class="n">RSquared</span><span class="s mono">IT TECHNOLOGIES</span></span>
+        </button>
+        <p>Network consultation, security consultation, infrastructure, penetration testing, and ICT hardware &amp; software — from Johannesburg, South Africa.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><button class="nav-link" data-page="home">Home</button></li>
+          <li><button class="nav-link" data-page="services">Services</button></li>
+          <li><button class="nav-link" data-page="about">About</button></li>
+          <li><button class="nav-link" data-page="contact">Contact</button></li>
+        </ul>
       </div>
       <div class="footer-col">
         <h4>Services</h4>
         <ul>
-          <li><a href="#services">Network Consultation</a></li>
-          <li><a href="#services">Security Consultation</a></li>
-          <li><a href="#services">Network &amp; Security Infrastructure</a></li>
-          <li><a href="#services">Penetration Testing</a></li>
-          <li><a href="#services">ICT Hardware &amp; Software</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Company</h4>
-        <ul>
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#approach">Our Approach</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><button class="nav-link" onclick="goService('consultation-network')">Network Consultation</button></li>
+          <li><button class="nav-link" onclick="goService('consultation-security')">Security Consultation</button></li>
+          <li><button class="nav-link" onclick="goService('infrastructure')">Network &amp; Security Infrastructure</button></li>
+          <li><button class="nav-link" onclick="goService('pentesting')">Penetration Testing</button></li>
+          <li><button class="nav-link" onclick="goService('hardware')">ICT Hardware &amp; Software</button></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -671,16 +828,12 @@ h2{font-size:clamp(1.8rem,3.4vw,2.6rem);margin-bottom:14px}
         <ul>
           <li><a href="mailto:infor@rsquaredit.com">infor@rsquaredit.com</a></li>
           <li><a href="tel:+27684301721">+27 68 430 1721</a></li>
-          <li><a href="#contact">Johannesburg, South Africa</a></li>
+          <li><button class="nav-link" data-page="contact">Johannesburg, South Africa</button></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
       <p>&copy; <span id="year"></span> RSquared IT Technologies. All rights reserved.</p>
-      <div class="footer-social">
-        <a href="#" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.14 1.45-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.11 20.45H3.56V9h3.55v11.45z"></path></svg></a>
-        <a href="#" aria-label="Twitter"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22 5.9c-.7.3-1.5.6-2.3.7.8-.5 1.5-1.3 1.8-2.3-.8.5-1.7.8-2.6 1a4.1 4.1 0 0 0-7 3.7A11.6 11.6 0 0 1 3.4 4.6a4.1 4.1 0 0 0 1.3 5.5c-.7 0-1.3-.2-1.9-.5v.1c0 2 1.4 3.6 3.3 4a4.1 4.1 0 0 1-1.9.1 4.1 4.1 0 0 0 3.8 2.9A8.2 8.2 0 0 1 2 18.4a11.6 11.6 0 0 0 6.3 1.8c7.5 0 11.7-6.3 11.7-11.7v-.5c.8-.6 1.5-1.3 2-2.1z"></path></svg></a>
-      </div>
     </div>
   </div>
 </footer>
@@ -688,17 +841,28 @@ h2{font-size:clamp(1.8rem,3.4vw,2.6rem);margin-bottom:14px}
 <script>
 document.getElementById('year').textContent = new Date().getFullYear();
 
-const navToggle = document.getElementById('navToggle');
-const siteHeader = document.getElementById('siteHeader');
-navToggle.addEventListener('click', () => siteHeader.classList.toggle('open'));
-document.querySelectorAll('#mobileNav a').forEach(a => a.addEventListener('click', () => siteHeader.classList.remove('open')));
+function go(page) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  const target = document.getElementById('page-' + page);
+  if (target) target.classList.add('active');
+  document.querySelectorAll('#dNav .nav-link[data-page], #mNav .nav-link[data-page]').forEach(l => {
+    l.classList.toggle('active', l.dataset.page === page);
+  });
+  window.scrollTo({ top: 0, behavior: 'instant' in window ? 'instant' : 'auto' });
+}
 
-const form = document.getElementById('contactForm');
-const success = document.getElementById('formSuccess');
-form.addEventListener('submit', function(e){
-  e.preventDefault();
-  form.style.display = 'none';
-  success.style.display = 'block';
+function goService(svcId) {
+  go('services');
+  document.querySelectorAll('.svc-expand.open').forEach(el => { if (el.id !== 'svc-' + svcId) el.classList.remove('open'); });
+  const el = document.getElementById('svc-' + svcId);
+  if (el) {
+    el.classList.add('open');
+    setTimeout(() => el.scrollIntoView({ behavior: 'smooth', block: 'start' }), 50);
+  }
+}
+
+document.querySelectorAll('.nav-link[data-page]').forEach(link => {
+  link.addEventListener('click', () => go(link.dataset.page));
 });
 </script>
 </body>
