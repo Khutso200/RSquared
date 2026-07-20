@@ -189,23 +189,6 @@ export default function Home() {
                 </div>
               </Link>
             ))}
-
-            <div className="relative col-span-full flex flex-col items-start gap-6 overflow-hidden rounded-2xl bg-gradient-to-br from-brand-600 via-brand-500 to-brand-400 p-11 text-white sm:flex-row sm:items-center sm:justify-between">
-              <div className="pointer-events-none absolute inset-0 opacity-35 [background-image:radial-gradient(rgba(255,255,255,0.15)_1px,transparent_1px)] [background-size:26px_26px]" />
-              <div className="relative z-10">
-                <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/15 px-3.5 py-1.5 font-mono text-xs font-semibold tracking-[0.12em] text-white uppercase">
-                  Not Sure Where To Start?
-                </div>
-                <h3 className="mb-2 text-[1.35rem] font-extrabold text-white">Full-stack infrastructure ownership.</h3>
-                <p className="max-w-md text-[0.92rem] text-white/85">
-                  Tell us about your environment and we'll recommend the right service, or a combination,
-                  backed by one accountable engineering team.
-                </p>
-              </div>
-              <Button to="/contact" variant="outlineOnDark" className="relative z-10 flex-none">
-                Get a Free Consultation
-              </Button>
-            </div>
           </div>
         </div>
       </section>
