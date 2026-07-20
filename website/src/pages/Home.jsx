@@ -18,55 +18,9 @@ const methodSteps = [
   { num: '04', title: 'Support', copy: 'Ongoing monitoring, hardware/software support, and a direct line to our engineers.' },
 ]
 
-const techDepth = [
-  {
-    title: 'Network Consultation & Infrastructure',
-    sub: 'Enterprise-grade networking across multi-vendor environments',
-    icon: 'radar',
-    items: [
-      'Advanced routing & switching (OSPF, EIGRP, BGP) and QoS',
-      'Cost-effective routing, wireless & VPN for SMB and branch sites',
-      'Controller-based Wi-Fi with seamless roaming',
-      'Monitoring & visibility: SNMP, NetFlow, dashboarding',
-      'High availability: gateway redundancy, link aggregation',
-    ],
-  },
-  {
-    title: 'Security Consultation & Infrastructure',
-    sub: 'Comprehensive security from perimeter to endpoint',
-    icon: 'shield',
-    items: [
-      'Next-gen firewalls with IPS & SSL inspection',
-      'SIEM for log aggregation & threat hunting',
-      'Vulnerability management with prioritised remediation',
-      'Identity & access: SSO, RADIUS, certificate-based auth',
-      'Security policy, governance & compliance alignment',
-    ],
-  },
-  {
-    title: 'Penetration Testing',
-    sub: 'Structured, methodology-driven offensive security',
-    icon: 'search',
-    items: [
-      'OWASP Top 10 aligned web application testing',
-      'Internal & external network exploitation testing',
-      'Wireless security & rogue access point assessment',
-      'Social engineering & phishing simulations',
-      'Prioritised findings with proof-of-concept & fixes',
-    ],
-  },
-  {
-    title: 'ICT Hardware & Software',
-    sub: 'Sourced, licensed, and supported end-to-end',
-    icon: 'box',
-    items: [
-      'Servers, workstations & networking hardware sourcing',
-      'Software licensing & deployment coordination',
-      'Asset tracking & lifecycle refresh planning',
-      'Warranty coordination & vendor escalation',
-      'Break-fix & on-site support',
-    ],
-  },
+const approachStats = [
+  { value: '5', label: 'Integrated service lines' },
+  { value: '1', label: 'Accountable engineering team' },
 ]
 
 const impactStats = [
@@ -226,61 +180,68 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Methodology */}
-      <section className="pb-26">
-        <div className="mx-auto max-w-6xl px-6">
-          <div className="mx-auto mb-14 max-w-xl text-center">
-            <Eyebrow className="mx-auto">Our Approach</Eyebrow>
-            <h2 className="mb-3.5 text-balance text-3xl font-extrabold tracking-tight text-ink sm:text-[2.6rem]">
+      {/* Our Approach */}
+      <section className="overflow-hidden bg-[#0f0f14] py-26">
+        <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-14 px-6 lg:grid-cols-[1.05fr_0.95fr]">
+          <div>
+            <Eyebrow dark>Our Approach</Eyebrow>
+            <h2 className="mt-5 mb-6 text-balance text-3xl font-extrabold tracking-tight text-white sm:text-[2.6rem]">
               Straightforward engineering. No vendor lock-in.
             </h2>
-            <p className="text-[1.05rem] text-body">
+
+            <div className="mb-7 flex gap-10">
+              {approachStats.map((stat) => (
+                <div key={stat.label}>
+                  <div className="mb-1 bg-gradient-to-br from-brand-400 to-brand-200 bg-clip-text text-4xl font-extrabold text-transparent">
+                    {stat.value}
+                  </div>
+                  <div className="max-w-[9rem] text-[0.8rem] leading-snug font-semibold text-white/60">
+                    {stat.label}
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <p className="mb-7 max-w-md text-[1.02rem] leading-relaxed text-white/70">
               We work as an extension of your team — assessing honestly, recommending the right-sized solution,
               and staying accountable after go-live.
             </p>
-          </div>
-          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            {methodSteps.map((step) => (
-              <div key={step.num} className="rounded-2xl border border-line-soft bg-panel p-6.5">
-                <div className="mb-3.5 font-mono text-xs font-bold text-brand-600">{step.num}</div>
-                <h4 className="mb-1.5 text-[1.02rem] font-extrabold text-ink">{step.title}</h4>
-                <p className="text-[0.86rem] text-body">{step.copy}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
-      {/* Technical depth */}
-      <section className="bg-panel py-26">
-        <div className="mx-auto max-w-6xl px-6">
-          <div className="mx-auto mb-14 max-w-xl text-center">
-            <Eyebrow className="mx-auto">Technical Depth</Eyebrow>
-            <h2 className="mb-3.5 text-balance text-3xl font-extrabold tracking-tight text-ink sm:text-[2.6rem]">
-              Real capability behind every service line.
-            </h2>
-            <p className="text-[1.05rem] text-body">
-              Each of our five services is backed by hands-on, tool-level expertise — not a slide deck.
-            </p>
+            <div className="mb-8 max-w-md rounded-2xl border border-white/10 bg-white/5 px-6 py-5">
+              <p className="mb-1.5 text-sm font-bold text-brand-300">Our Philosophy</p>
+              <p className="text-sm leading-relaxed text-white/70 italic">
+                "Infrastructure should be resilient by design, security should be proactive not reactive, and
+                every recommendation should be one we'd make to our own network."
+              </p>
+              <p className="mt-3 text-xs font-semibold text-white/40">— RSquared Engineering Team</p>
+            </div>
+
+            <div className="flex flex-wrap gap-3.5">
+              <Button to="/contact">Talk to a Consultant</Button>
+              <Button to="/services" variant="ghostOnDark">Explore Services</Button>
+            </div>
           </div>
-          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
-            {techDepth.map((card) => (
-              <div key={card.title} className="rounded-2xl border border-brand-100 bg-brand-50/40 p-8">
-                <span className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-white text-brand-600 shadow-[0_1px_3px_rgba(20,10,50,0.06)]">
-                  <Icon name={card.icon} className="h-5 w-5" />
-                </span>
-                <h3 className="mb-1 text-[1.05rem] font-extrabold text-ink">{card.title}</h3>
-                <p className="mb-4 text-[0.82rem] text-brand-600">{card.sub}</p>
-                <ul className="flex flex-col gap-2">
-                  {card.items.map((item) => (
-                    <li key={item} className="flex items-start gap-2 text-[0.86rem] text-ink-soft">
-                      <Icon name="check" className="mt-0.5 h-3.5 w-3.5 flex-none text-brand-500" strokeWidth={2.5} />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+
+          <div className="rounded-[20px] border border-white/10 bg-white/5 p-8">
+            <div className="mb-6 font-mono text-xs font-bold tracking-[0.1em] text-white/40 uppercase">
+              How an engagement runs
+            </div>
+            <div className="flex flex-col">
+              {methodSteps.map((step, i) => (
+                <div key={step.num} className="relative flex gap-5 pb-7 last:pb-0">
+                  {i !== methodSteps.length - 1 && (
+                    <span className="absolute top-9 left-4.5 h-full w-px bg-white/10" />
+                  )}
+                  <span className="relative flex h-9 w-9 flex-none items-center justify-center rounded-full border border-brand-400/40 bg-brand-500/20 font-mono text-xs font-bold text-brand-300">
+                    {step.num}
+                  </span>
+                  <div>
+                    <h4 className="mb-1 text-[1rem] font-bold text-white">{step.title}</h4>
+                    <p className="text-[0.86rem] leading-relaxed text-white/60">{step.copy}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
