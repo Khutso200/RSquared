@@ -18,6 +18,64 @@ const methodSteps = [
   { num: '04', title: 'Support', copy: 'Ongoing monitoring, hardware/software support, and a direct line to our engineers.' },
 ]
 
+const techDepth = [
+  {
+    title: 'Network Consultation & Infrastructure',
+    sub: 'Enterprise-grade networking across multi-vendor environments',
+    icon: 'radar',
+    items: [
+      'Advanced routing & switching (OSPF, EIGRP, BGP) and QoS',
+      'Cost-effective routing, wireless & VPN for SMB and branch sites',
+      'Controller-based Wi-Fi with seamless roaming',
+      'Monitoring & visibility: SNMP, NetFlow, dashboarding',
+      'High availability: gateway redundancy, link aggregation',
+    ],
+  },
+  {
+    title: 'Security Consultation & Infrastructure',
+    sub: 'Comprehensive security from perimeter to endpoint',
+    icon: 'shield',
+    items: [
+      'Next-gen firewalls with IPS & SSL inspection',
+      'SIEM for log aggregation & threat hunting',
+      'Vulnerability management with prioritised remediation',
+      'Identity & access: SSO, RADIUS, certificate-based auth',
+      'Security policy, governance & compliance alignment',
+    ],
+  },
+  {
+    title: 'Penetration Testing',
+    sub: 'Structured, methodology-driven offensive security',
+    icon: 'search',
+    items: [
+      'OWASP Top 10 aligned web application testing',
+      'Internal & external network exploitation testing',
+      'Wireless security & rogue access point assessment',
+      'Social engineering & phishing simulations',
+      'Prioritised findings with proof-of-concept & fixes',
+    ],
+  },
+  {
+    title: 'ICT Hardware & Software',
+    sub: 'Sourced, licensed, and supported end-to-end',
+    icon: 'box',
+    items: [
+      'Servers, workstations & networking hardware sourcing',
+      'Software licensing & deployment coordination',
+      'Asset tracking & lifecycle refresh planning',
+      'Warranty coordination & vendor escalation',
+      'Break-fix & on-site support',
+    ],
+  },
+]
+
+const impactStats = [
+  { value: '70', suffix: '%', label: 'MTTR Reduction', desc: 'Mean time to resolution cut across monitored infrastructure.' },
+  { value: '285', suffix: '+', label: 'Endpoints Secured', desc: 'Devices protected under active security monitoring and management.' },
+  { value: '99.9', suffix: '%', label: 'Uptime SLA', desc: 'Network availability guaranteed across managed infrastructure.' },
+  { value: '3', suffix: 'x', label: 'Faster Deployment', desc: 'A structured delivery process that accelerates infrastructure rollouts.' },
+]
+
 export default function Home() {
   return (
     <>
@@ -187,6 +245,71 @@ export default function Home() {
                 <div className="mb-3.5 font-mono text-xs font-bold text-brand-600">{step.num}</div>
                 <h4 className="mb-1.5 text-[1.02rem] font-extrabold text-ink">{step.title}</h4>
                 <p className="text-[0.86rem] text-body">{step.copy}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Technical depth */}
+      <section className="bg-panel py-26">
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="mx-auto mb-14 max-w-xl text-center">
+            <Eyebrow className="mx-auto">Technical Depth</Eyebrow>
+            <h2 className="mb-3.5 text-balance text-3xl font-extrabold tracking-tight text-ink sm:text-[2.6rem]">
+              Real capability behind every service line.
+            </h2>
+            <p className="text-[1.05rem] text-body">
+              Each of our five services is backed by hands-on, tool-level expertise — not a slide deck.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
+            {techDepth.map((card) => (
+              <div key={card.title} className="rounded-2xl border border-brand-100 bg-brand-50/40 p-8">
+                <span className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-white text-brand-600 shadow-[0_1px_3px_rgba(20,10,50,0.06)]">
+                  <Icon name={card.icon} className="h-5 w-5" />
+                </span>
+                <h3 className="mb-1 text-[1.05rem] font-extrabold text-ink">{card.title}</h3>
+                <p className="mb-4 text-[0.82rem] text-brand-600">{card.sub}</p>
+                <ul className="flex flex-col gap-2">
+                  {card.items.map((item) => (
+                    <li key={item} className="flex items-start gap-2 text-[0.86rem] text-ink-soft">
+                      <Icon name="check" className="mt-0.5 h-3.5 w-3.5 flex-none text-brand-500" strokeWidth={2.5} />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Business impact stats */}
+      <section className="py-26">
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="mx-auto mb-14 max-w-xl text-center">
+            <Eyebrow className="mx-auto">Business Impact</Eyebrow>
+            <h2 className="mb-3.5 text-balance text-3xl font-extrabold tracking-tight text-ink sm:text-[2.6rem]">
+              Measurable outcomes that matter.
+            </h2>
+            <p className="text-[1.05rem] text-body">
+              Every engagement is built around quantifiable results — faster response, lower risk, stronger
+              infrastructure.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 gap-5 lg:grid-cols-4">
+            {impactStats.map((stat) => (
+              <div
+                key={stat.label}
+                className="rounded-2xl border border-brand-100 bg-brand-50/40 p-8 text-center transition-colors hover:border-brand-300 hover:bg-brand-50"
+              >
+                <div className="mb-2 bg-gradient-to-br from-brand-600 to-brand-400 bg-clip-text text-4xl font-extrabold text-transparent sm:text-5xl">
+                  {stat.value}
+                  <span className="text-3xl sm:text-4xl">{stat.suffix}</span>
+                </div>
+                <div className="mb-2 text-sm font-bold text-ink">{stat.label}</div>
+                <p className="text-[0.8rem] text-body">{stat.desc}</p>
               </div>
             ))}
           </div>
