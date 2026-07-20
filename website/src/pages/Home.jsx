@@ -4,6 +4,7 @@ import Button from '../components/Button'
 import Icon from '../components/Icon'
 import ImagePlaceholder from '../components/ImagePlaceholder'
 import EngagementLoop from '../components/EngagementLoop'
+import useAutoLoop from '../hooks/useAutoLoop'
 import { services } from '../data/services'
 
 const statusRows = [
@@ -13,11 +14,35 @@ const statusRows = [
   { icon: 'compass', label: 'Hardware Rollout', value: 'On Track' },
 ]
 
-const methodSteps = [
-  { num: '01', title: 'Assess', copy: 'Infrastructure audit, gap analysis & risk benchmarking against your environment and goals.' },
-  { num: '02', title: 'Design', copy: 'Clear, documented architecture and security plans your team can actually maintain.' },
-  { num: '03', title: 'Deploy & Test', copy: 'Hands-on implementation followed by independent testing to verify it holds up.' },
-  { num: '04', title: 'Support', copy: 'Ongoing monitoring, hardware/software support, and a direct line to our engineers.' },
+const approachSteps = [
+  {
+    num: '01',
+    title: 'Assess',
+    tagline: 'Infrastructure audit, gap analysis & risk benchmarking against your environment and goals.',
+    detail: 'We start with your environment, not a pre-set product list — auditing what you run today and benchmarking it against real risk.',
+    photoCaption: 'Add photo — infrastructure audit on site',
+  },
+  {
+    num: '02',
+    title: 'Design',
+    tagline: 'Clear, documented architecture and security plans your team can actually maintain.',
+    detail: 'Every recommendation is documented in plain language, sized to your budget and team, and built to be maintained long after we hand it over.',
+    photoCaption: 'Add photo — architecture & design review',
+  },
+  {
+    num: '03',
+    title: 'Deploy & Test',
+    tagline: 'Hands-on implementation followed by independent testing to verify it holds up.',
+    detail: 'Our engineers implement the plan hands-on, then test it independently — so what goes live is verified, not just deployed.',
+    photoCaption: 'Add photo — deployment & testing day',
+  },
+  {
+    num: '04',
+    title: 'Support',
+    tagline: 'Ongoing monitoring, hardware/software support, and a direct line to our engineers.',
+    detail: "The relationship doesn't end at go-live — ongoing monitoring and a direct line to the engineers who built it keep things running.",
+    photoCaption: 'Add photo — monitoring & support desk',
+  },
 ]
 
 const approachStats = [
@@ -33,6 +58,9 @@ const impactStats = [
 ]
 
 export default function Home() {
+  const { index: stepIndex, setIndex: setStepIndex, setPaused: setStepPaused } = useAutoLoop(approachSteps.length)
+  const activeStep = approachSteps[stepIndex]
+
   return (
     <>
       {/* Hero */}
@@ -210,10 +238,15 @@ export default function Home() {
               <h3 className="mb-3 text-[1.3rem] font-extrabold text-white">
                 Straightforward engineering. No vendor lock-in.
               </h3>
-              <p className="mb-7 max-w-md text-[1.02rem] leading-relaxed text-white/70">
-                We work as an extension of your team — assessing honestly, recommending the right-sized
-                solution, and staying accountable after go-live.
-              </p>
+
+              <div key={activeStep.num} className="mb-7 max-w-md animate-[fadeIn_.4s_ease]">
+                <div className="mb-2 flex items-center gap-2 font-mono text-[0.7rem] font-bold tracking-[0.08em] text-brand-300 uppercase">
+                  <span>Phase {activeStep.num}</span>
+                  <span className="text-white/25">/</span>
+                  <span>{activeStep.title}</span>
+                </div>
+                <p className="text-[1.02rem] leading-relaxed text-white/70">{activeStep.detail}</p>
+              </div>
 
               <div className="mb-8 max-w-md rounded-2xl border border-white/10 bg-white/5 px-6 py-5">
                 <p className="mb-1.5 text-sm font-bold text-brand-300">Our Philosophy</p>
@@ -231,8 +264,18 @@ export default function Home() {
             </div>
 
             <div className="relative pb-10 sm:pb-14">
-              <ImagePlaceholder label="Add engagement photo" className="aspect-[4/5] w-full" />
-              <EngagementLoop steps={methodSteps} className="absolute inset-x-6 -bottom-2 sm:inset-x-10" />
+              <ImagePlaceholder
+                key={activeStep.num}
+                label={activeStep.photoCaption}
+                className="aspect-[4/5] w-full animate-[fadeIn_.4s_ease]"
+              />
+              <EngagementLoop
+                steps={approachSteps}
+                index={stepIndex}
+                onSelect={setStepIndex}
+                onPause={setStepPaused}
+                className="absolute inset-x-6 -bottom-2 sm:inset-x-10"
+              />
             </div>
           </div>
         </div>
