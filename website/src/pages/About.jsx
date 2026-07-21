@@ -2,19 +2,19 @@ import Eyebrow from '../components/Eyebrow'
 import Icon from '../components/Icon'
 
 const values = [
-  { icon: 'radar', title: 'Engineering Rigour', copy: 'Every solution is designed with industry best practice, tested before deployment, and documented for long-term maintainability.' },
+  { icon: 'radar', title: 'Engineering Rigour', copy: 'Every solution is designed with industry best practice, tested before deployment and documented for long-term maintainability.' },
   { icon: 'shield', title: 'Security-First Mindset', copy: "Security isn't an add-on — it's embedded in every design, from zero-trust architecture to defence-in-depth strategies." },
-  { icon: 'refresh', title: 'Continuous Improvement', copy: 'We monitor, measure, and optimise relentlessly — proactive vulnerability management over reactive firefighting.' },
-  { icon: 'link', title: 'Transparent Partnership', copy: 'Clear communication, detailed documentation, and honest assessments — no upselling, no unnecessary complexity.' },
-  { icon: 'award', title: 'Vendor-Neutral Advice', copy: "We're not locked into a single vendor. We recommend the best fit for your requirements, environment, and budget." },
+  { icon: 'refresh', title: 'Continuous Improvement', copy: 'We monitor, measure and optimise relentlessly — proactive vulnerability management over reactive firefighting.' },
+  { icon: 'link', title: 'Transparent Partnership', copy: 'Clear communication, detailed documentation and honest assessments — no upselling, no unnecessary complexity.' },
+  { icon: 'award', title: 'Vendor-Neutral Advice', copy: "We're not locked into a single vendor. We recommend the best fit for your requirements, environment and budget." },
   { icon: 'layers', title: 'Knowledge Transfer', copy: "We don't just build and leave. Documentation and hand-over ensure your team can confidently manage what we deploy." },
 ]
 
 const timeline = [
   { year: 'Foundation', title: 'RSquared IT Technologies Established', copy: 'Founded in Johannesburg, to deliver enterprise network infrastructure and cybersecurity services across South Africa.' },
-  { year: 'Certifications', title: 'Industry Certifications Achieved', copy: 'Our engineers earned certifications across network, security, and cloud platforms to back every recommendation with verified expertise.' },
-  { year: 'Service Expansion', title: 'Five Core Service Lines Defined', copy: 'Formalised our offering around network consultation, security consultation, infrastructure delivery, penetration testing, and ICT hardware & software.' },
-  { year: 'Client Delivery', title: 'Enterprise Engagements Delivered', copy: 'Delivered network infrastructure rollouts, security assessments, and penetration testing engagements for clients across Gauteng.' },
+  { year: 'Certifications', title: 'Industry Certifications Achieved', copy: 'Our engineers earned certifications across network, security and cloud platforms to back every recommendation with verified expertise.' },
+  { year: 'Service Expansion', title: 'Five Core Service Lines Defined', copy: 'Formalised our offering around network consultation, security consultation, infrastructure delivery, penetration testing and ICT hardware & software.' },
+  { year: 'Client Delivery', title: 'Enterprise Engagements Delivered', copy: 'Delivered network infrastructure rollouts, security assessments and penetration testing engagements for clients across Gauteng.' },
   { year: 'Today', title: 'Growing & Scaling', copy: 'Expanding our engineering team and deepening security capabilities, building long-term partnerships with enterprises across South Africa.' },
 ]
 
@@ -63,13 +63,13 @@ export default function About() {
             </p>
             <p className="mb-4 text-[0.98rem] leading-relaxed text-body">
               What sets us apart is depth. We don't just specify and hand over — we consult, design, deploy,
-              test, and support. From initial network consultation through to penetration testing and hardware
+              test and support. From initial network consultation through to penetration testing and hardware
               supply, we stay involved end-to-end so nothing gets lost between the strategy deck and the server
               rack.
             </p>
             <p className="text-[0.98rem] leading-relaxed text-body">
               Our approach combines deep technical certifications with real-world operational experience across
-              network engineering, security consulting, and infrastructure delivery — so every recommendation
+              network engineering, security consulting and infrastructure delivery — so every recommendation
               is grounded in practice, not vendor literature.
             </p>
           </div>
@@ -83,7 +83,7 @@ export default function About() {
               <div className="mb-4.5 text-sm font-bold text-brand-600">Network, Security &amp; Infrastructure Specialists</div>
               <p className="text-sm leading-relaxed text-body">
                 With expertise spanning enterprise networking, firewall and VPN infrastructure, penetration
-                testing, and ICT procurement, our engineers lead every engagement from initial assessment
+                testing and ICT procurement, our engineers lead every engagement from initial assessment
                 through deployment and support. Our team brings both breadth and hands-on depth to every
                 project.
               </p>
@@ -91,8 +91,8 @@ export default function About() {
             <div className="mt-4 rounded-[14px] border border-line-soft bg-panel px-6 py-5.5">
               <p className="mb-1.5 text-sm font-bold text-brand-600">Our Philosophy</p>
               <p className="text-sm leading-relaxed text-body italic">
-                "Infrastructure should be resilient by design, security should be proactive not reactive, and
-                every recommendation should be one we'd make to our own network."
+                "Infrastructure should be resilient by design, security should be proactive not reactive
+                and every recommendation should be one we'd make to our own network."
               </p>
             </div>
           </div>

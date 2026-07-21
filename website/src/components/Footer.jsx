@@ -12,7 +12,7 @@ export default function Footer() {
               <Logo dark />
             </Link>
             <p className="max-w-[280px] text-sm leading-relaxed text-[#8f8f9c]">
-              Network consultation, security consultation, infrastructure, penetration testing, and ICT
+              Network consultation, security consultation, infrastructure, penetration testing and ICT
               hardware &amp; software — from Johannesburg, South Africa.
             </p>
           </div>

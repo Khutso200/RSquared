@@ -46,6 +46,26 @@ body {
   }
 }
 
+@keyframes glowPulse {
+  0%,
+  100% {
+    text-shadow:
+      0 0 18px rgba(168, 85, 247, 0.55),
+      0 0 42px rgba(124, 58, 237, 0.4),
+      0 0 90px rgba(91, 33, 182, 0.3);
+  }
+  50% {
+    text-shadow:
+      0 0 26px rgba(168, 85, 247, 0.8),
+      0 0 62px rgba(124, 58, 237, 0.6),
+      0 0 130px rgba(91, 33, 182, 0.45);
+  }
+}
+
+.glow-heading {
+  animation: glowPulse 3.6s ease-in-out infinite;
+}
+
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0.01ms !important;

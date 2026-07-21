@@ -20,7 +20,7 @@ const approachSteps = [
     num: '02',
     title: 'Design',
     tagline: 'Clear, documented architecture and security plans your team can actually maintain.',
-    detail: 'Every recommendation is documented in plain language, sized to your budget and team, and built to be maintained long after we hand it over.',
+    detail: 'Every recommendation is documented in plain language, sized to your budget and team and built to be maintained long after we hand it over.',
     photoCaption: 'Add photo — architecture & design review',
   },
   {
@@ -33,7 +33,7 @@ const approachSteps = [
   {
     num: '04',
     title: 'Support',
-    tagline: 'Ongoing monitoring, hardware/software support, and a direct line to our engineers.',
+    tagline: 'Ongoing monitoring, hardware/software support and a direct line to our engineers.',
     detail: "The relationship doesn't end at go-live — ongoing monitoring and a direct line to the engineers who built it keep things running.",
     photoCaption: 'Add photo — monitoring & support desk',
   },
@@ -69,8 +69,8 @@ export default function Home() {
               Enterprise IT infrastructure, built <span className="text-brand-500">secure</span> from the ground up.
             </h1>
             <p className="mb-8 max-w-lg text-[1.15rem] leading-relaxed text-body">
-              RSquared IT Technologies helps organisations plan, secure, and run resilient networks — from
-              strategic consultation through to hands-on deployment, testing, and hardware supply.
+              RSquared IT Technologies helps organisations plan, secure and run resilient networks — from
+              strategic consultation through to hands-on deployment, testing and hardware supply.
             </p>
             <div className="mb-11 flex flex-wrap gap-3.5">
               <Button to="/contact">
@@ -115,7 +115,7 @@ export default function Home() {
               Everything your network and security posture needs.
             </h2>
             <p className="text-[1.05rem] text-body">
-              Five focused service lines covering strategy, defence, deployment, testing, and supply — so you
+              Five focused service lines covering strategy, defence, deployment, testing and supply — so you
               can work with one accountable partner.
             </p>
           </div>
@@ -148,9 +148,10 @@ export default function Home() {
       {/* Our Approach */}
       <section className="overflow-hidden bg-[#0f0f14] py-26">
         <div className="mx-auto max-w-6xl px-6">
-          <div className="mx-auto mb-16 max-w-2xl text-center">
+          <div className="relative mx-auto mb-16 max-w-2xl text-center">
+            <div className="pointer-events-none absolute top-1/2 left-1/2 -z-10 h-[420px] w-[420px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(168,85,247,0.35),rgba(124,58,237,0.12)_45%,rgba(124,58,237,0)_72%)] blur-2xl" />
             <Eyebrow dark className="mx-auto">Our Approach</Eyebrow>
-            <h2 className="mt-5 text-balance text-3xl font-extrabold tracking-tight text-white sm:text-[2.6rem]">
+            <h2 className="glow-heading mt-5 text-balance text-3xl font-extrabold tracking-tight text-white sm:text-[2.6rem]">
               Why teams trust RSquared with <span className="text-brand-300">infrastructure that can't go down.</span>
             </h2>
           </div>
@@ -186,7 +187,7 @@ export default function Home() {
               <div className="mb-8 max-w-md rounded-2xl border border-white/10 bg-white/5 px-6 py-5">
                 <p className="mb-1.5 text-sm font-bold text-brand-300">Our Philosophy</p>
                 <p className="text-sm leading-relaxed text-white/70 italic">
-                  "Infrastructure should be resilient by design, security should be proactive not reactive,
+                  "Infrastructure should be resilient by design, security should be proactive not reactive
                   and every recommendation should be one we'd make to our own network."
                 </p>
                 <p className="mt-3 text-xs font-semibold text-white/40">— RSquared Engineering Team</p>
