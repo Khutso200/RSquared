@@ -3,10 +3,13 @@ import { useEffect, useRef } from 'react'
 const SPHERE_COUNT = 640
 const RING_COUNT = 260
 const AUTO_SPIN_SPEED = 0.0022
+const HOVER_SPIN_SPEED = 0.0055
 const FOCAL_LENGTH = 2.6
 const DRAG_SENSITIVITY = 0.012
 const MOMENTUM_DECAY = 0.94
 const RING_TILT = 1.05
+const HOVER_RADIUS = 95
+const HOVER_BOOST = 1.6
 
 const SPHERE_PALETTE = [
   [124, 58, 237], // violet-500
@@ -76,7 +79,7 @@ function buildRingPoints() {
   return points
 }
 
-export default function InteractiveGlobe({ className = '' }) {
+export default function InteractiveGlobe({ className = '', originX = 0.5, originY = 0.5 }) {
   const canvasRef = useRef(null)
 
   useEffect(() => {
@@ -94,9 +97,15 @@ export default function InteractiveGlobe({ className = '' }) {
     let velY = AUTO_SPIN_SPEED
     let velX = 0
     let dragging = false
+    let hovering = false
+    let hoverX = null
+    let hoverY = null
     let lastX = 0
     let lastY = 0
     let raf = 0
+
+    let effectiveOriginX = originX
+    let effectiveOriginY = originY
 
     function resize() {
       const rect = canvas.getBoundingClientRect()
@@ -106,6 +115,17 @@ export default function InteractiveGlobe({ className = '' }) {
       canvas.width = width * dpr
       canvas.height = height * dpr
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0)
+
+      if (width < 640) {
+        effectiveOriginX = 1.02
+        effectiveOriginY = 0.32
+      } else if (width < 1024) {
+        effectiveOriginX = 0.86
+        effectiveOriginY = 0.38
+      } else {
+        effectiveOriginX = originX
+        effectiveOriginY = originY
+      }
     }
 
     function project(p) {
@@ -124,8 +144,8 @@ export default function InteractiveGlobe({ className = '' }) {
       const scale = FOCAL_LENGTH / (FOCAL_LENGTH + z2)
       const R = Math.min(width, height) * 0.36
       return {
-        x: width / 2 + x2 * R * scale,
-        y: height / 2 + y2 * R * scale,
+        x: width * effectiveOriginX + x2 * R * scale,
+        y: height * effectiveOriginY + y2 * R * scale,
         z: z2,
         scale,
       }
@@ -139,8 +159,18 @@ export default function InteractiveGlobe({ className = '' }) {
       for (const p of projected) {
         const baseAlpha = p.ring ? 0.16 : 0.22
         const alphaRange = p.ring ? 0.5 : 0.68
-        const alpha = baseAlpha + ((1 - p.z) / 2) * alphaRange
-        const radius = Math.max(0.3, p.size * p.scale)
+        let alpha = baseAlpha + ((1 - p.z) / 2) * alphaRange
+        let radius = Math.max(0.3, p.size * p.scale)
+
+        if (hoverX !== null) {
+          const dist = Math.hypot(p.x - hoverX, p.y - hoverY)
+          if (dist < HOVER_RADIUS) {
+            const proximity = 1 - dist / HOVER_RADIUS
+            alpha = Math.min(1, alpha + proximity * 0.6)
+            radius *= 1 + proximity * HOVER_BOOST
+          }
+        }
+
         ctx.beginPath()
         ctx.fillStyle = `rgba(${p.r},${p.g},${p.b},${alpha.toFixed(3)})`
         ctx.arc(p.x, p.y, radius, 0, Math.PI * 2)
@@ -150,14 +180,19 @@ export default function InteractiveGlobe({ className = '' }) {
 
     function tick() {
       if (!dragging) {
+        const targetSpeed = hovering ? HOVER_SPIN_SPEED : AUTO_SPIN_SPEED
+        velY += (targetSpeed - velY) * 0.03
         rotY += velY
         rotX += velX
-        velY *= MOMENTUM_DECAY
         velX *= MOMENTUM_DECAY
-        if (Math.abs(velY) < AUTO_SPIN_SPEED) velY = AUTO_SPIN_SPEED
       }
       render()
       raf = requestAnimationFrame(tick)
+    }
+
+    function localPoint(e) {
+      const rect = canvas.getBoundingClientRect()
+      return { x: e.clientX - rect.left, y: e.clientY - rect.top }
     }
 
     function onPointerDown(e) {
@@ -165,13 +200,20 @@ export default function InteractiveGlobe({ className = '' }) {
       lastX = e.clientX
       lastY = e.clientY
       velX = 0
-      velY = 0
       canvas.setPointerCapture(e.pointerId)
       canvas.style.cursor = 'grabbing'
     }
 
     function onPointerMove(e) {
-      if (!dragging) return
+      const p = localPoint(e)
+      hoverX = p.x
+      hoverY = p.y
+      hovering = true
+
+      if (!dragging) {
+        if (reducedMotion) render()
+        return
+      }
       const dx = e.clientX - lastX
       const dy = e.clientY - lastY
       lastX = e.clientX
@@ -194,13 +236,21 @@ export default function InteractiveGlobe({ className = '' }) {
       }
     }
 
+    function onPointerLeave(e) {
+      onPointerUp(e)
+      hovering = false
+      hoverX = null
+      hoverY = null
+      if (reducedMotion) render()
+    }
+
     resize()
     canvas.style.cursor = 'grab'
     canvas.style.touchAction = 'none'
     canvas.addEventListener('pointerdown', onPointerDown)
     canvas.addEventListener('pointermove', onPointerMove)
     canvas.addEventListener('pointerup', onPointerUp)
-    canvas.addEventListener('pointerleave', onPointerUp)
+    canvas.addEventListener('pointerleave', onPointerLeave)
 
     const ro = new ResizeObserver(() => {
       resize()
@@ -220,15 +270,15 @@ export default function InteractiveGlobe({ className = '' }) {
       canvas.removeEventListener('pointerdown', onPointerDown)
       canvas.removeEventListener('pointermove', onPointerMove)
       canvas.removeEventListener('pointerup', onPointerUp)
-      canvas.removeEventListener('pointerleave', onPointerUp)
+      canvas.removeEventListener('pointerleave', onPointerLeave)
     }
-  }, [])
+  }, [originX, originY])
 
   return (
     <canvas
       ref={canvasRef}
       role="img"
-      aria-label="Interactive rotating globe with an orbiting particle ring, representing RSquared's global network reach — drag to rotate"
+      aria-label="Interactive rotating globe with an orbiting particle ring, representing RSquared's global network reach — hover or drag to interact"
       className={className}
     />
   )

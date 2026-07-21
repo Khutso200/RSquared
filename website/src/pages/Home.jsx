@@ -9,6 +9,8 @@ import GlowText from '../components/GlowText'
 import useAutoLoop from '../hooks/useAutoLoop'
 import { services } from '../data/services'
 
+const oemLogos = ['CISCO', 'FORTINET', 'AWS', 'Microsoft', 'MikroTik', 'Splunk']
+
 const approachSteps = [
   {
     num: '01',
@@ -59,12 +61,14 @@ export default function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="relative overflow-hidden py-22 pt-22 pb-20">
+      <section className="relative min-h-[620px] overflow-hidden py-22 pt-22 pb-20 sm:min-h-[680px] lg:min-h-[740px]">
         <div className="pointer-events-none absolute -top-40 -right-30 h-[560px] w-[560px] rounded-full bg-[radial-gradient(circle,rgba(124,58,237,0.14),rgba(124,58,237,0)_70%)]" />
         <div className="pointer-events-none absolute -bottom-50 -left-35 h-[480px] w-[480px] rounded-full bg-[radial-gradient(circle,rgba(168,85,247,0.10),rgba(168,85,247,0)_70%)]" />
 
-        <div className="relative z-10 mx-auto grid max-w-6xl grid-cols-1 items-center gap-14 px-6 lg:grid-cols-[1.05fr_0.95fr]">
-          <div>
+        <InteractiveGlobe className="pointer-events-auto absolute inset-0 z-0 h-full w-full" originX={0.68} originY={0.42} />
+
+        <div className="relative z-10 mx-auto max-w-6xl px-6">
+          <div className="max-w-xl">
             <Eyebrow>Johannesburg, South Africa</Eyebrow>
             <h1 className="mb-5.5 text-balance text-4xl leading-[1.08] font-extrabold tracking-tight text-ink sm:text-5xl lg:text-[3.6rem]">
               Enterprise IT infrastructure, built <span className="text-brand-500">secure</span> from the ground up.
@@ -86,20 +90,21 @@ export default function Home() {
               <Stat value="100%" label="Vendor-Neutral Advice" />
             </div>
           </div>
-
-          <div className="relative min-h-[420px] sm:min-h-[520px] lg:min-h-[600px]">
-            <InteractiveGlobe className="pointer-events-auto absolute top-1/2 left-1/2 z-0 h-[480px] w-[480px] -translate-x-1/2 -translate-y-1/2 sm:h-[580px] sm:w-[580px] lg:-right-16 lg:left-auto lg:h-[620px] lg:w-[620px] lg:translate-x-0" />
-          </div>
         </div>
       </section>
 
       {/* Certified strip */}
       <div className="border-y border-line-soft bg-[#faf9fc] py-8">
-        <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-center gap-9 px-6">
+        <div className="mx-auto mb-5 max-w-6xl px-6 text-center">
           <span className="font-mono text-xs font-bold tracking-[0.1em] text-muted uppercase">Certified With</span>
-          <div className="flex flex-wrap justify-center gap-8.5">
-            {['CISCO', 'FORTINET', 'AWS', 'Microsoft', 'MikroTik'].map((brand) => (
-              <span key={brand} className="text-[0.95rem] font-extrabold tracking-wide text-body transition-colors hover:text-brand-600">
+        </div>
+        <div className="marquee-mask overflow-hidden">
+          <div className="marquee-track flex w-max items-center gap-16 pr-16">
+            {[...oemLogos, ...oemLogos].map((brand, i) => (
+              <span
+                key={`${brand}-${i}`}
+                className="text-[0.95rem] font-extrabold tracking-wide whitespace-nowrap text-body transition-colors hover:text-brand-600"
+              >
                 {brand}
               </span>
             ))}
