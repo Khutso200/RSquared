@@ -8,13 +8,6 @@ import InteractiveGlobe from '../components/InteractiveGlobe'
 import useAutoLoop from '../hooks/useAutoLoop'
 import { services } from '../data/services'
 
-const statusRows = [
-  { icon: 'monitor', label: 'Network Uptime', value: '99.98%', ok: true },
-  { icon: 'shield', label: 'Threats Blocked (30d)', value: '1,204' },
-  { icon: 'search', label: 'Last Pentest Findings', value: 'Resolved', ok: true },
-  { icon: 'compass', label: 'Hardware Rollout', value: 'On Track' },
-]
-
 const approachSteps = [
   {
     num: '01',
@@ -93,46 +86,8 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="relative">
+          <div className="relative min-h-[420px] sm:min-h-[520px] lg:min-h-[600px]">
             <InteractiveGlobe className="pointer-events-auto absolute top-1/2 left-1/2 z-0 h-[480px] w-[480px] -translate-x-1/2 -translate-y-1/2 sm:h-[580px] sm:w-[580px] lg:-right-16 lg:left-auto lg:h-[620px] lg:w-[620px] lg:translate-x-0" />
-
-            <div className="absolute -top-4.5 -left-7 z-10 hidden items-center gap-2.5 rounded-xl border border-line bg-white px-4 py-3 text-[0.85rem] font-bold shadow-[0_8px_24px_rgba(40,20,90,0.08)] sm:flex">
-              <span className="flex h-7.5 w-7.5 flex-none items-center justify-center rounded-lg bg-brand-500 text-white">
-                <Icon name="shield" className="h-3.5 w-3.5" />
-              </span>
-              Secured Network
-            </div>
-
-            <div className="relative z-10 rounded-[20px] border border-line bg-white p-8 shadow-[0_20px_50px_rgba(40,20,90,0.12)]">
-              <div className="mb-5.5 flex gap-1.5">
-                <span className="h-2.5 w-2.5 rounded-full bg-line" />
-                <span className="h-2.5 w-2.5 rounded-full bg-line" />
-                <span className="h-2.5 w-2.5 rounded-full bg-line" />
-              </div>
-              {statusRows.map((row, i) => (
-                <div
-                  key={row.label}
-                  className={`flex items-center justify-between py-3.5 ${i !== statusRows.length - 1 ? 'border-b border-line-soft' : ''}`}
-                >
-                  <div className="flex items-center gap-3 text-[0.92rem] font-semibold text-ink-soft">
-                    <span className="flex h-8.5 w-8.5 items-center justify-center rounded-[9px] bg-brand-50 text-brand-600">
-                      <Icon name={row.icon} className="h-4 w-4" />
-                    </span>
-                    {row.label}
-                  </div>
-                  <div className={`font-mono text-[0.78rem] font-semibold ${row.ok ? 'text-[#16a34a]' : 'text-muted'}`}>
-                    {row.value}
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <div className="absolute -right-5 -bottom-5 z-10 hidden items-center gap-2.5 rounded-xl border border-line bg-white px-4 py-3 text-[0.85rem] font-bold shadow-[0_8px_24px_rgba(40,20,90,0.08)] sm:flex">
-              <span className="flex h-7.5 w-7.5 flex-none items-center justify-center rounded-lg bg-brand-500 text-white">
-                <Icon name="search" className="h-3.5 w-3.5" />
-              </span>
-              Pentest Verified
-            </div>
           </div>
         </div>
       </section>
