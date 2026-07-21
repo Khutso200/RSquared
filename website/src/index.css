@@ -52,29 +52,29 @@ body {
     filter: brightness(1) saturate(1);
   }
   50% {
-    filter: brightness(1.4) saturate(1.2);
+    filter: brightness(1.18) saturate(1.05);
   }
 }
 
 .glow-word {
   display: inline-block;
   text-shadow:
-    0 0 12px rgba(var(--glow-color), 0.55),
-    0 0 30px rgba(var(--glow-color), 0.38),
-    0 0 64px rgba(var(--glow-color), 0.24);
-  animation: glowPulse 3.2s ease-in-out infinite;
+    0 0 10px rgba(var(--glow-color), 0.4),
+    0 0 24px rgba(var(--glow-color), 0.26),
+    0 0 50px rgba(var(--glow-color), 0.14);
+  animation: glowPulse 3.8s ease-in-out infinite;
   transition:
-    text-shadow 0.3s ease,
-    transform 0.3s ease;
+    text-shadow 0.35s ease,
+    transform 0.35s ease;
   will-change: text-shadow, transform;
   transform-origin: center bottom;
 }
 
 .glow-word:hover {
   text-shadow:
-    0 0 20px rgba(var(--glow-color), 1),
-    0 0 50px rgba(var(--glow-color), 0.9),
-    0 0 110px rgba(var(--glow-color), 0.65);
+    0 0 14px rgba(var(--glow-color), 0.75),
+    0 0 36px rgba(var(--glow-color), 0.55),
+    0 0 76px rgba(var(--glow-color), 0.32);
   transform: translateY(-4px);
   animation-play-state: paused;
   cursor: default;

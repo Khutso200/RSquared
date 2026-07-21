@@ -1,11 +1,11 @@
 const GLOW_PALETTE = [
-  [124, 58, 237], // violet
-  [56, 189, 248], // sky
-  [236, 72, 153], // pink
-  [245, 158, 11], // amber
-  [20, 184, 166], // teal
-  [99, 102, 241], // indigo
-  [244, 63, 94], // rose
+  [124, 58, 237], // violet-500
+  [59, 130, 246], // blue-500
+  [45, 212, 191], // teal-400
+  [99, 102, 241], // indigo-500
+  [34, 211, 238], // cyan-400
+  [147, 51, 234], // purple-600
+  [56, 189, 248], // sky-400
 ]
 
 export default function GlowText({ text, className = '' }) {
