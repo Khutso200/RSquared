@@ -104,16 +104,10 @@ export default function Home() {
             </div>
 
             <div className="relative z-10 rounded-[20px] border border-line bg-white p-8 shadow-[0_20px_50px_rgba(40,20,90,0.12)]">
-              <div className="mb-5.5 flex items-center justify-between">
-                <div className="flex gap-1.5">
-                  <span className="h-2.5 w-2.5 rounded-full bg-line" />
-                  <span className="h-2.5 w-2.5 rounded-full bg-line" />
-                  <span className="h-2.5 w-2.5 rounded-full bg-line" />
-                </div>
-                <div className="flex items-center gap-1.5 rounded-full bg-[#eafcf1] px-3 py-1.5 font-mono text-xs font-bold text-[#16a34a]">
-                  <span className="h-1.5 w-1.5 rounded-full bg-[#16a34a]" />
-                  All Systems Operational
-                </div>
+              <div className="mb-5.5 flex gap-1.5">
+                <span className="h-2.5 w-2.5 rounded-full bg-line" />
+                <span className="h-2.5 w-2.5 rounded-full bg-line" />
+                <span className="h-2.5 w-2.5 rounded-full bg-line" />
               </div>
               {statusRows.map((row, i) => (
                 <div
