@@ -5,6 +5,7 @@ import Icon from '../components/Icon'
 import ImagePlaceholder from '../components/ImagePlaceholder'
 import EngagementLoop from '../components/EngagementLoop'
 import InteractiveGlobe from '../components/InteractiveGlobe'
+import GlowText from '../components/GlowText'
 import useAutoLoop from '../hooks/useAutoLoop'
 import { services } from '../data/services'
 
@@ -151,8 +152,8 @@ export default function Home() {
           <div className="relative mx-auto mb-16 max-w-2xl text-center">
             <div className="pointer-events-none absolute top-1/2 left-1/2 -z-10 h-[420px] w-[420px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(168,85,247,0.35),rgba(124,58,237,0.12)_45%,rgba(124,58,237,0)_72%)] blur-2xl" />
             <Eyebrow dark className="mx-auto">Our Approach</Eyebrow>
-            <h2 className="glow-heading mt-5 text-balance text-3xl font-extrabold tracking-tight text-white sm:text-[2.6rem]">
-              Why teams trust RSquared with <span className="text-brand-300">infrastructure that can't go down.</span>
+            <h2 className="mt-5 text-balance text-3xl font-extrabold tracking-tight text-white sm:text-[2.6rem]">
+              <GlowText text="Why teams trust RSquared with infrastructure that can't go down." />
             </h2>
           </div>
 
