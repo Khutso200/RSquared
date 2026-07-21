@@ -278,7 +278,7 @@ export default function InteractiveGlobe({ className = '', originX = 0.5, origin
     <canvas
       ref={canvasRef}
       role="img"
-      aria-label="Interactive rotating globe with an orbiting particle ring, representing RSquared's global network reach — hover or drag to interact"
+      aria-label="Interactive rotating globe with an orbiting particle ring, representing RSquared's global network reach. Hover or drag to interact."
       className={className}
     />
   )

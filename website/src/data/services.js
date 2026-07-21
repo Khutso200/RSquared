@@ -17,7 +17,7 @@ export const services = [
       'Technology roadmap development',
     ],
     description: [
-      "Our Network Consultation practice starts with your environment, not a vendor catalogue. We assess your current LAN, WAN and wireless estate — identifying coverage gaps, capacity constraints and single points of failure — before recommending a right-sized architecture.",
+      "Our Network Consultation practice starts with your environment, not a vendor catalogue. We assess your current LAN, WAN and wireless estate, identifying coverage gaps, capacity constraints and single points of failure, before recommending a right-sized architecture.",
       "Whether you're planning a new site, refreshing ageing infrastructure, or preparing for growth, we deliver clear, documented designs your own team can implement and maintain, with vendor-neutral recommendations grounded in hands-on engineering experience rather than sales targets.",
     ],
   },
@@ -40,7 +40,7 @@ export const services = [
     ],
     description: [
       'We help organisations understand where they actually stand: assessing security maturity against recognised frameworks, identifying gaps in policy and practice and prioritising remediation by real business risk rather than checklist compliance.',
-      'Every engagement produces a practical roadmap — not just a findings report — covering governance, incident response readiness and regulatory alignment, so your leadership team can make informed decisions about where to invest next.',
+      'Every engagement produces a practical roadmap, not just a findings report, covering governance, incident response readiness and regulatory alignment, so your leadership team can make informed decisions about where to invest next.',
     ],
   },
   {
@@ -61,7 +61,7 @@ export const services = [
       'Change control & documentation',
     ],
     description: [
-      'We design and deploy the infrastructure that carries your business — firewalls, switches, routers and VPNs — engineered to work as one secure system rather than a collection of disconnected boxes.',
+      'We design and deploy the infrastructure that carries your business: firewalls, switches, routers and VPNs, engineered to work as one secure system rather than a collection of disconnected boxes.',
       'Beyond initial rollout, we provide ongoing management: policy tuning, firmware and patch management, capacity monitoring and documented change control, so your network stays secure and predictable as it grows.',
     ],
   },
@@ -83,8 +83,8 @@ export const services = [
       'Retesting & validation',
     ],
     description: [
-      'We simulate the tactics real attackers use — from the internet-facing perimeter to the internal network, web applications, wireless estate and your people — to find weaknesses before someone else does.',
-      'Every engagement ends with a clear, prioritised report: what we found, how we got there and exactly how to fix it — followed by retesting to confirm remediation actually closed the gap.',
+      'We simulate the tactics real attackers use, from the internet-facing perimeter to the internal network, web applications, wireless estate and your people, to find weaknesses before someone else does.',
+      'Every engagement ends with a clear, prioritised report: what we found, how we got there and exactly how to fix it, followed by retesting to confirm remediation actually closed the gap.',
     ],
   },
   {
@@ -105,7 +105,7 @@ export const services = [
       'Break-fix & on-site support',
     ],
     description: [
-      'We source, supply and support the hardware and software your infrastructure runs on — servers, workstations, networking gear and licensing — sourced from trusted vendors and deployed to spec.',
+      'We source, supply and support the hardware and software your infrastructure runs on: servers, workstations, networking gear and licensing, sourced from trusted vendors and deployed to spec.',
       'From initial procurement through installation, warranty coordination and lifecycle refresh planning, we keep your estate current and supported, with break-fix and on-site assistance when something needs a hands-on fix.',
     ],
   },

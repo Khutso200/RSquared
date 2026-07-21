@@ -33,7 +33,7 @@ export default function Header() {
     <>
       <header className="sticky top-0 z-50 border-b border-line-soft bg-white/85 backdrop-blur-lg">
         <div className="mx-auto flex h-[76px] max-w-6xl items-center justify-between px-6">
-          <NavLink to="/" aria-label="RSquared IT Technologies — Home">
+          <NavLink to="/" aria-label="RSquared IT Technologies home page">
             <Logo />
           </NavLink>
 

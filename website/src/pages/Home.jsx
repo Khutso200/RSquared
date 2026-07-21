@@ -16,29 +16,29 @@ const approachSteps = [
     num: '01',
     title: 'Assess',
     tagline: 'Infrastructure audit, gap analysis & risk benchmarking against your environment and goals.',
-    detail: 'We start with your environment, not a pre-set product list — auditing what you run today and benchmarking it against real risk.',
-    photoCaption: 'Add photo — infrastructure audit on site',
+    detail: 'We start with your environment, not a pre-set product list, auditing what you run today and benchmarking it against real risk.',
+    photoCaption: 'Add photo: infrastructure audit on site',
   },
   {
     num: '02',
     title: 'Design',
     tagline: 'Clear, documented architecture and security plans your team can actually maintain.',
     detail: 'Every recommendation is documented in plain language, sized to your budget and team and built to be maintained long after we hand it over.',
-    photoCaption: 'Add photo — architecture & design review',
+    photoCaption: 'Add photo: architecture & design review',
   },
   {
     num: '03',
     title: 'Deploy & Test',
     tagline: 'Hands-on implementation followed by independent testing to verify it holds up.',
-    detail: 'Our engineers implement the plan hands-on, then test it independently — so what goes live is verified, not just deployed.',
-    photoCaption: 'Add photo — deployment & testing day',
+    detail: 'Our engineers implement the plan hands-on, then test it independently, so what goes live is verified, not just deployed.',
+    photoCaption: 'Add photo: deployment & testing day',
   },
   {
     num: '04',
     title: 'Support',
     tagline: 'Ongoing monitoring, hardware/software support and a direct line to our engineers.',
-    detail: "The relationship doesn't end at go-live — ongoing monitoring and a direct line to the engineers who built it keep things running.",
-    photoCaption: 'Add photo — monitoring & support desk',
+    detail: "The relationship doesn't end at go-live. Ongoing monitoring and a direct line to the engineers who built it keep things running.",
+    photoCaption: 'Add photo: monitoring & support desk',
   },
 ]
 
@@ -74,7 +74,7 @@ export default function Home() {
               Enterprise IT infrastructure, built <span className="text-brand-500">secure</span> from the ground up.
             </h1>
             <p className="mb-8 max-w-lg text-[1.15rem] leading-relaxed text-body">
-              RSquared IT Technologies helps organisations plan, secure and run resilient networks — from
+              RSquared IT Technologies helps organisations plan, secure and run resilient networks, from
               strategic consultation through to hands-on deployment, testing and hardware supply.
             </p>
             <div className="mb-11 flex flex-wrap gap-3.5">
@@ -121,7 +121,7 @@ export default function Home() {
               Everything your network and security posture needs.
             </h2>
             <p className="text-[1.05rem] text-body">
-              Five focused service lines covering strategy, defence, deployment, testing and supply — so you
+              Five focused service lines covering strategy, defence, deployment, testing and supply, so you
               can work with one accountable partner.
             </p>
           </div>
@@ -196,7 +196,7 @@ export default function Home() {
                   "Infrastructure should be resilient by design, security should be proactive not reactive
                   and every recommendation should be one we'd make to our own network."
                 </p>
-                <p className="mt-3 text-xs font-semibold text-white/40">— RSquared Engineering Team</p>
+                <p className="mt-3 text-xs font-semibold text-white/40">RSquared Engineering Team</p>
               </div>
 
               <div className="flex flex-wrap gap-3.5">
@@ -232,7 +232,7 @@ export default function Home() {
               Measurable outcomes that matter.
             </h2>
             <p className="text-[1.05rem] text-body">
-              Every engagement is built around quantifiable results — faster response, lower risk, stronger
+              Every engagement is built around quantifiable results: faster response, lower risk, stronger
               infrastructure.
             </p>
           </div>

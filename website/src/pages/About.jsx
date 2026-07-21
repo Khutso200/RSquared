@@ -3,9 +3,9 @@ import Icon from '../components/Icon'
 
 const values = [
   { icon: 'radar', title: 'Engineering Rigour', copy: 'Every solution is designed with industry best practice, tested before deployment and documented for long-term maintainability.' },
-  { icon: 'shield', title: 'Security-First Mindset', copy: "Security isn't an add-on — it's embedded in every design, from zero-trust architecture to defence-in-depth strategies." },
-  { icon: 'refresh', title: 'Continuous Improvement', copy: 'We monitor, measure and optimise relentlessly — proactive vulnerability management over reactive firefighting.' },
-  { icon: 'link', title: 'Transparent Partnership', copy: 'Clear communication, detailed documentation and honest assessments — no upselling, no unnecessary complexity.' },
+  { icon: 'shield', title: 'Security-First Mindset', copy: "Security isn't an add-on. It's embedded in every design, from zero-trust architecture to defence-in-depth strategies." },
+  { icon: 'refresh', title: 'Continuous Improvement', copy: 'We monitor, measure and optimise relentlessly: proactive vulnerability management over reactive firefighting.' },
+  { icon: 'link', title: 'Transparent Partnership', copy: 'Clear communication, detailed documentation and honest assessments: no upselling, no unnecessary complexity.' },
   { icon: 'award', title: 'Vendor-Neutral Advice', copy: "We're not locked into a single vendor. We recommend the best fit for your requirements, environment and budget." },
   { icon: 'layers', title: 'Knowledge Transfer', copy: "We don't just build and leave. Documentation and hand-over ensure your team can confidently manage what we deploy." },
 ]
@@ -41,7 +41,7 @@ export default function About() {
             <span className="text-muted">Trusted by enterprise.</span>
           </h1>
           <p className="mx-auto max-w-lg text-[1.02rem] text-body">
-            The story of RSquared IT Technologies — from hands-on engineering to end-to-end infrastructure
+            The story of RSquared IT Technologies, from hands-on engineering to end-to-end infrastructure
             ownership.
           </p>
         </div>
@@ -62,14 +62,14 @@ export default function About() {
               delivered with the rigour and precision of a hands-on engineering team.
             </p>
             <p className="mb-4 text-[0.98rem] leading-relaxed text-body">
-              What sets us apart is depth. We don't just specify and hand over — we consult, design, deploy,
+              What sets us apart is depth. We don't just specify and hand over; we consult, design, deploy,
               test and support. From initial network consultation through to penetration testing and hardware
               supply, we stay involved end-to-end so nothing gets lost between the strategy deck and the server
               rack.
             </p>
             <p className="text-[0.98rem] leading-relaxed text-body">
               Our approach combines deep technical certifications with real-world operational experience across
-              network engineering, security consulting and infrastructure delivery — so every recommendation
+              network engineering, security consulting and infrastructure delivery, so every recommendation
               is grounded in practice, not vendor literature.
             </p>
           </div>
