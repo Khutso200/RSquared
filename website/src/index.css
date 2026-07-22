@@ -49,10 +49,10 @@ body {
 @keyframes glowPulse {
   0%,
   100% {
-    filter: brightness(1) saturate(1);
+    filter: brightness(1) saturate(1.15) hue-rotate(-30deg);
   }
   50% {
-    filter: brightness(1.18) saturate(1.05);
+    filter: brightness(1.35) saturate(1.5) hue-rotate(30deg);
   }
 }
 
@@ -61,21 +61,25 @@ body {
   text-shadow:
     0 0 2px rgba(var(--glow-color), 0.9),
     0 0 14px rgba(var(--glow-color), 0.6),
-    0 0 34px rgba(var(--glow-color), 0.35);
-  animation: glowPulse 3.8s ease-in-out infinite;
+    0 0 34px rgba(var(--glow-color), 0.35),
+    0 0 60px rgba(var(--glow-color), 0.2);
+  animation: glowPulse 5s ease-in-out infinite;
   transition:
     text-shadow 0.35s ease,
-    transform 0.35s ease;
-  will-change: text-shadow, transform;
+    transform 0.35s ease,
+    filter 0.35s ease;
+  will-change: text-shadow, transform, filter;
   transform-origin: center bottom;
 }
 
 .glow-word:hover {
   text-shadow:
     0 0 3px rgba(var(--glow-color), 1),
-    0 0 20px rgba(var(--glow-color), 0.9),
-    0 0 50px rgba(var(--glow-color), 0.6);
+    0 0 20px rgba(var(--glow-color), 0.95),
+    0 0 50px rgba(var(--glow-color), 0.7),
+    0 0 90px rgba(var(--glow-color), 0.4);
   transform: translateY(-4px);
+  filter: brightness(1.5) saturate(1.6) hue-rotate(0deg);
   animation-play-state: paused;
   cursor: default;
 }
