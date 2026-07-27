@@ -1,59 +1,8 @@
 /* ============================================================
-   Light-mode concept themes for the RSquared one-pager.
-   Loaded after styles.css; scoped by a class on <html>:
-     .theme-aurora  — warm pastel light mode (aurora hero)
-     .theme-ribbons — cool indigo light mode (ribbon hero, dark hero band)
+   Aurora light theme — the live look for RSquared IT Technologies.
+   Loaded after styles.css and scoped to .theme-aurora on <html>,
+   so it overrides the base tokens rather than duplicating rules.
    ============================================================ */
-
-/* ---------------- shared light-mode component overrides ---------------- */
-
-.theme-aurora body,
-.theme-ribbons body { background: var(--bg); color: var(--text); }
-
-.theme-aurora .nav.scrolled,
-.theme-ribbons .nav.scrolled {
-  background: color-mix(in srgb, var(--bg) 86%, transparent);
-  border-bottom-color: var(--line-soft);
-}
-
-@media (max-width: 860px) {
-  .theme-aurora .nav-links,
-  .theme-ribbons .nav-links { background: var(--bg); }
-}
-
-.theme-aurora .figure,
-.theme-ribbons .figure {
-  box-shadow: 0 24px 60px rgba(70, 46, 140, 0.16), 0 0 0 rgba(0, 0, 0, 0);
-}
-
-.theme-aurora .figure figcaption,
-.theme-ribbons .figure figcaption {
-  background: rgba(255, 255, 255, 0.85);
-  color: var(--muted);
-}
-
-.theme-aurora .cap:hover,
-.theme-ribbons .cap:hover { box-shadow: 0 16px 44px rgba(70, 46, 140, 0.14); }
-
-.theme-aurora .cap::after,
-.theme-ribbons .cap::after { opacity: 0; }
-
-.theme-aurora .cap .tags span,
-.theme-ribbons .cap .tags span { color: var(--muted); }
-
-/* the automation interlude stays a dark cinematic band in both variants */
-.theme-aurora .interlude h2,
-.theme-ribbons .interlude h2 { color: #f4f1fa; }
-
-.theme-aurora .cta::before,
-.theme-ribbons .cta::before {
-  background: radial-gradient(52% 62% at 50% 108%, rgba(124, 58, 237, 0.16), transparent 70%);
-}
-
-.theme-aurora .cta-hex,
-.theme-ribbons .cta-hex { opacity: 0.16; }
-
-/* ---------------- AURORA — warm pastel light ---------------- */
 
 .theme-aurora {
   --bg: #faf6f8;
@@ -70,12 +19,26 @@
   --accent-grad: linear-gradient(120deg, #f0a12c 0%, #e0408f 48%, #7c3aed 100%);
 }
 
+.theme-aurora body { background: var(--bg); color: var(--text); }
+
 .theme-aurora ::selection { background: rgba(224, 64, 143, 0.3); color: #251c38; }
+
+/* ---------- chrome ---------- */
+
+.theme-aurora .nav.scrolled {
+  background: color-mix(in srgb, var(--bg) 86%, transparent);
+  border-bottom-color: var(--line-soft);
+}
 
 /* the emblem's face is pale — lift it off the light ground */
 .theme-aurora .brand img { filter: drop-shadow(0 1px 3px rgba(90, 50, 140, 0.35)); }
 
-/* light hero image, dark ink text */
+@media (max-width: 860px) {
+  .theme-aurora .nav-links { background: var(--bg); }
+}
+
+/* ---------- hero ---------- */
+
 .theme-aurora .hero::before {
   background:
     linear-gradient(90deg, rgba(250, 246, 248, 0.78) 0%, rgba(250, 246, 248, 0.42) 38%, rgba(250, 246, 248, 0) 68%),
@@ -93,6 +56,8 @@
 
 .theme-aurora .hero-stats { border-top-color: rgba(124, 58, 237, 0.25); }
 
+/* ---------- controls ---------- */
+
 .theme-aurora .btn-primary { box-shadow: 0 8px 26px rgba(224, 64, 143, 0.35); }
 .theme-aurora .btn-primary:hover { box-shadow: 0 12px 36px rgba(224, 64, 143, 0.45); }
 
@@ -102,83 +67,26 @@
   background: rgba(255, 255, 255, 0.55);
 }
 
-/* ---------------- RIBBONS — cool indigo light, dark hero band ---------------- */
+/* ---------- surfaces ---------- */
 
-.theme-ribbons {
-  --bg: #f5f5fb;
-  --bg-raise: #ebecf7;
-  --surface: rgba(255, 255, 255, 0.78);
-  --line: rgba(79, 70, 229, 0.22);
-  --line-soft: rgba(79, 70, 229, 0.12);
-  --text: #1d1c38;
-  --muted: #565575;
-  --faint: #8b8aa5;
-  --violet: #4f46e5;
-  --violet-hi: #6062f0;
-  --magenta: #818cf8;
-  --accent-grad: linear-gradient(120deg, #4338ca 0%, #6366f1 55%, #818cf8 100%);
+.theme-aurora .figure { box-shadow: 0 24px 60px rgba(70, 46, 140, 0.16); }
+
+.theme-aurora .figure figcaption {
+  background: rgba(255, 255, 255, 0.85);
+  color: var(--muted);
 }
 
-.theme-ribbons ::selection { background: rgba(99, 102, 241, 0.3); color: #1d1c38; }
+.theme-aurora .cap::after { opacity: 0; }
+.theme-aurora .cap:hover { box-shadow: 0 16px 44px rgba(70, 46, 140, 0.14); }
+.theme-aurora .cap .tags span { color: var(--muted); }
 
-/* dark indigo hero image, light text, fading into the light page */
-.theme-ribbons .hero { color: #f2f2fc; }
+/* the automation interlude stays a dark cinematic band */
+.theme-aurora .interlude h2 { color: #f4f1fa; }
 
-.theme-ribbons .hero::before {
-  background:
-    linear-gradient(90deg, rgba(30, 29, 62, 0.72) 0%, rgba(30, 29, 62, 0.38) 40%, rgba(30, 29, 62, 0) 70%),
-    linear-gradient(180deg, rgba(30, 29, 62, 0.55) 0%, rgba(30, 29, 62, 0) 30%, rgba(52, 50, 104, 0.22) 52%, rgba(245, 245, 251, 0.72) 76%, #f5f5fb 90%);
+/* ---------- closing CTA ---------- */
+
+.theme-aurora .cta::before {
+  background: radial-gradient(52% 62% at 50% 108%, rgba(124, 58, 237, 0.16), transparent 70%);
 }
 
-@media (max-width: 700px) {
-  .theme-ribbons .hero::before {
-    background:
-      linear-gradient(180deg, rgba(30, 29, 62, 0.78) 0%, rgba(30, 29, 62, 0.45) 40%, rgba(36, 35, 74, 0.5) 68%, #f5f5fb 100%);
-  }
-}
-
-.theme-ribbons .hero .eyebrow { color: #aab2ff; }
-.theme-ribbons .hero .eyebrow::before { background: linear-gradient(90deg, #aab2ff, #6366f1); }
-
-.theme-ribbons .hero .sub { color: #d4d4ec; }
-
-.theme-ribbons .hero-stats { border-top-color: rgba(170, 178, 255, 0.35); }
-.theme-ribbons .hero-stats span { color: #b7b6d8; }
-
-.theme-ribbons .hero .btn-ghost {
-  color: #f2f2fc;
-  border-color: rgba(242, 242, 252, 0.32);
-  background: rgba(30, 29, 62, 0.35);
-}
-
-.theme-ribbons .btn-ghost {
-  color: var(--text);
-  border-color: rgba(29, 28, 56, 0.28);
-  background: rgba(255, 255, 255, 0.55);
-}
-
-.theme-ribbons .btn-primary { box-shadow: 0 8px 26px rgba(79, 70, 229, 0.35); }
-.theme-ribbons .btn-primary:hover { box-shadow: 0 12px 36px rgba(99, 102, 241, 0.45); }
-
-.theme-ribbons .scroll-cue { color: rgba(242, 242, 252, 0.55); }
-
-/* stats sit on the hero's light fade zone — keep them ink */
-.theme-ribbons .hero-stats { color: var(--text); border-top-color: rgba(79, 70, 229, 0.28); }
-.theme-ribbons .hero-stats span { color: var(--muted); }
-
-/* nav over the dark hero: light text until the bar gets its scrolled background */
-.theme-ribbons .nav:not(.scrolled) .brand-name strong { color: #f2f2fc; }
-.theme-ribbons .nav:not(.scrolled) .nav-toggle { border-color: rgba(242, 242, 252, 0.3); }
-.theme-ribbons .nav:not(.scrolled) .nav-toggle span,
-.theme-ribbons .nav:not(.scrolled) .nav-toggle span::before,
-.theme-ribbons .nav:not(.scrolled) .nav-toggle span::after { background: #f2f2fc; }
-
-@media (min-width: 861px) {
-  .theme-ribbons .nav:not(.scrolled) .nav-links a:not(.btn) { color: #c7c7e2; }
-  .theme-ribbons .nav:not(.scrolled) .nav-links a:not(.btn):hover { color: #ffffff; }
-}
-
-@media (max-width: 860px) {
-  /* the dropdown panel is light in this theme, so its links stay ink */
-  .theme-ribbons .nav-links a:not(.btn) { color: var(--muted); }
-}
+.theme-aurora .cta-hex { opacity: 0.16; }
