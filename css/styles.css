@@ -458,15 +458,15 @@ a { color: inherit; text-decoration: none; }
   white-space: nowrap;
 }
 
-/* vendor marks sit at one optical height and lift on hover */
+/* vendor marks in their own colours, at one optical height */
 .marquee img {
   height: 1.85rem;
   width: auto;
-  opacity: 0.42;
+  opacity: 0.9;
   transition: opacity 0.35s ease, transform 0.35s ease;
 }
 
-.marquee li:hover img { opacity: 1; transform: translateY(-2px); }
+.marquee li:hover img { opacity: 1; transform: translateY(-3px) scale(1.06); }
 
 .vendor-name {
   font-family: var(--font-mono);
@@ -489,7 +489,7 @@ a { color: inherit; text-decoration: none; }
   .marquee-track { animation: none; flex-wrap: wrap; width: auto; }
   .marquee ul[aria-hidden="true"] { display: none; }
   .marquee ul { flex-wrap: wrap; gap: 1.2rem 3rem; }
-  .marquee img { opacity: 0.6; }
+  .marquee img { opacity: 1; }
 }
 
 /* ---------- sections ---------- */
@@ -1443,3 +1443,71 @@ textarea:focus-visible {
   .cap h3 a,
   .cta-direct a { background-image: none; }
 }
+
+
+/* ============================================================
+   PHOTO BANDS
+   A full-bleed image behind a dark scrim, so a section can carry
+   photography without costing legibility. Drop the photo in and it
+   appears; if the file is absent the scrim alone still reads.
+   ============================================================ */
+
+.photo-band {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  color: #f4f1fa;
+  /* base tone, so the band is dark with or without a photo */
+  background: #0c0916;
+  border-block: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+.photo-band::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background-image: var(--band-photo);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.photo-band::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(180deg, rgba(12, 9, 22, 0.80) 0%, rgba(12, 9, 22, 0.70) 55%, rgba(12, 9, 22, 0.85) 100%),
+    radial-gradient(58% 78% at 18% 18%, rgba(124, 58, 237, 0.34), transparent 70%),
+    radial-gradient(52% 70% at 86% 76%, rgba(224, 64, 143, 0.24), transparent 72%);
+}
+
+.photo-band .eyebrow { color: #cbb6ff; }
+.photo-band h2,
+.photo-band h3 { color: #f7f5ff; }
+.photo-band p,
+.photo-band .lede { color: #cec6e5; }
+.photo-band .num { color: #cbb6ff; }
+.photo-band .idx { color: #cbb6ff; }
+.photo-band .step { border-top-color: rgba(255, 255, 255, 0.2); }
+
+.photo-band .cap {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.photo-band .cap:hover { border-color: rgba(255, 255, 255, 0.3); }
+.photo-band .cap::before { display: none; }
+
+.photo-band .tags span {
+  color: #ded7f0;
+  border-color: rgba(255, 255, 255, 0.22);
+}
+
+/* swap these two files for your own photography */
+.band-engage { --band-photo: url("../assets/images/engage-bg.webp"); }
+.band-next { --band-photo: url("../assets/images/next-bg.webp"); }
