@@ -432,8 +432,7 @@ a { color: inherit; text-decoration: none; }
 /* ---------- marquee ---------- */
 
 .marquee {
-  border-block: 1px solid var(--line-soft);
-  padding: 1.1rem 0;
+  padding: clamp(1.4rem, 3vw, 2.2rem) 0;
   overflow: hidden;
   background: transparent;
 }
@@ -453,20 +452,34 @@ a { color: inherit; text-decoration: none; }
 }
 
 .marquee li {
-  font-family: var(--font-mono);
-  font-size: 0.8rem;
-  font-weight: 500;
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
-  color: var(--faint);
+  display: flex;
+  align-items: center;
+  height: 2rem;
   white-space: nowrap;
 }
 
-.marquee li::before {
-  content: "⬡";
-  margin-right: 0.9rem;
-  color: var(--violet);
+/* vendor marks sit at one optical height and lift on hover */
+.marquee img {
+  height: 1.85rem;
+  width: auto;
+  opacity: 0.42;
+  transition: opacity 0.35s ease, transform 0.35s ease;
 }
+
+.marquee li:hover img { opacity: 1; transform: translateY(-2px); }
+
+.vendor-name {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--faint);
+  opacity: 0.85;
+  transition: color 0.35s ease;
+}
+
+.marquee li:hover .vendor-name { color: var(--text); }
 
 @keyframes marquee {
   to { transform: translateX(calc(-50% - 1.75rem)); }
@@ -476,6 +489,7 @@ a { color: inherit; text-decoration: none; }
   .marquee-track { animation: none; flex-wrap: wrap; width: auto; }
   .marquee ul[aria-hidden="true"] { display: none; }
   .marquee ul { flex-wrap: wrap; gap: 1.2rem 3rem; }
+  .marquee img { opacity: 0.6; }
 }
 
 /* ---------- sections ---------- */
