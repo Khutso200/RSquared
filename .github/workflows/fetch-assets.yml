@@ -1,7 +1,9 @@
 name: Fetch generated assets
 
 on:
-  workflow_dispatch:
+  push:
+    branches: [claude/rsqured-it-cinematic-site-nbfu6h]
+    paths: ['.github/workflows/fetch-assets.yml']
 
 permissions:
   contents: write
