@@ -1314,3 +1314,118 @@ textarea:focus-visible {
 /* give the form the wider column on the contact page */
 .split.form-first { grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr); }
 @media (max-width: 900px) { .split.form-first { grid-template-columns: 1fr; } }
+
+/* ============================================================
+   MOTION + INTERACTION
+   GSAP owns the reveal once .gsap-on is set, so the CSS
+   transition stands down to avoid two engines fighting.
+   ============================================================ */
+
+.gsap-on [data-reveal] { transition: none; }
+.gsap-on .marquee-track { animation: none; }
+.gsap-on .btn {
+  transition: box-shadow 0.25s ease, border-color 0.25s ease, background-color 0.25s ease;
+}
+
+/* headline words, masked so they can slide up into place */
+.w {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+  /* room for descenders so the mask does not clip commas and tails */
+  padding-bottom: 0.14em;
+  margin-bottom: -0.14em;
+}
+.wi { display: inline-block; will-change: transform; }
+
+/* ---------- pointer spotlight on panels ---------- */
+
+.cap,
+.ccard,
+.creds,
+.figure {
+  --mx: 50%;
+  --my: 50%;
+  isolation: isolate;
+}
+
+.cap::before,
+.ccard::before,
+.creds::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background: radial-gradient(16rem 16rem at var(--mx) var(--my),
+    rgba(224, 64, 143, 0.16), transparent 70%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.cap:hover::before,
+.ccard:hover::before,
+.creds:hover::before { opacity: 1; }
+
+.ccard,
+.creds { position: relative; }
+
+.ccard {
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ccard:hover {
+  transform: translateY(-4px);
+  border-color: rgba(168, 139, 250, 0.4);
+}
+
+/* ---------- media ---------- */
+
+.figure img { transition: transform 0.7s cubic-bezier(0.22, 0.61, 0.36, 1); }
+.figure:hover img { transform: scale(1.045); }
+
+.figure figcaption { transition: transform 0.4s ease, background-color 0.3s ease; }
+.figure:hover figcaption { transform: translateY(-3px); }
+
+/* ---------- links draw an underline ---------- */
+
+.foot-col a,
+.cap h3 a,
+.cta-direct a {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 0% 1px;
+  transition: background-size 0.4s cubic-bezier(0.22, 0.61, 0.36, 1), color 0.25s ease;
+}
+
+.foot-col a:hover,
+.cap h3 a:hover,
+.cta-direct a:hover { background-size: 100% 1px; }
+
+/* ---------- service rows lift on hover ---------- */
+
+.svc { transition: background-color 0.35s ease; border-radius: var(--radius); }
+.svc:hover { background: color-mix(in srgb, var(--surface) 55%, transparent); }
+
+.svc-list li::before { transition: transform 0.3s ease; }
+.svc:hover .svc-list li::before { transform: scale(1.35); }
+
+/* ---------- process steps ---------- */
+
+.step::before { transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1); }
+.step:hover::before { width: 100%; }
+
+/* ---------- the marquee slows under the pointer ---------- */
+
+.marquee { cursor: default; }
+
+@media (prefers-reduced-motion: reduce) {
+  .figure img,
+  .figure:hover img,
+  .ccard:hover { transform: none; }
+  .foot-col a,
+  .cap h3 a,
+  .cta-direct a { background-image: none; }
+}
