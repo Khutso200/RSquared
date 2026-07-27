@@ -59,7 +59,7 @@
       <div class="wrap">
         <p class="eyebrow" data-reveal>Services</p>
         <h1 data-reveal style="--d:.08s">Every layer of the estate, <span class="grad-text">one accountable team.</span></h1>
-        <p class="lede" data-reveal style="--d:.16s">Seven services that cover the physical layer, the security perimeter, the cloud edge, and the pipeline that keeps them consistent. Each one is delivered by the engineers who designed it.</p>
+        <p class="lede" data-reveal style="--d:.16s">Four services that cover the physical layer, the security perimeter, and the cloud edge — each delivered by the engineers who designed it.</p>
       </div>
     </section>
 
@@ -113,102 +113,47 @@
           <h2>Network Infrastructure</h2>
         </div>
         <div class="svc-body">
-          <p>Campus and branch networks designed to stay up on their worst day. We size for peak rather than average, build redundancy into the gateway and the uplink, and hand over addressing plans and diagrams that still match the estate a year later.</p>
+          <p>Everything that carries traffic, from the cable in the wall to the WAN overlay between sites. Campus, branch, wireless, and SD-WAN are designed to stay up on their worst day, then managed as code so the estate stays consistent between projects. Building systems and IoT ride the same governed fabric rather than an unmanaged network beside it.</p>
           <ul class="svc-list">
             <li>Enterprise LAN and WAN design</li>
             <li>VLAN segmentation and inter-VLAN routing</li>
             <li>Advanced routing: OSPF, EIGRP, and BGP</li>
             <li>High availability with HSRP/VRRP and LACP</li>
             <li>Wireless design and site survey (Aruba, Cisco, Ubiquiti)</li>
+            <li>SD-WAN overlay design and staged rollout</li>
             <li>Quality of service for voice and video</li>
-            <li>Multi-vendor integration and migration</li>
+            <li>Ansible, pyATS, and CI/CD change pipelines</li>
+            <li>Golden configuration and drift detection</li>
+            <li>Structured cabling design and certification</li>
+            <li>IoT segmentation, IP access control, and surveillance</li>
             <li>Monitoring with SNMP, NetFlow, Grafana, ThousandEyes</li>
           </ul>
-          <div class="tags"><span>Cisco</span><span>Aruba</span><span>MikroTik</span><span>Wireless</span></div>
+          <div class="tags"><span>Cisco</span><span>Aruba</span><span>MikroTik</span><span>SD-WAN</span><span>Ansible</span><span>Cabling</span></div>
         </div>
       </article>
 
-      <article class="svc" id="svc-cloud" data-reveal>
+      <article class="svc" id="svc-m365-cloud" data-reveal>
         <div>
           <p class="svc-id">04</p>
-          <h2>Cloud &amp; SD-WAN</h2>
+          <h2>Microsoft 365 &amp; Cloud</h2>
         </div>
         <div class="svc-body">
-          <p>Hybrid estates where the cloud footprint and the physical network are designed together rather than bolted to each other. Environments are provisioned from Terraform, so what runs in production matches what is committed to the repository.</p>
+          <p>Microsoft 365 and public cloud governed as one identity model rather than two disconnected estates. Tenancy, conditional access, and retention are configured against a written policy; Azure and AWS workloads are provisioned from Terraform so what runs in production matches what is committed to the repository. The administrators who inherit it are trained on it before we hand over.</p>
           <ul class="svc-list">
-            <li>AWS VPC architecture and workload migration</li>
-            <li>Azure virtual networks and ExpressRoute</li>
-            <li>Hybrid connectivity and site-to-site VPN</li>
-            <li>SD-WAN overlay design and staged rollout</li>
-            <li>Infrastructure as Code with Terraform and CloudFormation</li>
-            <li>Cloud security posture and governance</li>
-            <li>Cost optimisation and rightsizing reviews</li>
-            <li>Disaster recovery and business continuity design</li>
-          </ul>
-          <div class="tags"><span>Azure</span><span>AWS</span><span>Terraform</span><span>SD-WAN</span></div>
-        </div>
-      </article>
-
-      <article class="svc" id="svc-automation" data-reveal>
-        <div>
-          <p class="svc-id">05</p>
-          <h2>Network Automation</h2>
-        </div>
-        <div class="svc-body">
-          <p>Configuration managed the way software is managed. Changes are written as code, reviewed, tested against a virtual copy of the network, and released through a pipeline — so a change window becomes a merge rather than a late night.</p>
-          <ul class="svc-list">
-            <li>Ansible playbook and role development</li>
-            <li>pyATS and Genie automated test suites</li>
-            <li>GitHub Actions and GitLab CI pipelines</li>
-            <li>Python tooling and REST, NETCONF, gRPC integration</li>
-            <li>Golden configuration and drift detection</li>
-            <li>Automated compliance checking and reporting</li>
-            <li>Generated documentation and version control</li>
-            <li>Controlled change windows with tested rollback</li>
-          </ul>
-          <div class="tags"><span>Ansible</span><span>pyATS</span><span>CI/CD</span><span>Python</span></div>
-        </div>
-      </article>
-
-      <article class="svc" id="svc-smart-building" data-reveal>
-        <div>
-          <p class="svc-id">06</p>
-          <h2>Smart Building</h2>
-        </div>
-        <div class="svc-body">
-          <p>Building systems and IT on one governed network instead of five unmanaged ones. Cameras, access control, and sensors are segmented away from corporate traffic, documented, and monitored with the same tooling as the rest of the estate.</p>
-          <ul class="svc-list">
-            <li>Structured cabling design, installation, and certification</li>
-            <li>IoT network design and segmentation</li>
-            <li>IP-based access control systems</li>
-            <li>IP surveillance and NVR deployment</li>
-            <li>Building management system integration</li>
-            <li>Visitor management solutions</li>
-            <li>Environmental and power monitoring</li>
-            <li>Physical security consulting</li>
-          </ul>
-          <div class="tags"><span>Cabling</span><span>IoT</span><span>Access</span><span>Surveillance</span></div>
-        </div>
-      </article>
-
-      <article class="svc" id="svc-m365" data-reveal>
-        <div>
-          <p class="svc-id">07</p>
-          <h2>Microsoft 365 &amp; Productivity</h2>
-        </div>
-        <div class="svc-body">
-          <p>Microsoft 365 deployed with identity and governance decided up front. Conditional access, retention, and data loss prevention are configured against a written policy, and administrators are trained on the tenant they inherit.</p>
-          <ul class="svc-list">
-            <li>Tenant design and staged migration</li>
-            <li>Azure AD, conditional access, and MFA</li>
+            <li>Microsoft 365 tenant design and staged migration</li>
+            <li>Azure AD identity, conditional access, and MFA</li>
             <li>SharePoint Online intranet development</li>
             <li>Teams deployment and governance</li>
-            <li>Power Automate workflow development</li>
-            <li>Power Apps line-of-business applications</li>
+            <li>Power Automate and Power Apps development</li>
             <li>Exchange Online and email security</li>
             <li>Data loss prevention and Defender for Office 365</li>
+            <li>Azure virtual networks and ExpressRoute</li>
+            <li>AWS VPC architecture and workload migration</li>
+            <li>Hybrid connectivity and site-to-site VPN</li>
+            <li>Infrastructure as Code with Terraform</li>
+            <li>Cloud cost optimisation and disaster recovery</li>
           </ul>
-          <div class="tags"><span>Azure AD</span><span>SharePoint</span><span>Power Platform</span><span>Defender</span></div>
+          <div class="tags"><span>Azure</span><span>AWS</span><span>Azure AD</span><span>SharePoint</span><span>Terraform</span></div>
         </div>
       </article>
       </div>
@@ -281,10 +226,7 @@
             <li><a href="services.html#svc-consultation">Network &amp; Security Consultation</a></li>
             <li><a href="services.html#svc-managed-security">Managed Security</a></li>
             <li><a href="services.html#svc-network">Network Infrastructure</a></li>
-            <li><a href="services.html#svc-cloud">Cloud &amp; SD-WAN</a></li>
-            <li><a href="services.html#svc-automation">Network Automation</a></li>
-            <li><a href="services.html#svc-smart-building">Smart Building</a></li>
-            <li><a href="services.html#svc-m365">Microsoft 365 &amp; Productivity</a></li>
+            <li><a href="services.html#svc-m365-cloud">Microsoft 365 &amp; Cloud</a></li>
           </ul>
         </nav>
 
