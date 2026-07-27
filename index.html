@@ -28,7 +28,7 @@
 
   <header class="nav">
     <div class="wrap nav-inner">
-      <a class="brand" href="#top" aria-label="RSquared IT Technologies — back to top">
+      <a class="brand" href="index.html" aria-label="RSquared IT Technologies — home">
         <img src="assets/brand/RSquared-Icon-Hexagon-Dark.png" alt="" width="40" height="40">
         <span class="brand-name">
           <strong>RSquared</strong>
@@ -41,10 +41,10 @@
       </button>
 
       <ul class="nav-links" id="nav-menu">
-        <li><a href="#top">Home</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a class="btn btn-primary" href="#contact">Contact</a></li>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a class="btn btn-primary" href="contact.html">Contact</a></li>
       </ul>
     </div>
   </header>
@@ -69,7 +69,7 @@
           <a class="btn btn-primary" href="#platform">Explore the Product
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 3v10m0 0 4-4m-4 4L4 9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
-          <a class="btn btn-ghost" href="#contact">Talk to an engineer</a>
+          <a class="btn btn-ghost" href="contact.html">Talk to an engineer</a>
         </div>
 
         <div class="hero-stats" data-reveal style="--d:.32s">
@@ -174,56 +174,57 @@
           <p class="eyebrow" data-reveal>Services</p>
           <h2 data-reveal style="--d:.08s">Seven services. One team.</h2>
           <p class="lede" data-reveal style="--d:.16s">End-to-end ownership means no hand-offs and no gaps. Every service below is designed, deployed, and operated by the same engineers.</p>
+          <p data-reveal style="--d:.2s" class="head-link"><a class="btn btn-ghost" href="services.html">See what each service includes</a></p>
         </div>
 
         <div class="cap-grid">
-          <article class="cap lead" id="svc-consultation" data-reveal>
+          <article class="cap lead" data-svc="svc-consultation" data-reveal>
             <p class="idx">01</p>
             <div class="lead-row">
-              <h3>Network &amp; Security Consultation</h3>
+              <h3><a href="services.html#svc-consultation">Network &amp; Security Consultation</a></h3>
               <p>Vendor-neutral advisory across Cisco and Fortinet estates: architecture assessment, zero-trust segmentation, firewall and SD-WAN design, and a hardening plan you can act on immediately.</p>
             </div>
             <div class="tags"><span>Assessment</span><span>Zero Trust</span><span>SD-WAN</span><span>Hardening</span></div>
           </article>
 
-          <article class="cap" id="svc-managed-security" data-reveal>
+          <article class="cap" data-svc="svc-managed-security" data-reveal>
             <p class="idx">02</p>
-            <h3>Managed Security</h3>
+            <h3><a href="services.html#svc-managed-security">Managed Security</a></h3>
             <p>24/7 SOC monitoring, Splunk-driven threat hunting, and incident response that closes findings — not just tickets.</p>
             <div class="tags"><span>SIEM</span><span>FTD/FMC</span><span>FortiGate</span></div>
           </article>
 
-          <article class="cap" id="svc-network" data-reveal style="--d:.06s">
+          <article class="cap" data-svc="svc-network" data-reveal style="--d:.06s">
             <p class="idx">03</p>
-            <h3>Network Infrastructure</h3>
+            <h3><a href="services.html#svc-network">Network Infrastructure</a></h3>
             <p>Enterprise LAN/WAN design, VLAN segmentation, and wireless engineered to hold up on a full floor.</p>
             <div class="tags"><span>Cisco</span><span>Aruba</span><span>MikroTik</span></div>
           </article>
 
-          <article class="cap" id="svc-cloud" data-reveal style="--d:.12s">
+          <article class="cap" data-svc="svc-cloud" data-reveal style="--d:.12s">
             <p class="idx">04</p>
-            <h3>Cloud &amp; SD-WAN</h3>
+            <h3><a href="services.html#svc-cloud">Cloud &amp; SD-WAN</a></h3>
             <p>Azure and AWS architecture, hybrid connectivity, and SD-WAN overlays — all defined in Terraform.</p>
             <div class="tags"><span>Azure</span><span>AWS</span><span>Terraform</span></div>
           </article>
 
-          <article class="cap" id="svc-automation" data-reveal style="--d:.18s">
+          <article class="cap" data-svc="svc-automation" data-reveal style="--d:.18s">
             <p class="idx">05</p>
-            <h3>Network Automation</h3>
+            <h3><a href="services.html#svc-automation">Network Automation</a></h3>
             <p>Ansible playbooks, pyATS test suites, and GitHub Actions pipelines that validate every change before production.</p>
             <div class="tags"><span>Ansible</span><span>pyATS</span><span>CI/CD</span></div>
           </article>
 
-          <article class="cap" id="svc-smart-building" data-reveal style="--d:.24s">
+          <article class="cap" data-svc="svc-smart-building" data-reveal style="--d:.24s">
             <p class="idx">06</p>
-            <h3>Smart Building</h3>
+            <h3><a href="services.html#svc-smart-building">Smart Building</a></h3>
             <p>Structured cabling, IoT segmentation, IP access control, and surveillance converged on one managed network.</p>
             <div class="tags"><span>Cabling</span><span>IoT</span><span>Access</span></div>
           </article>
 
-          <article class="cap" id="svc-m365" data-reveal style="--d:.3s">
+          <article class="cap" data-svc="svc-m365" data-reveal style="--d:.3s">
             <p class="idx">07</p>
-            <h3>Microsoft 365 &amp; Productivity</h3>
+            <h3><a href="services.html#svc-m365">Microsoft 365 &amp; Productivity</a></h3>
             <p>Tenant design, Azure AD identity, SharePoint intranets, and Power Automate workflows — governed properly.</p>
             <div class="tags"><span>Azure AD</span><span>SharePoint</span><span>Power</span></div>
           </article>
@@ -284,39 +285,6 @@
       </div>
     </section>
 
-    <!-- ============ ABOUT ============ -->
-    <section class="section" id="about">
-      <div class="wrap about-grid">
-        <div>
-          <div class="section-head">
-            <p class="eyebrow" data-reveal>About</p>
-            <h2 data-reveal style="--d:.08s">Engineering first, <span class="grad-text">every time.</span></h2>
-            <p class="lede" data-reveal style="--d:.16s">RSquared IT Technologies is an engineering practice in Sandton, Johannesburg, working with organisations whose infrastructure cannot afford guesswork.</p>
-          </div>
-          <p class="about-body" data-reveal style="--d:.2s">Engagements are run by the engineers who stay on the account afterwards. We document what we build, train the people who inherit it, and hold ourselves to the numbers published on this page. When a recommendation costs less than what you expected to spend, we say so.</p>
-          <blockquote class="pull" data-reveal style="--d:.24s">Infrastructure should be treated as code, security should be proactive rather than reactive, and every deployment should be validated before it touches production.</blockquote>
-        </div>
-
-        <aside class="creds" data-reveal style="--d:.12s">
-          <p class="creds-label">Led by</p>
-          <p class="creds-name">Khutso Malatji</p>
-          <p class="creds-role">Founder · Network &amp; Security Engineer</p>
-
-          <p class="creds-label spaced">Certified in</p>
-          <ul class="creds-list">
-            <li>CCNP Security</li>
-            <li>CCNP Enterprise</li>
-            <li>AWS SysOps</li>
-            <li>Fortinet NSE</li>
-            <li>DevNet Associate</li>
-            <li>Splunk</li>
-            <li>MikroTik MTCNA</li>
-            <li>ITIL 4</li>
-          </ul>
-        </aside>
-      </div>
-    </section>
-
     <!-- ============ IMPACT ============ -->
     <section class="section impact" id="impact">
       <div class="wrap">
@@ -361,7 +329,7 @@
           <a class="btn btn-primary" href="#platform">Explore the Product
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 13V3m0 0L4 7m4-4 4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
-          <a class="btn btn-ghost" href="mailto:infor@rsquaredit.com?subject=Infrastructure%20project">Start a conversation</a>
+          <a class="btn btn-ghost" href="contact.html">Start a conversation</a>
         </div>
 
         <div class="cta-direct" data-reveal style="--d:.32s">
@@ -393,24 +361,23 @@
         <nav class="foot-col" aria-label="Services">
           <h3>Services</h3>
           <ul>
-            <li><a href="#svc-consultation">Network &amp; Security Consultation</a></li>
-            <li><a href="#svc-managed-security">Managed Security</a></li>
-            <li><a href="#svc-network">Network Infrastructure</a></li>
-            <li><a href="#svc-cloud">Cloud &amp; SD-WAN</a></li>
-            <li><a href="#svc-automation">Network Automation</a></li>
-            <li><a href="#svc-smart-building">Smart Building</a></li>
-            <li><a href="#svc-m365">Microsoft 365 &amp; Productivity</a></li>
+            <li><a href="services.html#svc-consultation">Network &amp; Security Consultation</a></li>
+            <li><a href="services.html#svc-managed-security">Managed Security</a></li>
+            <li><a href="services.html#svc-network">Network Infrastructure</a></li>
+            <li><a href="services.html#svc-cloud">Cloud &amp; SD-WAN</a></li>
+            <li><a href="services.html#svc-automation">Network Automation</a></li>
+            <li><a href="services.html#svc-smart-building">Smart Building</a></li>
+            <li><a href="services.html#svc-m365">Microsoft 365 &amp; Productivity</a></li>
           </ul>
         </nav>
 
-        <nav class="foot-col" aria-label="Company">
-          <h3>Company</h3>
+        <nav class="foot-col" aria-label="Site navigation">
+          <h3>Navigation</h3>
           <ul>
-            <li><a href="#top">Home</a></li>
-            <li><a href="#platform">Platform</a></li>
-            <li><a href="#process">Process</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
         </nav>
 

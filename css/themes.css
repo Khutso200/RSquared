@@ -78,7 +78,7 @@
 
 .theme-aurora .cap::after { opacity: 0; }
 .theme-aurora .cap:hover { box-shadow: 0 16px 44px rgba(70, 46, 140, 0.14); }
-.theme-aurora .cap .tags span { color: var(--muted); }
+.theme-aurora .tags span { color: var(--muted); }
 
 /* the automation interlude stays a dark cinematic band */
 .theme-aurora .interlude h2 { color: #f4f1fa; }
