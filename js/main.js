@@ -150,7 +150,7 @@
 
   function bindSpotlight() {
     if (!finePointer.matches) return;
-    all(".cap, .ccard, .creds, .figure").forEach(function (card) {
+    all(".cap, .ccard, .figure").forEach(function (card) {
       card.addEventListener("pointermove", function (e) {
         var r = card.getBoundingClientRect();
         card.style.setProperty("--mx", ((e.clientX - r.left) / r.width * 100).toFixed(2) + "%");
