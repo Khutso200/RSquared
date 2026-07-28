@@ -274,19 +274,51 @@
 
     var first = track.querySelector("ul");
     if (!first) return;
-    var gap = parseFloat(getComputedStyle(track).columnGap || getComputedStyle(track).gap) || 0;
-    var distance = first.getBoundingClientRect().width + gap;
-    if (!distance) return;
 
-    var loop = gsap.fromTo(track, { x: 0 }, {
-      x: -distance, duration: distance / 58, ease: "none", repeat: -1
-    });
+    var loop = null;
+    var resizeTimer = null;
+
+    /* the two <ul> lists are exact duplicates, so the seamless-loop
+       distance is exactly the first list's width plus the track's own
+       gap between them — but that width shifts once the webfont swaps
+       in (Aruba / ThousandEyes render in a fallback face first), so
+       measuring before fonts settle bakes in a stale distance and the
+       loop visibly skips the moment the real font lands. */
+    function build() {
+      if (loop) { loop.kill(); loop = null; }
+      gsap.set(track, { x: 0 });
+
+      var gap = parseFloat(getComputedStyle(track).columnGap || getComputedStyle(track).gap) || 0;
+      var distance = first.getBoundingClientRect().width + gap;
+      if (!distance) return;
+
+      loop = gsap.fromTo(track, { x: 0 }, {
+        x: -distance, duration: distance / 58, ease: "none", repeat: -1
+      });
+    }
+
+    function onResize() {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(build, 200);
+    }
+
+    var ready = (document.fonts && document.fonts.ready) || Promise.resolve();
+    var settled = false;
+    var settle = function () {
+      if (settled) return;
+      settled = true;
+      build();
+    };
+    ready.then(settle).catch(settle);
+    setTimeout(settle, 1200); // fonts.ready can hang on a slow connection
+
+    window.addEventListener("resize", onResize, { passive: true });
 
     band.addEventListener("pointerenter", function () {
-      gsap.to(loop, { timeScale: 0.2, duration: 0.4 });
+      if (loop) gsap.to(loop, { timeScale: 0.2, duration: 0.4 });
     });
     band.addEventListener("pointerleave", function () {
-      gsap.to(loop, { timeScale: 1, duration: 0.4 });
+      if (loop) gsap.to(loop, { timeScale: 1, duration: 0.4 });
     });
   }
 
