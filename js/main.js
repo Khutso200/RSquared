@@ -63,6 +63,28 @@
      static bindings — always run
      ============================================================ */
 
+  function bindPageLoader() {
+    var screen = document.querySelector(".page-loader");
+    if (!screen) return;
+
+    var hide = function () {
+      if (screen.classList.contains("is-hidden")) return;
+      screen.classList.add("is-hidden");
+      screen.setAttribute("aria-hidden", "true");
+      window.setTimeout(function () {
+        if (screen.parentNode) screen.parentNode.removeChild(screen);
+      }, 550);
+    };
+
+    if (document.readyState === "complete") {
+      hide();
+    } else {
+      window.addEventListener("load", hide, { once: true });
+    }
+    /* safety net: never let a slow third-party asset hold the loader forever */
+    window.setTimeout(hide, 4000);
+  }
+
   function bindChrome() {
     var nav = document.querySelector(".nav");
     var toggle = document.querySelector(".nav-toggle");
@@ -433,6 +455,7 @@
      ============================================================ */
 
   function initPage() {
+    bindPageLoader();
     bindChrome();
     bindSpotlight();
 
