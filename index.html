@@ -20,7 +20,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/themes.css">
@@ -83,7 +83,7 @@
 
   <header class="nav">
     <div class="wrap nav-inner">
-      <a class="brand" href="index.html" aria-label="RSquared IT Technologies home">
+      <a class="brand" href="#top" aria-label="RSquared IT Technologies home">
         <img src="assets/brand/RSquared-Icon-Hexagon-Dark.png" alt="" width="40" height="40">
         <span class="brand-name">
           <strong>RSquared</strong>
@@ -96,10 +96,10 @@
       </button>
 
       <ul class="nav-links" id="nav-menu">
-        <li><a href="index.html" aria-current="page">Home</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a class="btn btn-primary" href="contact.html">Contact</a></li>
+        <li><a href="#top">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a class="btn btn-primary" href="#contact">Contact</a></li>
       </ul>
     </div>
   </header>
@@ -126,7 +126,7 @@
           <a class="btn btn-primary" href="#platform">Explore the Product
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 3v10m0 0 4-4m-4 4L4 9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
-          <a class="btn btn-ghost" href="contact.html">Talk to an engineer</a>
+          <a class="btn btn-ghost" href="#contact">Talk to an engineer</a>
         </div>
 
         <div class="hero-stats" data-reveal style="--d:.32s">
@@ -239,7 +239,7 @@
         </div>
 
         <p class="platform-cta" data-reveal>
-          <a class="btn btn-ghost" href="services.html">See what each service includes</a>
+          <a class="btn btn-ghost" href="#services">See what each service includes</a>
         </p>
       </div>
     </section>
@@ -328,31 +328,391 @@
       </div>
     </section>
 
-    <!-- ============ FINAL CTA ============ -->
-    <section class="cta" id="contact">
-      <img class="cta-hex" src="assets/brand/RSquared-Icon-Hexagon-Dark.png" alt="" aria-hidden="true" loading="lazy">
-
+    <!-- ============ SERVICES ============ -->
+    <section class="page-head" id="services">
+      <div class="page-head-media parallax" aria-hidden="true">
+        <img src="assets/images/hero-aurora.webp" alt="" width="1920" height="1080" loading="lazy">
+      </div>
       <div class="wrap">
-        <p class="eyebrow" data-reveal>Ready When You Are</p>
-        <h2 data-reveal style="--d:.08s">See what your infrastructure <span class="grad-text">can be.</span></h2>
-        <p data-reveal style="--d:.16s">Tell us about your environment and we will come back within one business day with a clear, actionable plan.</p>
+        <p class="eyebrow" data-reveal>Services</p>
+        <h2 data-reveal style="--d:.08s">Every layer of the estate, <span class="grad-text">one accountable team.</span></h2>
+        <p class="lede" data-reveal style="--d:.16s">Four services that cover the physical layer, the security perimeter and the cloud edge, each delivered by the engineers who designed it.</p>
+      </div>
+    </section>
 
-        <div class="cta-actions" data-reveal style="--d:.24s">
-          <a class="btn btn-primary" href="#platform">Explore the Product
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 13V3m0 0L4 7m4-4 4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
-          <a class="btn btn-ghost" href="contact.html">Start a conversation</a>
+    <section class="section">
+      <div class="wrap">
+      <article class="svc" id="svc-consultation" data-reveal>
+        <div>
+          <p class="svc-id">01</p>
+          <h3>Network &amp; Security Consultation</h3>
+        </div>
+        <div class="svc-body">
+          <p>Independent advisory for organisations running Cisco and Fortinet estates. We audit what is deployed, map it against how the business actually operates and return a prioritised plan that separates what must change now from what can wait. No product is recommended before the requirement is written down.</p>
+          <ul class="svc-list">
+            <li>Infrastructure audit and gap analysis</li>
+            <li>Zero-trust segmentation design</li>
+            <li>Firewall policy review and hardening</li>
+            <li>SD-WAN architecture (Viptela, FortiSD-WAN)</li>
+            <li>Remote access design (AnyConnect, FortiClient)</li>
+            <li>IPS/IDS tuning and false-positive reduction</li>
+            <li>Wireless security and NAC strategy</li>
+            <li>High-level and low-level design documentation</li>
+          </ul>
+          <div class="tags"><span>Assessment</span><span>Zero Trust</span><span>SD-WAN</span><span>Hardening</span></div>
+        </div>
+      </article>
+
+      <article class="svc" id="svc-managed-security" data-reveal>
+        <div>
+          <p class="svc-id">02</p>
+          <h3>Managed Security</h3>
+        </div>
+        <div class="svc-body">
+          <p>A security operations capability without the headcount. We run Splunk-based detection, own the alert queue around the clock and take incidents through containment, eradication and a written post-incident report. Findings close with evidence, not with a status change.</p>
+          <ul class="svc-list">
+            <li>Splunk SIEM implementation and detection tuning</li>
+            <li>24/7 monitoring, triage and escalation</li>
+            <li>Incident response and digital forensics</li>
+            <li>Firewall management (Cisco FTD/FMC, FortiGate)</li>
+            <li>Vulnerability assessment and penetration testing</li>
+            <li>Endpoint detection and response rollout</li>
+            <li>Security policy and standards development</li>
+            <li>POPIA and ISO 27001 evidence reporting</li>
+          </ul>
+          <div class="tags"><span>SIEM</span><span>FTD/FMC</span><span>FortiGate</span><span>MXDR</span></div>
+        </div>
+      </article>
+
+      <article class="svc" id="svc-network" data-reveal>
+        <div>
+          <p class="svc-id">03</p>
+          <h3>Network Infrastructure</h3>
+        </div>
+        <div class="svc-body">
+          <p>Everything that carries traffic, from the cable in the wall to the WAN overlay between sites. Campus, branch, wireless and SD-WAN are designed to stay up on their worst day, then managed as code so the estate stays consistent between projects. Building systems and IoT ride the same governed fabric rather than an unmanaged network beside it.</p>
+          <ul class="svc-list">
+            <li>Enterprise LAN and WAN design</li>
+            <li>VLAN segmentation and inter-VLAN routing</li>
+            <li>Advanced routing: OSPF, EIGRP and BGP</li>
+            <li>High availability with HSRP/VRRP and LACP</li>
+            <li>Wireless design and site survey (Aruba, Cisco, Ubiquiti)</li>
+            <li>SD-WAN overlay design and staged rollout</li>
+            <li>Quality of service for voice and video</li>
+            <li>Ansible, pyATS and CI/CD change pipelines</li>
+            <li>Golden configuration and drift detection</li>
+            <li>Structured cabling design and certification</li>
+            <li>IoT segmentation, IP access control and surveillance</li>
+            <li>Monitoring with SNMP, NetFlow, Grafana, ThousandEyes</li>
+          </ul>
+          <div class="tags"><span>Cisco</span><span>Aruba</span><span>MikroTik</span><span>SD-WAN</span><span>Ansible</span><span>Cabling</span></div>
+        </div>
+      </article>
+
+      <article class="svc" id="svc-m365-cloud" data-reveal>
+        <div>
+          <p class="svc-id">04</p>
+          <h3>Microsoft 365 &amp; Cloud</h3>
+        </div>
+        <div class="svc-body">
+          <p>Microsoft 365 and public cloud governed as one identity model rather than two disconnected estates. Tenancy, conditional access and retention are configured against a written policy; Azure and AWS workloads are provisioned from Terraform so what runs in production matches what is committed to the repository. The administrators who inherit it are trained on it before we hand over.</p>
+          <ul class="svc-list">
+            <li>Microsoft 365 tenant design and staged migration</li>
+            <li>Azure AD identity, conditional access and MFA</li>
+            <li>SharePoint Online intranet development</li>
+            <li>Teams deployment and governance</li>
+            <li>Power Automate and Power Apps development</li>
+            <li>Exchange Online and email security</li>
+            <li>Data loss prevention and Defender for Office 365</li>
+            <li>Azure virtual networks and ExpressRoute</li>
+            <li>AWS VPC architecture and workload migration</li>
+            <li>Hybrid connectivity and site-to-site VPN</li>
+            <li>Infrastructure as Code with Terraform</li>
+            <li>Cloud cost optimisation and disaster recovery</li>
+          </ul>
+          <div class="tags"><span>Azure</span><span>AWS</span><span>Azure AD</span><span>SharePoint</span><span>Terraform</span></div>
+        </div>
+      </article>
+      </div>
+    </section>
+
+    <!-- ============ ENGAGEMENT ============ -->
+    <section class="section photo-band band-engage">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow" data-reveal>How We Engage</p>
+          <h2 data-reveal style="--d:.08s">Three ways to work with us.</h2>
+          <p class="lede" data-reveal style="--d:.16s">Scope, ownership and reporting are agreed before work starts, so the commercial model matches the outcome you need.</p>
         </div>
 
-        <div class="cta-direct" data-reveal style="--d:.32s">
-          <a href="mailto:infor@rsquaredit.com">
-            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true"><rect x="1.5" y="3" width="12" height="9" rx="1.5" stroke="currentColor" stroke-width="1.3"/><path d="m2 4 5.5 4L13 4" stroke="currentColor" stroke-width="1.3"/></svg>
-            infor@rsquaredit.com
-          </a>
-          <a href="tel:+27684301721">
-            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true"><path d="M3 2h3l1.2 3-1.7 1.2a9 9 0 0 0 3.3 3.3L10 7.8l3 1.2v3a1 1 0 0 1-1 1C6.5 13 2 8.5 2 3a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>
-            +27 68 430 1721
-          </a>
+        <div class="cap-grid">
+          <article class="cap" data-reveal>
+            <p class="idx">Project</p>
+            <h3>Fixed-scope delivery</h3>
+            <p>A defined build with a design pack, an agreed acceptance test and handover documentation. Priced on scope, not on hours.</p>
+            <div class="tags"><span>Design</span><span>Build</span><span>Handover</span></div>
+          </article>
+          <article class="cap" data-reveal style="--d:.08s">
+            <p class="idx">Managed</p>
+            <h3>Ongoing operations</h3>
+            <p>Monitoring, patching, incident response and monthly reporting under an SLA with defined response and resolution targets.</p>
+            <div class="tags"><span>24/7 SOC</span><span>SLA</span><span>Reporting</span></div>
+          </article>
+          <article class="cap" data-reveal style="--d:.16s">
+            <p class="idx">Advisory</p>
+            <h3>Retained engineering</h3>
+            <p>A standing block of senior engineering time for design reviews, escalations and roadmap work, drawn down as you need it.</p>
+            <div class="tags"><span>Review</span><span>Escalation</span><span>Roadmap</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="page-head" id="about">
+      <div class="page-head-media parallax" aria-hidden="true">
+        <img src="assets/images/hero-aurora.webp" alt="" width="1920" height="1080" loading="lazy">
+      </div>
+      <div class="wrap">
+        <p class="eyebrow" data-reveal>About</p>
+        <h2 data-reveal style="--d:.08s">Built by engineers <span class="grad-text">who stay.</span></h2>
+        <p class="lede" data-reveal style="--d:.16s">RSquared IT Technologies is an engineering practice in Sandton, Johannesburg, working with organisations whose infrastructure cannot afford guesswork.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow" data-reveal>The Practice</p>
+          <h2 data-reveal style="--d:.08s">Engineering first, every time.</h2>
+          <p class="lede" data-reveal style="--d:.16s">We were founded on a straightforward observation: most infrastructure problems are not caused by bad products, they are caused by undocumented decisions.</p>
+        </div>
+        <p class="about-body" data-reveal style="--d:.2s">Engagements are run by the engineers who stay on the account afterwards. We document what we build, train the people who inherit it and hold ourselves to the numbers published on this site. When a recommendation costs less than what you expected to spend, we say so. When a request would make the estate harder to run, we say that too.</p>
+        <p class="about-body" data-reveal style="--d:.22s">That approach suits organisations carrying real operational risk: multi-site networks, regulated data and estates that have grown faster than the documentation describing them. We work across Gauteng and remotely for clients elsewhere in South Africa.</p>
+        <blockquote class="pull" data-reveal style="--d:.24s">Infrastructure should be treated as code, security should be proactive rather than reactive and every deployment should be validated before it touches production.</blockquote>
+      </div>
+    </section>
+
+    <!-- ============ VALUES ============ -->
+    <section class="section impact">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow" data-reveal>What We Hold To</p>
+          <h2 data-reveal style="--d:.08s">Six commitments.</h2>
+          <p class="lede" data-reveal style="--d:.16s">These are the working rules we are willing to be measured against on any engagement.</p>
+        </div>
+
+        <div class="cap-grid">
+          <article class="cap" data-reveal>
+            <p class="idx">01</p>
+            <h3>Engineering rigour</h3>
+            <p>Designs are documented before they are built and tested before they are released. Nothing reaches production on the strength of an assumption.</p>
+          </article>
+          <article class="cap" data-reveal style="--d:.06s">
+            <p class="idx">02</p>
+            <h3>Security by default</h3>
+            <p>Segmentation, least privilege and logging are part of the original design rather than a later hardening exercise.</p>
+          </article>
+          <article class="cap" data-reveal style="--d:.12s">
+            <p class="idx">03</p>
+            <h3>Vendor independence</h3>
+            <p>Cisco, Fortinet, MikroTik, Aruba, AWS, Azure. We recommend what fits the requirement and the budget, not what carries a margin.</p>
+          </article>
+          <article class="cap" data-reveal style="--d:.18s">
+            <p class="idx">04</p>
+            <h3>Transparent reporting</h3>
+            <p>You see what we find, including the parts that are inconvenient. Assessments are shared in full, not summarised into comfort.</p>
+          </article>
+          <article class="cap" data-reveal style="--d:.24s">
+            <p class="idx">05</p>
+            <h3>Continuous improvement</h3>
+            <p>Monitoring, benchmarking and compliance checks run continuously, so the estate is measured between projects and not only during them.</p>
+          </article>
+          <article class="cap" data-reveal style="--d:.3s">
+            <p class="idx">06</p>
+            <h3>Knowledge transfer</h3>
+            <p>Administrator training and complete documentation ship with the work. Your team should be able to run what we deploy without us.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TIMELINE ============ -->
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow" data-reveal>Track Record</p>
+          <h2 data-reveal style="--d:.08s">How we got here.</h2>
+        </div>
+
+        <div class="timeline">
+          <div class="tl" data-reveal>
+            <p class="tl-year">Foundation</p>
+            <div>
+              <h3>RSquared IT Technologies established</h3>
+              <p>Founded in Sandton, Johannesburg, to deliver enterprise network infrastructure, cybersecurity and cloud automation to South African organisations.</p>
+            </div>
+          </div>
+          <div class="tl" data-reveal>
+            <p class="tl-year">Certification</p>
+            <div>
+              <h3>Eight industry certifications achieved</h3>
+              <p>CCNP Security, CCNP Enterprise, AWS SysOps Administrator, Fortinet NSE, Cisco DevNet Associate, ITIL 4 Foundation, Splunk and MikroTik MTCNA across the engineering team.</p>
+            </div>
+          </div>
+          <div class="tl" data-reveal>
+            <p class="tl-year">Delivery</p>
+            <div>
+              <h3>Multi-site enterprise deployments</h3>
+              <p>Multi-vendor VLAN segmentation, CI/CD network automation pipelines, penetration testing engagements and Microsoft 365 intranet rollouts delivered for enterprise clients.</p>
+            </div>
+          </div>
+          <div class="tl" data-reveal>
+            <p class="tl-year">Open source</p>
+            <div>
+              <h3>Network automation framework published</h3>
+              <p>An enterprise-grade network CI/CD pipeline released publicly, built on GitHub Actions, Ansible, pyATS and Terraform for Cisco environments.</p>
+            </div>
+          </div>
+          <div class="tl" data-reveal>
+            <p class="tl-year">Present</p>
+            <div>
+              <h3>Managed services under long-term SLA</h3>
+              <p>The majority of engagements have shifted from single projects to ongoing managed security and infrastructure contracts, with 24/7 monitoring across every account.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="page-head" id="contact">
+      <div class="page-head-media parallax" aria-hidden="true">
+        <img src="assets/images/hero-aurora.webp" alt="" width="1920" height="1080" loading="lazy">
+      </div>
+      <div class="wrap">
+        <p class="eyebrow" data-reveal>Contact</p>
+        <h2 data-reveal style="--d:.08s">Let's scope your <span class="grad-text">environment.</span></h2>
+        <p class="lede" data-reveal style="--d:.16s">Tell us what you are running and what is going wrong. We reply within one business day with an initial assessment and a recommended next step.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="contact-grid">
+          <div class="ccard" data-reveal>
+            <h3>Email</h3>
+            <a href="mailto:infor@rsquaredit.com">infor@rsquaredit.com</a>
+            <small>Best for detailed enquiries and documentation.</small>
+          </div>
+          <div class="ccard" data-reveal style="--d:.06s">
+            <h3>Phone</h3>
+            <a href="tel:+27684301721">+27 68 430 1721</a>
+            <small>Weekdays, 08:00–17:00 SAST.</small>
+          </div>
+          <div class="ccard" data-reveal style="--d:.12s">
+            <h3>Based in</h3>
+            <a href="https://www.google.com/maps/place/Sandton" target="_blank" rel="noopener">Sandton, Johannesburg</a>
+            <small>On site across Gauteng, remote nationwide.</small>
+          </div>
+          <div class="ccard" data-reveal style="--d:.18s">
+            <h3>Response</h3>
+            <p class="val">One business day</p>
+            <small>Existing managed clients: per SLA, 24/7.</small>
+          </div>
+        </div>
+
+        <div class="split form-first" style="margin-top:clamp(3rem,8vw,5rem)">
+          <div>
+            <div class="section-head">
+              <p class="eyebrow" data-reveal>Send a Brief</p>
+              <h2 data-reveal style="--d:.08s">Start the conversation.</h2>
+              <p class="lede" data-reveal style="--d:.16s">The more you can tell us about the estate, the more useful our first reply will be.</p>
+            </div>
+
+            <form class="form" id="enquiry" data-reveal style="--d:.2s">
+              <div class="form-row">
+                <div class="field">
+                  <label for="f-name">Your name</label>
+                  <input id="f-name" name="name" type="text" autocomplete="name" required>
+                </div>
+                <div class="field">
+                  <label for="f-company">Company</label>
+                  <input id="f-company" name="company" type="text" autocomplete="organization">
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="field">
+                  <label for="f-email">Email</label>
+                  <input id="f-email" name="email" type="email" autocomplete="email" required>
+                </div>
+                <div class="field">
+                  <label for="f-phone">Phone</label>
+                  <input id="f-phone" name="phone" type="tel" autocomplete="tel">
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="f-service">What do you need</label>
+                <select id="f-service" name="service">
+                  <option>Network &amp; Security Consultation</option>
+                  <option>Managed Security</option>
+                  <option>Network Infrastructure</option>
+                  <option>Microsoft 365 &amp; Cloud</option>
+                  <option>Something else</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="f-message">Tell us about the environment</label>
+                <textarea id="f-message" name="message" placeholder="Sites, user count, current vendors and what prompted the enquiry."></textarea>
+              </div>
+
+              <div>
+                <button class="btn btn-primary" type="submit">Send enquiry
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10m0 0-4-4m4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+              </div>
+              <p class="form-note">This opens your email application with the details filled in, so nothing is submitted to a third party. Prefer to write directly? Use <a href="mailto:infor@rsquaredit.com" style="text-decoration:underline">infor@rsquaredit.com</a>.</p>
+            </form>
+          </div>
+
+          <figure class="figure" data-reveal style="--d:.12s">
+            <img src="assets/images/security-ops.webp"
+                 alt="A glowing shield icon at the centre of a circuit board, representing embedded network security"
+                 width="1600" height="1073"
+                 loading="lazy">
+            <figcaption>Operations Core: security view</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WHAT HAPPENS NEXT ============ -->
+    <section class="section photo-band band-next">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow" data-reveal>What Happens Next</p>
+          <h2 data-reveal style="--d:.08s">Three steps, no obligation.</h2>
+        </div>
+
+        <div class="steps">
+          <div class="step" data-reveal>
+            <p class="num">Step 01</p>
+            <h3>Scoping call</h3>
+            <p>A 30-minute conversation to understand the estate, the constraint and the deadline you are working to.</p>
+          </div>
+          <div class="step" data-reveal style="--d:.08s">
+            <p class="num">Step 02</p>
+            <h3>Assessment</h3>
+            <p>We review what is deployed and return findings in writing, with risks ranked by impact rather than by ease of sale.</p>
+          </div>
+          <div class="step" data-reveal style="--d:.16s">
+            <p class="num">Step 03</p>
+            <h3>Proposal</h3>
+            <p>A scoped plan with phases, costs and acceptance criteria. You decide whether we deliver it or your team does.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -373,20 +733,20 @@
         <nav class="foot-col" aria-label="Services">
           <h3>Services</h3>
           <ul>
-            <li><a href="services.html#svc-consultation">Network &amp; Security Consultation</a></li>
-            <li><a href="services.html#svc-managed-security">Managed Security</a></li>
-            <li><a href="services.html#svc-network">Network Infrastructure</a></li>
-            <li><a href="services.html#svc-m365-cloud">Microsoft 365 &amp; Cloud</a></li>
+            <li><a href="#svc-consultation">Network &amp; Security Consultation</a></li>
+            <li><a href="#svc-managed-security">Managed Security</a></li>
+            <li><a href="#svc-network">Network Infrastructure</a></li>
+            <li><a href="#svc-m365-cloud">Microsoft 365 &amp; Cloud</a></li>
           </ul>
         </nav>
 
         <nav class="foot-col" aria-label="Site navigation">
           <h3>Navigation</h3>
           <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#top">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
         </nav>
 

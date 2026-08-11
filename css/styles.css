@@ -1,7 +1,7 @@
 /* ============================================================
    RSQUARED IT TECHNOLOGIES — cinematic one-pager
    Palette: near-black surfaces, one violet→magenta accent
-   Type: Space Grotesk (display/body) + JetBrains Mono (labels)
+   Type: Geist Sans (display/body) + Geist Mono (labels)
    ============================================================ */
 
 :root {
@@ -17,8 +17,8 @@
   --violet-hi: #a855f7;
   --magenta: #c936d3;
   --accent-grad: linear-gradient(120deg, #7c3aed 0%, #a855f7 55%, #c936d3 100%);
-  --font-display: "Space Grotesk", system-ui, sans-serif;
-  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --font-display: "Geist", system-ui, sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, monospace;
   --pad: clamp(1.25rem, 4vw, 3rem);
   --section-y: clamp(5rem, 12vw, 10rem);
   --radius: 14px;
@@ -1296,7 +1296,7 @@ textarea:focus-visible {
     var(--bg) 100%);
 }
 
-.page-head h1 {
+.page-head h2 {
   font-size: clamp(2.3rem, 5.8vw, 4.2rem);
   font-weight: 700;
   line-height: 1.03;
