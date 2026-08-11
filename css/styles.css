@@ -190,6 +190,12 @@ a { color: inherit; text-decoration: none; }
   .page-loader { display: none; }
 }
 
+/* ---------- views (Home/Services/About/Contact act as tabs) ---------- */
+
+/* several [data-view] roots (.hero, .interlude) set their own display,
+   which would otherwise beat the UA [hidden] rule at equal specificity */
+[data-view][hidden] { display: none !important; }
+
 /* From Uiverse.io by andrew-manzyk */
 .loader {
   --color-one: #ffbf48;

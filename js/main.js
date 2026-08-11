@@ -60,6 +60,70 @@
   }
 
   /* ============================================================
+     view switching — Home/Services/About/Contact act like tabs
+     inside the single index.html document
+     ============================================================ */
+
+  function bindViews() {
+    var scope = document.getElementById("top");
+    if (!scope) return;
+    var groups = all("[data-view]", scope);
+    if (!groups.length) return;
+    var navLinks = all(".nav-links a");
+
+    function viewForId(id) {
+      if (!id || id === "top") return "home";
+      if (id === "services" || id === "about" || id === "contact") return id;
+      var el = document.getElementById(id);
+      var owner = el && el.closest("[data-view]");
+      return owner ? owner.getAttribute("data-view") : "home";
+    }
+
+    function setView(view, replayIntro) {
+      groups.forEach(function (el) {
+        el.hidden = el.getAttribute("data-view") !== view;
+      });
+      navLinks.forEach(function (a) {
+        var id = (a.getAttribute("href") || "").slice(1) || "top";
+        if (viewForId(id) === view) a.setAttribute("aria-current", "page");
+        else a.removeAttribute("aria-current");
+      });
+      if (replayIntro && gsap && ST) {
+        requestAnimationFrame(function () {
+          ST.refresh();
+          gsapIntro();
+        });
+      }
+    }
+
+    function go(id, opts) {
+      opts = opts || {};
+      setView(viewForId(id), !!opts.replayIntro);
+      var target = id && id !== "top" ? document.getElementById(id) : null;
+      requestAnimationFrame(function () {
+        if (target) target.scrollIntoView({ behavior: opts.instant ? "auto" : "smooth", block: "start" });
+        else window.scrollTo({ top: 0, behavior: opts.instant ? "auto" : "smooth" });
+      });
+    }
+
+    document.addEventListener("click", function (e) {
+      var a = e.target.closest('a[href^="#"]');
+      if (!a) return;
+      var id = a.getAttribute("href").slice(1);
+      e.preventDefault();
+      go(id, { replayIntro: true });
+      var hash = id ? "#" + id : "#top";
+      if (location.hash !== hash) history.pushState(null, "", hash);
+    });
+
+    window.addEventListener("popstate", function () {
+      go(location.hash.slice(1), { instant: true, replayIntro: true });
+    });
+
+    go(location.hash.slice(1) || "top", { instant: true, replayIntro: false });
+  }
+
+  /* ============================================================
      static bindings — always run
      ============================================================ */
 
@@ -204,7 +268,7 @@
      ============================================================ */
 
   function gsapIntro() {
-    var scope = document.querySelector(".hero");
+    var scope = document.querySelector(".hero:not([hidden]), .page-head:not([hidden])");
     if (!scope) return;
 
     var heading = scope.querySelector("h1");
@@ -231,7 +295,7 @@
 
     var tl = gsap.timeline({ defaults: { ease: "power3.out" } });
 
-    var media = scope.querySelector(".hero-media img");
+    var media = scope.querySelector(".hero-media img, .page-head-media img");
     if (media) tl.fromTo(media, { scale: 1.09 }, { scale: 1, duration: 1.8, ease: "power2.out" }, 0);
 
     if (words.length) {
@@ -242,7 +306,7 @@
 
   function gsapReveals() {
     all("[data-reveal]").forEach(function (el) {
-      if (el.closest(".hero")) return;
+      if (el.closest(".hero") || el.closest(".page-head")) return;
       gsap.fromTo(el,
         { opacity: 0, y: 26 },
         {
@@ -458,6 +522,7 @@
     bindPageLoader();
     bindChrome();
     bindSpotlight();
+    bindViews();
 
     if (reduce.matches) {
       root.classList.remove("gsap-on");
