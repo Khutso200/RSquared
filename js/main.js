@@ -13,6 +13,7 @@
   var root = document.documentElement;
 
   var gsap, ST, animated;
+  var openAccordionFor = function () {};
 
   /* ============================================================
      helpers
@@ -99,6 +100,7 @@
     function go(id, opts) {
       opts = opts || {};
       setView(viewForId(id), !!opts.replayIntro);
+      openAccordionFor(id);
       var target = id && id !== "top" ? document.getElementById(id) : null;
       requestAnimationFrame(function () {
         if (target) target.scrollIntoView({ behavior: opts.instant ? "auto" : "smooth", block: "start" });
@@ -121,6 +123,39 @@
     });
 
     go(location.hash.slice(1) || "top", { instant: true, replayIntro: false });
+  }
+
+  /* ============================================================
+     services accordion
+     ============================================================ */
+
+  function bindAccordion() {
+    var items = all(".acc-item");
+    if (!items.length) return;
+
+    function closeItem(item) {
+      item.classList.remove("is-open");
+      item.querySelector(".acc-trigger").setAttribute("aria-expanded", "false");
+    }
+
+    function openItem(item) {
+      items.forEach(function (other) { if (other !== item) closeItem(other); });
+      item.classList.add("is-open");
+      item.querySelector(".acc-trigger").setAttribute("aria-expanded", "true");
+    }
+
+    items.forEach(function (item) {
+      item.querySelector(".acc-trigger").addEventListener("click", function () {
+        if (item.classList.contains("is-open")) closeItem(item);
+        else openItem(item);
+      });
+    });
+
+    openAccordionFor = function (id) {
+      var target = id && document.getElementById(id);
+      var item = target && target.closest(".acc-item");
+      if (item) openItem(item);
+    };
   }
 
   /* ============================================================
@@ -522,6 +557,7 @@
     bindPageLoader();
     bindChrome();
     bindSpotlight();
+    bindAccordion();
     bindViews();
 
     if (reduce.matches) {

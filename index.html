@@ -141,6 +141,7 @@
 
     <!-- ============ VENDOR CERTIFICATIONS ============ -->
     <div class="marquee" aria-label="Vendor certifications" data-view="home">
+      <div class="wrap marquee-wrap">
       <div class="marquee-track">
         <ul>
           <li><img src="assets/logos/cisco.svg" alt="Cisco" width="55" height="30" loading="lazy"></li>
@@ -166,6 +167,7 @@
           <li><span class="vendor-name">Aruba</span></li>
           <li><span class="vendor-name">ThousandEyes</span></li>
         </ul>
+      </div>
       </div>
     </div>
 
@@ -336,103 +338,195 @@
       <div class="wrap">
         <p class="eyebrow" data-reveal>Services</p>
         <h2 data-reveal style="--d:.08s">Every layer of the estate, <span class="grad-text">one accountable team.</span></h2>
-        <p class="lede" data-reveal style="--d:.16s">Four services that cover the physical layer, the security perimeter and the cloud edge, each delivered by the engineers who designed it.</p>
+        <p class="lede" data-reveal style="--d:.16s">Ten service lines that cover the physical layer, the security perimeter and the cloud edge, each delivered by the engineers who designed it.</p>
       </div>
     </section>
 
     <section class="section" data-view="services" hidden>
       <div class="wrap">
-      <article class="svc" id="svc-consultation" data-reveal>
-        <div>
-          <p class="svc-id">01</p>
-          <h3>Network &amp; Security Consultation</h3>
-        </div>
-        <div class="svc-body">
-          <p>Independent advisory for organisations running Cisco and Fortinet estates. We audit what is deployed, map it against how the business actually operates and return a prioritised plan that separates what must change now from what can wait. No product is recommended before the requirement is written down.</p>
-          <ul class="svc-list">
-            <li>Infrastructure audit and gap analysis</li>
-            <li>Zero-trust segmentation design</li>
-            <li>Firewall policy review and hardening</li>
-            <li>SD-WAN architecture (Viptela, FortiSD-WAN)</li>
-            <li>Remote access design (AnyConnect, FortiClient)</li>
-            <li>IPS/IDS tuning and false-positive reduction</li>
-            <li>Wireless security and NAC strategy</li>
-            <li>High-level and low-level design documentation</li>
-          </ul>
-          <div class="tags"><span>Assessment</span><span>Zero Trust</span><span>SD-WAN</span><span>Hardening</span></div>
-        </div>
-      </article>
+      <div class="accordion" data-reveal>
 
-      <article class="svc" id="svc-managed-security" data-reveal>
-        <div>
-          <p class="svc-id">02</p>
-          <h3>Managed Security</h3>
+        <div class="acc-item is-open">
+          <h3 class="acc-head">
+            <button class="acc-trigger" id="acc-trigger-consulting" aria-expanded="true" aria-controls="svc-consulting">
+              <span class="svc-id">01</span>
+              <span class="acc-title">Network &amp; Security Consulting</span>
+              <svg class="acc-chevron" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </h3>
+          <div class="acc-panel-wrap">
+            <div class="acc-panel" id="svc-consulting">
+              <div class="acc-panel-inner" role="region" aria-labelledby="acc-trigger-consulting">
+                <p>Independent, vendor-neutral advisory for organisations that need to know what is actually running before any product gets recommended. We audit the estate, benchmark it against how the business operates and return a written, prioritised roadmap with high-level and low-level design documentation to support it.</p>
+                <div class="tags"><span>Cisco</span><span>Fortinet</span><span>Zero Trust</span><span>SD-WAN</span></div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="svc-body">
-          <p>A security operations capability without the headcount. We run Splunk-based detection, own the alert queue around the clock and take incidents through containment, eradication and a written post-incident report. Findings close with evidence, not with a status change.</p>
-          <ul class="svc-list">
-            <li>Splunk SIEM implementation and detection tuning</li>
-            <li>24/7 monitoring, triage and escalation</li>
-            <li>Incident response and digital forensics</li>
-            <li>Firewall management (Cisco FTD/FMC, FortiGate)</li>
-            <li>Vulnerability assessment and penetration testing</li>
-            <li>Endpoint detection and response rollout</li>
-            <li>Security policy and standards development</li>
-            <li>POPIA and ISO 27001 evidence reporting</li>
-          </ul>
-          <div class="tags"><span>SIEM</span><span>FTD/FMC</span><span>FortiGate</span><span>MXDR</span></div>
-        </div>
-      </article>
 
-      <article class="svc" id="svc-network" data-reveal>
-        <div>
-          <p class="svc-id">03</p>
-          <h3>Network Infrastructure</h3>
+        <div class="acc-item">
+          <h3 class="acc-head">
+            <button class="acc-trigger" id="acc-trigger-managed-network" aria-expanded="false" aria-controls="svc-managed-network">
+              <span class="svc-id">02</span>
+              <span class="acc-title">Managed Network Services</span>
+              <svg class="acc-chevron" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </h3>
+          <div class="acc-panel-wrap">
+            <div class="acc-panel" id="svc-managed-network">
+              <div class="acc-panel-inner" role="region" aria-labelledby="acc-trigger-managed-network">
+                <p>Day-to-day management of the LAN, WAN and wireless estate under a single governed model, so configuration stays consistent across sites instead of drifting between projects. Monitoring, performance optimisation and planned firmware and capacity management replace reactive firefighting.</p>
+                <div class="tags"><span>Cisco</span><span>Fortinet</span><span>Ansible</span><span>Monitoring</span></div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="svc-body">
-          <p>Everything that carries traffic, from the cable in the wall to the WAN overlay between sites. Campus, branch, wireless and SD-WAN are designed to stay up on their worst day, then managed as code so the estate stays consistent between projects. Building systems and IoT ride the same governed fabric rather than an unmanaged network beside it.</p>
-          <ul class="svc-list">
-            <li>Enterprise LAN and WAN design</li>
-            <li>VLAN segmentation and inter-VLAN routing</li>
-            <li>Advanced routing: OSPF, EIGRP and BGP</li>
-            <li>High availability with HSRP/VRRP and LACP</li>
-            <li>Wireless design and site survey (Aruba, Cisco, Ubiquiti)</li>
-            <li>SD-WAN overlay design and staged rollout</li>
-            <li>Quality of service for voice and video</li>
-            <li>Ansible, pyATS and CI/CD change pipelines</li>
-            <li>Golden configuration and drift detection</li>
-            <li>Structured cabling design and certification</li>
-            <li>IoT segmentation, IP access control and surveillance</li>
-            <li>Monitoring with SNMP, NetFlow, Grafana, ThousandEyes</li>
-          </ul>
-          <div class="tags"><span>Cisco</span><span>Aruba</span><span>MikroTik</span><span>SD-WAN</span><span>Ansible</span><span>Cabling</span></div>
-        </div>
-      </article>
 
-      <article class="svc" id="svc-m365-cloud" data-reveal>
-        <div>
-          <p class="svc-id">04</p>
-          <h3>Microsoft 365 &amp; Cloud</h3>
+        <div class="acc-item">
+          <h3 class="acc-head">
+            <button class="acc-trigger" id="acc-trigger-managed-security" aria-expanded="false" aria-controls="svc-managed-security">
+              <span class="svc-id">03</span>
+              <span class="acc-title">Managed Security Services</span>
+              <svg class="acc-chevron" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </h3>
+          <div class="acc-panel-wrap">
+            <div class="acc-panel" id="svc-managed-security">
+              <div class="acc-panel-inner" role="region" aria-labelledby="acc-trigger-managed-security">
+                <p>A 24/7 security operations capability without the cost of building an in-house SOC. Splunk-based SIEM detection backed by a permanently staffed alert queue, covering vulnerability assessment, penetration testing, endpoint security and incident response through to a written post-incident report.</p>
+                <div class="tags"><span>Splunk</span><span>SIEM</span><span>SOC</span><span>MXDR</span></div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="svc-body">
-          <p>Microsoft 365 and public cloud governed as one identity model rather than two disconnected estates. Tenancy, conditional access and retention are configured against a written policy; Azure and AWS workloads are provisioned from Terraform so what runs in production matches what is committed to the repository. The administrators who inherit it are trained on it before we hand over.</p>
-          <ul class="svc-list">
-            <li>Microsoft 365 tenant design and staged migration</li>
-            <li>Azure AD identity, conditional access and MFA</li>
-            <li>SharePoint Online intranet development</li>
-            <li>Teams deployment and governance</li>
-            <li>Power Automate and Power Apps development</li>
-            <li>Exchange Online and email security</li>
-            <li>Data loss prevention and Defender for Office 365</li>
-            <li>Azure virtual networks and ExpressRoute</li>
-            <li>AWS VPC architecture and workload migration</li>
-            <li>Hybrid connectivity and site-to-site VPN</li>
-            <li>Infrastructure as Code with Terraform</li>
-            <li>Cloud cost optimisation and disaster recovery</li>
-          </ul>
-          <div class="tags"><span>Azure</span><span>AWS</span><span>Azure AD</span><span>SharePoint</span><span>Terraform</span></div>
+
+        <div class="acc-item">
+          <h3 class="acc-head">
+            <button class="acc-trigger" id="acc-trigger-cloud" aria-expanded="false" aria-controls="svc-cloud">
+              <span class="svc-id">04</span>
+              <span class="acc-title">Cloud Services</span>
+              <svg class="acc-chevron" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </h3>
+          <div class="acc-panel-wrap">
+            <div class="acc-panel" id="svc-cloud">
+              <div class="acc-panel-inner" role="region" aria-labelledby="acc-trigger-cloud">
+                <p>One identity model for Microsoft 365 and public cloud, so access and policy are managed in one place instead of two. Tenant design, identity governance and Infrastructure as Code provisioning for Microsoft 365, Azure and AWS, delivered as one governed, auditable environment.</p>
+                <div class="tags"><span>Microsoft 365</span><span>Azure</span><span>AWS</span><span>Terraform</span></div>
+              </div>
+            </div>
+          </div>
         </div>
-      </article>
+
+        <div class="acc-item">
+          <h3 class="acc-head">
+            <button class="acc-trigger" id="acc-trigger-enterprise-networking" aria-expanded="false" aria-controls="svc-enterprise-networking">
+              <span class="svc-id">05</span>
+              <span class="acc-title">Enterprise Networking</span>
+              <svg class="acc-chevron" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </h3>
+          <div class="acc-panel-wrap">
+            <div class="acc-panel" id="svc-enterprise-networking">
+              <div class="acc-panel-inner" role="region" aria-labelledby="acc-trigger-enterprise-networking">
+                <p>The physical and logical network, LAN, WAN, SD-WAN and wireless, designed to stay up on its worst day. High availability, QoS and VLAN segmentation are built in from the start rather than retrofitted once something fails.</p>
+                <div class="tags"><span>Cisco</span><span>Fortinet</span><span>SD-WAN</span><span>High Availability</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="acc-item">
+          <h3 class="acc-head">
+            <button class="acc-trigger" id="acc-trigger-cabling" aria-expanded="false" aria-controls="svc-cabling">
+              <span class="svc-id">06</span>
+              <span class="acc-title">Structured Cabling</span>
+              <svg class="acc-chevron" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </h3>
+          <div class="acc-panel-wrap">
+            <div class="acc-panel" id="svc-cabling">
+              <div class="acc-panel-inner" role="region" aria-labelledby="acc-trigger-cabling">
+                <p>The physical layer everything else depends on, done right the first time. Copper and fibre cabling designed, tested and certified, with rack and cabinet layouts planned for growth rather than retrofitted once space runs out.</p>
+                <div class="tags"><span>Copper</span><span>Fibre</span><span>Testing &amp; Certification</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="acc-item">
+          <h3 class="acc-head">
+            <button class="acc-trigger" id="acc-trigger-cctv" aria-expanded="false" aria-controls="svc-cctv">
+              <span class="svc-id">07</span>
+              <span class="acc-title">CCTV &amp; Physical Security</span>
+              <svg class="acc-chevron" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </h3>
+          <div class="acc-panel-wrap">
+            <div class="acc-panel" id="svc-cctv">
+              <div class="acc-panel-inner" role="region" aria-labelledby="acc-trigger-cctv">
+                <p>Camera and access control systems brought onto the same governed network as everything else in the estate. CCTV, access control and visitor management run on a segmented, IP-based surveillance network, integrated with the broader security posture rather than managed in isolation.</p>
+                <div class="tags"><span>CCTV</span><span>Access Control</span><span>IP Surveillance</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="acc-item">
+          <h3 class="acc-head">
+            <button class="acc-trigger" id="acc-trigger-network-automation" aria-expanded="false" aria-controls="svc-network-automation">
+              <span class="svc-id">08</span>
+              <span class="acc-title">Network Automation</span>
+              <svg class="acc-chevron" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </h3>
+          <div class="acc-panel-wrap">
+            <div class="acc-panel" id="svc-network-automation">
+              <div class="acc-panel-inner" role="region" aria-labelledby="acc-trigger-network-automation">
+                <p>Configuration and change, version-controlled and managed as code rather than typed by hand. Ansible and Terraform drive configuration and provisioning, with Python-based pyATS validating every change before and after deployment inside a CI/CD pipeline.</p>
+                <div class="tags"><span>Ansible</span><span>Terraform</span><span>Python</span><span>CI/CD</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="acc-item">
+          <h3 class="acc-head">
+            <button class="acc-trigger" id="acc-trigger-support" aria-expanded="false" aria-controls="svc-support">
+              <span class="svc-id">09</span>
+              <span class="acc-title">IT Support Services</span>
+              <svg class="acc-chevron" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </h3>
+          <div class="acc-panel-wrap">
+            <div class="acc-panel" id="svc-support">
+              <div class="acc-panel-inner" role="region" aria-labelledby="acc-trigger-support">
+                <p>Day-to-day support for the people who depend on the network to do their jobs. Remote and onsite support, a helpdesk and device management, with preventative maintenance replacing reactive break-fix.</p>
+                <div class="tags"><span>Helpdesk</span><span>Remote Support</span><span>Device Management</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="acc-item">
+          <h3 class="acc-head">
+            <button class="acc-trigger" id="acc-trigger-hardware" aria-expanded="false" aria-controls="svc-hardware">
+              <span class="svc-id">10</span>
+              <span class="acc-title">Peripherals &amp; Hardware</span>
+              <svg class="acc-chevron" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </h3>
+          <div class="acc-panel-wrap">
+            <div class="acc-panel" id="svc-hardware">
+              <div class="acc-panel-inner" role="region" aria-labelledby="acc-trigger-hardware">
+                <p>Procurement, deployment and lifecycle management of the hardware that sits on every desk and in every rack. Laptops, desktops, monitors, docking stations, UPS units and printers are standardised and tracked in a documented asset register, with planned refresh cycles replacing ad hoc purchasing before ageing hardware becomes a liability.</p>
+                <div class="tags"><span>Procurement</span><span>Asset Register</span><span>Lifecycle</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
       </div>
     </section>
 
@@ -656,10 +750,16 @@
               <div class="field">
                 <label for="f-service">What do you need</label>
                 <select id="f-service" name="service">
-                  <option>Network &amp; Security Consultation</option>
-                  <option>Managed Security</option>
-                  <option>Network Infrastructure</option>
-                  <option>Microsoft 365 &amp; Cloud</option>
+                  <option>Network &amp; Security Consulting</option>
+                  <option>Managed Network Services</option>
+                  <option>Managed Security Services</option>
+                  <option>Cloud Services</option>
+                  <option>Enterprise Networking</option>
+                  <option>Structured Cabling</option>
+                  <option>CCTV &amp; Physical Security</option>
+                  <option>Network Automation</option>
+                  <option>IT Support Services</option>
+                  <option>Peripherals &amp; Hardware</option>
                   <option>Something else</option>
                 </select>
               </div>
@@ -733,10 +833,10 @@
         <nav class="foot-col" aria-label="Services">
           <h3>Services</h3>
           <ul>
-            <li><a href="#svc-consultation">Network &amp; Security Consultation</a></li>
-            <li><a href="#svc-managed-security">Managed Security</a></li>
-            <li><a href="#svc-network">Network Infrastructure</a></li>
-            <li><a href="#svc-m365-cloud">Microsoft 365 &amp; Cloud</a></li>
+            <li><a href="#svc-consulting">Network &amp; Security Consulting</a></li>
+            <li><a href="#svc-managed-security">Managed Security Services</a></li>
+            <li><a href="#svc-enterprise-networking">Enterprise Networking</a></li>
+            <li><a href="#svc-cloud">Cloud Services</a></li>
           </ul>
         </nav>
 
