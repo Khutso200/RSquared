@@ -204,7 +204,7 @@
      ============================================================ */
 
   function gsapIntro() {
-    var scope = document.querySelector(".hero") || document.querySelector(".page-head");
+    var scope = document.querySelector(".hero");
     if (!scope) return;
 
     var heading = scope.querySelector("h1");
@@ -231,7 +231,7 @@
 
     var tl = gsap.timeline({ defaults: { ease: "power3.out" } });
 
-    var media = scope.querySelector(".hero-media img, .page-head-media img");
+    var media = scope.querySelector(".hero-media img");
     if (media) tl.fromTo(media, { scale: 1.09 }, { scale: 1, duration: 1.8, ease: "power2.out" }, 0);
 
     if (words.length) {
@@ -242,7 +242,7 @@
 
   function gsapReveals() {
     all("[data-reveal]").forEach(function (el) {
-      if (el.closest(".hero") || el.closest(".page-head")) return;
+      if (el.closest(".hero")) return;
       gsap.fromTo(el,
         { opacity: 0, y: 26 },
         {
